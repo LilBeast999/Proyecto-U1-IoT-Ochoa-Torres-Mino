@@ -1,0 +1,10 @@
+node_modules/
+nodered_data/
+imagenes_camara/
+mosquitto/data/
+mosquitto/log/
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env

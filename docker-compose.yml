@@ -1,0 +1,29 @@
+networks:
+  iot_net:
+    driver: bridge
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto_broker
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - iot_net
+
+  nodered:
+    image: nodered/node-red:latest-debian
+    container_name: nodered_app
+    ports:
+      - "1880:1880"
+    volumes:
+      # guarda flujos, configuraciones y nodos descargados para evitar perdida de datos
+      - ./nodered_data:/data
+      # directorio mapeado para guardar temporalmente las capturas del esp32-cam
+      - ./imagenes_camara:/tmp/imagenes
+    networks:
+      - iot_net
