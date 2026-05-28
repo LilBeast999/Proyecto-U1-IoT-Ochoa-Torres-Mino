@@ -1,11 +1,15 @@
-#include "WiFi.h"
 #include "esp_camera.h"
-#include "HTTPClient.h"
+#include <WiFi.h>
+#include <HTTPClient.h>
 
-const char* ssid = "Telematica";
-const char* password = "telematica.2024";
-const char* serverUrl = "http://192.168.1.22:1880/upload-image";
+// credenciales de tu red wifi
+const char* ssid = "iot";
+const char* password = "password123";
 
+// ip y puerto de tu servidor node-red coincidiendo con tu configuracion
+String serverName = "http://192.168.137.253:1880/upload-image";
+
+// pines correspondientes al modelo ai thinker
 #define PWDN_GPIO_NUM     32
 #define RESET_GPIO_NUM    -1
 #define XCLK_GPIO_NUM      0
@@ -25,12 +29,6 @@ const char* serverUrl = "http://192.168.1.22:1880/upload-image";
 
 void setup() {
   Serial.begin(115200);
-  WiFi.begin(ssid, password);
-  
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
 
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -53,44 +51,68 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
-  
-  // resolucion ajustada para equilibrar calidad y peso de transferencia
-  config.frame_size = FRAMESIZE_VGA; 
-  config.jpeg_quality = 12;
-  config.fb_count = 1;
 
-  // inicializa el hardware de la camara con la configuracion definida
+  // configuracion optimizada para evitar latencia de transmision
+  if(psramFound()){
+    config.frame_size = FRAMESIZE_QVGA; 
+    config.jpeg_quality = 20; 
+    config.fb_count = 1; 
+  } else {
+    config.frame_size = FRAMESIZE_QQVGA;
+    config.jpeg_quality = 20;
+    config.fb_count = 1;
+  }
+
+  // inicializa el hardware de la camara
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
-    Serial.printf("error al iniciar camara");
+    Serial.printf("fallo la inicializacion de la camara");
     return;
   }
+
+  // inicia la conexion a internet y espera hasta obtener ip
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nwifi conectado");
 }
 
 void loop() {
-  // captura la imagen y la almacena en el buffer
+  // obtiene el fotograma desde el buffer de hardware
   camera_fb_t * fb = esp_camera_fb_get();
   if (!fb) {
-    Serial.println("fallo al capturar imagen");
+    Serial.println("fallo al capturar la imagen");
+    delay(1000);
     return;
   }
 
-  if (WiFi.status() == WL_CONNECTED) {
+  // asegura conexion activa antes del envio http
+  if(WiFi.status() == WL_CONNECTED){
     HTTPClient http;
-    http.begin(serverUrl);
+    
+    // establece la ruta de destino
+    http.begin(serverName);
+    
+    // define el tipo de archivo que viaja en el cuerpo del mensaje
     http.addHeader("Content-Type", "image/jpeg");
     
-    // envia el buffer binario directamente al servidor
+    // ejecuta la peticion post enviando el arreglo de bytes de la imagen
     int httpResponseCode = http.POST(fb->buf, fb->len);
     
-    Serial.print("codigo de respuesta: ");
+    Serial.print("codigo de respuesta http: ");
     Serial.println(httpResponseCode);
     
+    // cierra la conexion y libera recursos
     http.end();
+  } else {
+    Serial.println("wifi desconectado");
   }
-  
-  // libera el buffer de memoria para evitar cuelgues
+
+  // devuelve el buffer a la camara para limpiar la memoria
   esp_camera_fb_return(fb);
   
-  delay(10000); 
+  // controla la cadencia de disparos a 1 cada 2 segundos
+  delay(1250);
 }

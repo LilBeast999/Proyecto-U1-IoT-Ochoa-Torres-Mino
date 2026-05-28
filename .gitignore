@@ -1,10 +1,6 @@
-node_modules/
-nodered_data/
-imagenes_camara/
-mosquitto/data/
-mosquitto/log/
-.DS_Store
-.vscode/
-.idea/
-*.log
-.env
+**/node_modules/
+imagenes_camara/*
+!imagenes_camara/.gitkeep
+!nodered_data/package.json
+!nodered_data/flows.json
+!nodered_data/settings.js

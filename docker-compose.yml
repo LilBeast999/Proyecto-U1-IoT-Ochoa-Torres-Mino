@@ -14,6 +14,7 @@ services:
       - ./mosquitto/log:/mosquitto/log
     networks:
       - iot_net
+    restart: unless-stopped
 
   nodered:
     image: nodered/node-red:latest-debian
@@ -25,5 +26,21 @@ services:
       - ./nodered_data:/data
       # directorio mapeado para guardar temporalmente las capturas del esp32-cam
       - ./imagenes_camara:/tmp/imagenes
+      
     networks:
       - iot_net
+    restart: unless-stopped
+    depends_on:
+      - mosquitto
+
+  reconocimiento_facial:
+    build: ./servicio_reconocimiento
+    container_name: iot_reconocimiento
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./imagenes_camara:/tmp/imagenes
+      - ./servicio_reconocimiento/caras_conocidas:/app/caras_conocidas
+    networks:
+      - iot_net
+    restart: unless-stopped
