@@ -19,6 +19,7 @@
         },
         "debug": {
             "filter": "filterSelected"
-        }
+        },
+        "menu-menu-item-sidebar": true
     }
 }
