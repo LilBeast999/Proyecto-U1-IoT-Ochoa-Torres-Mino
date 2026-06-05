@@ -2,11 +2,11 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-// credenciales de tu red wifi
+// credenciales
 const char* ssid = "iot";
 const char* password = "password123";
 
-// ip y puerto de tu servidor node-red coincidiendo con tu configuracion
+// ip y puerto
 String serverName = "http://192.168.137.253:1880/upload-image";
 
 // pines correspondientes al modelo ai thinker

@@ -125,7 +125,7 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "🏠Casa Inteligente 😶‍🌫️",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "icon",
@@ -155,7 +155,7 @@
         "className": ""
     },
     {
-        "id": "6efdbc34edd63a01",
+        "id": "4d182a94a859ebfa",
         "type": "ui_spacer",
         "z": "cba3b38867a78e6d",
         "name": "spacer",
@@ -165,7 +165,7 @@
         "height": 1
     },
     {
-        "id": "acdf96c370ce50e3",
+        "id": "7745f04cf817f9ea",
         "type": "ui_spacer",
         "z": "cba3b38867a78e6d",
         "name": "spacer",
@@ -175,27 +175,17 @@
         "height": 1
     },
     {
-        "id": "0c37768d2f50392f",
-        "type": "ui_spacer",
-        "z": "cba3b38867a78e6d",
-        "name": "spacer",
-        "group": "d6d11e5f510da65c",
-        "order": 5,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "97a7a0d0a43ee174",
+        "id": "e187867848e8d24d",
         "type": "ui_spacer",
         "z": "cba3b38867a78e6d",
         "name": "spacer",
         "group": "d6d11e5f510da65c",
         "order": 7,
-        "width": 5,
+        "width": 1,
         "height": 1
     },
     {
-        "id": "52b15d5c3ece4b2c",
+        "id": "f3bd564cedd82c40",
         "type": "ui_spacer",
         "z": "cba3b38867a78e6d",
         "name": "spacer",
@@ -232,8 +222,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 350,
-        "y": 420,
+        "x": 290,
+        "y": 360,
         "wires": []
     },
     {
@@ -247,8 +237,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 640,
-        "y": 340,
+        "x": 540,
+        "y": 180,
         "wires": [
             [
                 "790b908da95f7788"
@@ -264,7 +254,7 @@
         "scoreThreshold": 0.5,
         "passthru": "bbox",
         "lineColour": "magenta",
-        "x": 1090,
+        "x": 1010,
         "y": 340,
         "wires": [
             [
@@ -289,8 +279,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 390,
-        "y": 340,
+        "x": 310,
+        "y": 180,
         "wires": [
             [
                 "427886dfffa18e6c"
@@ -309,7 +299,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1300,
+        "x": 1220,
         "y": 340,
         "wires": [
             [
@@ -336,7 +326,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1520,
+        "x": 1420,
         "y": 340,
         "wires": [
             [
@@ -360,14 +350,15 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1730,
+        "x": 1610,
         "y": 340,
         "wires": [
             [
                 "5c3d0c8bc9ca59d1",
                 "7c621e934e67035c",
                 "d011a35ed4758ef4",
-                "e09892d3ac40396b"
+                "e09892d3ac40396b",
+                "b3f61a124f1a0cbb"
             ]
         ]
     },
@@ -384,8 +375,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1960,
-        "y": 180,
+        "x": 1800,
+        "y": 140,
         "wires": []
     },
     {
@@ -405,7 +396,7 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 880,
+        "x": 800,
         "y": 260,
         "wires": [
             [
@@ -428,15 +419,17 @@
         "rh": 0,
         "inputs": 0,
         "x": 150,
-        "y": 760,
+        "y": 860,
         "wires": [
             [
                 "d30be44562f05cc9",
                 "f370a4b8f43eeaf0",
-                "7ede61f1787cfab7",
                 "c91ec256d73d7327",
                 "3f78fc2969fde37a",
-                "d596676ac93f72a7"
+                "d596676ac93f72a7",
+                "d5b835194dcfbe6f",
+                "7ede61f1787cfab7",
+                "d2e41f13fc10f35f"
             ]
         ]
     },
@@ -453,8 +446,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 640,
+        "x": 400,
+        "y": 740,
         "wires": []
     },
     {
@@ -481,8 +474,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 490,
-        "y": 760,
+        "x": 410,
+        "y": 1060,
         "wires": []
     },
     {
@@ -509,8 +502,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 480,
-        "y": 820,
+        "x": 400,
+        "y": 1140,
         "wires": []
     },
     {
@@ -527,7 +520,7 @@
         "label": "units",
         "format": "{{msg.payload.microfono}}",
         "min": 0,
-        "max": "10000",
+        "max": "4095",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -537,8 +530,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 480,
-        "y": 900,
+        "x": 400,
+        "y": 1200,
         "wires": []
     },
     {
@@ -553,8 +546,8 @@
         "active": true,
         "pass": false,
         "outputs": 0,
-        "x": 400,
-        "y": 80,
+        "x": 300,
+        "y": 440,
         "wires": []
     },
     {
@@ -581,8 +574,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 490,
-        "y": 980,
+        "x": 410,
+        "y": 1000,
         "wires": []
     },
     {
@@ -604,8 +597,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
-        "y": 400,
+        "x": 1820,
+        "y": 420,
         "wires": [
             [
                 "433f0257e9f37497"
@@ -626,8 +619,8 @@
         "correl": "",
         "expiry": "",
         "broker": "1aace3cbeb0d6dfd",
-        "x": 2310,
-        "y": 400,
+        "x": 2150,
+        "y": 420,
         "wires": []
     },
     {
@@ -641,13 +634,13 @@
         "name": "",
         "label": "Persona detectada: ",
         "format": "{{msg.payload.resultado}}",
-        "layout": "row-left",
+        "layout": "row-center",
         "className": "",
         "style": true,
         "font": "Arial,Arial,Helvetica,sans-serif",
         "fontSize": "19",
         "color": "#000000",
-        "x": 1970,
+        "x": 1830,
         "y": 560,
         "wires": []
     },
@@ -668,11 +661,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1930,
-        "y": 280,
+        "x": 1810,
+        "y": 340,
         "wires": [
             [
-                "aef98006b3116a36",
                 "6f52856032ded4b4"
             ]
         ]
@@ -689,8 +681,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2130,
-        "y": 280,
+        "x": 2150,
+        "y": 340,
         "wires": [
             [
                 "1b22efeed61f8c51"
@@ -713,8 +705,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 2350,
-        "y": 280,
+        "x": 2330,
+        "y": 340,
         "wires": [
             []
         ]
@@ -757,8 +749,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 730,
-        "y": 760,
+        "x": 610,
+        "y": 640,
         "wires": [
             []
         ]
@@ -782,8 +774,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 700,
+        "x": 410,
+        "y": 800,
         "wires": [
             [
                 "7d4f754df5d7cde2",
@@ -808,8 +800,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 710,
-        "y": 660,
+        "x": 590,
+        "y": 760,
         "wires": [
             [
                 "39d4df7c50117294",
@@ -834,8 +826,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 930,
-        "y": 720,
+        "x": 790,
+        "y": 760,
         "wires": [
             [
                 "57b6e64bea5c4bcc"
@@ -854,7 +846,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1030,
         "y": 720,
         "wires": [
             [
@@ -878,8 +870,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 1350,
-        "y": 720,
+        "x": 1470,
+        "y": 860,
         "wires": [
             []
         ]
@@ -899,7 +891,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1240,
+        "x": 1180,
         "y": 180,
         "wires": [
             []
@@ -917,7 +909,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
+        "x": 1000,
         "y": 180,
         "wires": [
             [
@@ -930,20 +922,20 @@
         "type": "ui_text",
         "z": "cba3b38867a78e6d",
         "group": "d6d11e5f510da65c",
-        "order": 6,
-        "width": 6,
+        "order": 5,
+        "width": 5,
         "height": 1,
         "name": "",
         "label": "Estado del sistema",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1510,
-        "y": 620,
+        "x": 1210,
+        "y": 880,
         "wires": []
     },
     {
@@ -967,8 +959,8 @@
         "topic": "",
         "payload": "Normal",
         "payloadType": "str",
-        "x": 1240,
-        "y": 660,
+        "x": 1000,
+        "y": 920,
         "wires": [
             [
                 "937ac1cd9ab80ad0"
@@ -995,8 +987,8 @@
         "payloadType": "str",
         "topic": "smarthome/equipoXX/comandos",
         "topicType": "msg",
-        "x": 2000,
-        "y": 480,
+        "x": 1860,
+        "y": 500,
         "wires": [
             [
                 "433f0257e9f37497"
@@ -1022,8 +1014,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 620,
+        "x": 760,
+        "y": 880,
         "wires": [
             [
                 "52d82d8caef84634",
@@ -1042,13 +1034,13 @@
         "name": "",
         "label": "",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "layout": "row-left",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 2310,
+        "x": 2110,
         "y": 220,
         "wires": []
     },
@@ -1061,7 +1053,7 @@
         "op2": "Normal",
         "op1type": "nul",
         "op2type": "str",
-        "duration": "10",
+        "duration": "30",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -1069,8 +1061,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1250,
-        "y": 560,
+        "x": 990,
+        "y": 800,
         "wires": [
             [
                 "937ac1cd9ab80ad0"
@@ -1078,15 +1070,32 @@
         ]
     },
     {
+        "id": "b3f61a124f1a0cbb",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 80,
+        "wires": []
+    },
+    {
         "id": "6f52856032ded4b4",
         "type": "trigger",
         "z": "cba3b38867a78e6d",
         "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "pay",
-        "op2type": "nul",
-        "duration": "2",
+        "op1": "🔴 ¡Alerta de Intruso!",
+        "op2": "🟢 Sistema Normal",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "7",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -1094,12 +1103,234 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2120,
-        "y": 220,
+        "x": 1960,
+        "y": 340,
         "wires": [
             [
-                "f0c6e143b4a68fa2"
+                "f0c6e143b4a68fa2",
+                "aef98006b3116a36"
             ]
+        ]
+    },
+    {
+        "id": "d5b835194dcfbe6f",
+        "type": "switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "property": "payload.humedad",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "7dac7e67f4b3d6e4",
+                "6b2b27c86bc4f999"
+            ]
+        ]
+    },
+    {
+        "id": "6b2b27c86bc4f999",
+        "type": "delay",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 980,
+        "wires": [
+            [
+                "d225c6544915c2cc"
+            ]
+        ]
+    },
+    {
+        "id": "d225c6544915c2cc",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "mensaje de telegram para humedad",
+        "func": "msg.payload = {\n    \"chat_id\": \"1455813427\",\n    \"text\": \"alerta de seguridad: la humedad ha superado el 70%.\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 980,
+        "wires": [
+            [
+                "f2bd0e0fb0631bcd"
+            ]
+        ]
+    },
+    {
+        "id": "744a18abb4ce8174",
+        "type": "ui_switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "label": "Luz patio",
+        "tooltip": "",
+        "group": "d6d11e5f510da65c",
+        "order": 6,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1800,
+        "y": 1020,
+        "wires": [
+            [
+                "86be666d8d4cfa8a"
+            ]
+        ]
+    },
+    {
+        "id": "86be666d8d4cfa8a",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 2020,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "00ef81be64159fe7",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1870,
+        "y": 920,
+        "wires": [
+            [
+                "5b2b3faa0f951452"
+            ]
+        ]
+    },
+    {
+        "id": "5b2b3faa0f951452",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "d2e41f13fc10f35f",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Formato CSV",
+        "func": "let fecha = new Date().toLocaleString(\"es-CL\");\n\nlet estado = \"normal\";\nif (msg.payload.temperatura > 24 || msg.payload.humedad > 70) {\n    estado = \"alerta\";\n}\n\nmsg.payload = {\n    timestamp: fecha,\n    temperatura: msg.payload.temperatura,\n    humedad: msg.payload.humedad,\n    gas: msg.payload.gas,\n    estado_alerta: estado\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1260,
+        "wires": [
+            [
+                "3bf649e629ca8364"
+            ]
+        ]
+    },
+    {
+        "id": "3bf649e629ca8364",
+        "type": "csv",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "timestamp,temperatura,humedad,gas,estado_alerta",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 630,
+        "y": 1260,
+        "wires": [
+            [
+                "f2186967e6c01e5b"
+            ]
+        ]
+    },
+    {
+        "id": "f2186967e6c01e5b",
+        "type": "file",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "filename": "/data/registro_smarthome.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 870,
+        "y": 1260,
+        "wires": [
+            []
         ]
     }
 ]

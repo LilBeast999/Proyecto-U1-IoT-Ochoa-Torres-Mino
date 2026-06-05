@@ -5,9 +5,9 @@
 #include <Adafruit_SHT31.h>
 #include <LiquidCrystal.h>
 
-const char* ssid = "iot";
-const char* password = "password123";
-const char* mqtt_server = "192.168.137.253";
+const char* ssid = "Pc-gustavo";
+const char* password = "zapato123";
+const char* mqtt_server = "192.168.137.1";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -17,16 +17,22 @@ Adafruit_SHT31 sht30 = Adafruit_SHT31();
 
 const int pinGas = 34;
 const int pinMic = 35;
-// definicion del pin para el actuador de la cerradura
+// definicion de pines para actuadores
 const int pinLedCerradura = 4;
+const int pinLuzPatio = 12;
 
+// variables de temporizacion
 unsigned long ultimoEnvio = 0;
 unsigned long ultimoScroll = 0;
-// variable para capturar el instante en el que se abre la cerradura
 unsigned long tiempoApertura = 0;
+unsigned long inicioAlarma = 0;
+unsigned long ultimoCambioLuz = 0;
 
-// bandera para controlar el estado logico del led
+// banderas de estado logico
 bool cerraduraAbierta = false;
+bool alarmaActiva = false;
+bool estadoLuzPatio = false;
+bool luzPatioManual = false;
 
 String camaraRes = "Cam: Esperando...                "; 
 String textoSensores = "Iniciando sensores...                ";
@@ -41,14 +47,28 @@ void callback(char* topic, byte* payload, unsigned int length) {
   
   if (String(topic) == "smarthome/equipoXX/camara") {
     camaraRes = "Cam: " + mensaje + "                "; 
-    // se reinicia el scroll al recibir un mensaje nuevo
     scrollIndexCamara = 0; 
     
-    // logica de acceso: si el string no es "desconocido", "no_hay_rostro_visible" ni vacio, activa la salida
-    if (mensaje != "desconocido" && mensaje != "no_hay_rostro_visible" && mensaje.length() > 0) {
+    // activacion de actuadores segun reconocimiento facial
+    if (mensaje == "desconocido") {
+      alarmaActiva = true;
+      inicioAlarma = millis();
+    } else if (mensaje != "no_hay_rostro_visible" && mensaje.length() > 0) {
       digitalWrite(pinLedCerradura, HIGH);
       tiempoApertura = millis();
       cerraduraAbierta = true;
+    }
+  } else if (String(topic) == "smarthome/equipoXX/luz_manual") {
+    // control manual desde el dashboard anula temporalmente la alarma
+    alarmaActiva = false; 
+    if (mensaje == "1") {
+      luzPatioManual = true;
+      estadoLuzPatio = true;
+      digitalWrite(pinLuzPatio, HIGH);
+    } else if (mensaje == "0") {
+      luzPatioManual = false;
+      estadoLuzPatio = false;
+      digitalWrite(pinLuzPatio, LOW);
     }
   }
 }
@@ -57,6 +77,7 @@ void reconectar() {
   while (!client.connected()) {
     if (client.connect("ESP32_SmartHome")) {
       client.subscribe("smarthome/equipoXX/camara"); 
+      client.subscribe("smarthome/equipoXX/luz_manual");
     } else {
       delay(5000);
     }
@@ -67,9 +88,11 @@ void setup() {
   lcd.begin(16, 2);
   lcd.print("Conectando...");
 
-  // configuracion del pin de salida y su estado inicial por seguridad
+  // configuracion de pines y estado inicial seguro
   pinMode(pinLedCerradura, OUTPUT);
+  pinMode(pinLuzPatio, OUTPUT);
   digitalWrite(pinLedCerradura, LOW);
+  digitalWrite(pinLuzPatio, LOW);
 
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -89,12 +112,28 @@ void loop() {
   }
   client.loop();
 
-  // estructura condicional no bloqueante para apagar el led exactamente a los 4000 milisegundos
+  // temporizador para cerrar la puerta automaticamente
   if (cerraduraAbierta && (millis() - tiempoApertura >= 4000)) {
     digitalWrite(pinLedCerradura, LOW);
     cerraduraAbierta = false;
   }
 
+  // logica de parpadeo no bloqueante para intrusos
+  if (alarmaActiva) {
+    if (millis() - inicioAlarma >= 5000) {
+      // fin del parpadeo, se restaura el estado definido por el dashboard
+      alarmaActiva = false;
+      digitalWrite(pinLuzPatio, luzPatioManual ? HIGH : LOW);
+      estadoLuzPatio = luzPatioManual;
+    } else if (millis() - ultimoCambioLuz >= 250) {
+      // inversion del estado del led cada 250 ms
+      ultimoCambioLuz = millis();
+      estadoLuzPatio = !estadoLuzPatio;
+      digitalWrite(pinLuzPatio, estadoLuzPatio ? HIGH : LOW);
+    }
+  }
+
+  // control de pantalla lcd
   if (millis() - ultimoScroll > 400) {
     ultimoScroll = millis();
     
@@ -119,6 +158,7 @@ void loop() {
     }
   }
 
+  // lectura y transmision de sensores
   if (millis() - ultimoEnvio > 3000) {
     ultimoEnvio = millis();
 
