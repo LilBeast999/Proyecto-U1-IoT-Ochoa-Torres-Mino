@@ -1,0 +1,291 @@
+0 verbose cli /usr/local/bin/node /usr/src/node-red/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.16.0
+2 info using node@v24.16.0
+3 silly config load:file:/usr/src/node-red/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm remove @flowfuse/node-red-dashboard
+8 verbose argv "remove" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--" "@flowfuse/node-red-dashboard"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-17T17_14_14_080Z-
+10 verbose logfile /data/.npm/_logs/2026-06-17T17_14_14_080Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly reify mark retired [ '/data/node_modules/@babel/helper-string-parser' ]
+15 silly reify mark retired [ '/data/node_modules/@babel/helper-validator-identifier' ]
+16 silly reify mark retired [
+16 silly reify   '/data/node_modules/@babel/parser',
+16 silly reify   '/data/node_modules/.bin/parser'
+16 silly reify ]
+17 silly reify mark retired [ '/data/node_modules/@babel/types' ]
+18 silly reify mark retired [ '/data/node_modules/@flowfuse/node-red-dashboard' ]
+19 silly reify mark retired [ '/data/node_modules/@jridgewell/sourcemap-codec' ]
+20 silly reify mark retired [ '/data/node_modules/@vue/compiler-core' ]
+21 silly reify mark retired [ '/data/node_modules/@vue/compiler-dom' ]
+22 silly reify mark retired [ '/data/node_modules/@vue/compiler-sfc' ]
+23 silly reify mark retired [ '/data/node_modules/@vue/compiler-ssr' ]
+24 silly reify mark retired [ '/data/node_modules/@vue/reactivity' ]
+25 silly reify mark retired [ '/data/node_modules/@vue/runtime-core' ]
+26 silly reify mark retired [ '/data/node_modules/@vue/runtime-dom' ]
+27 silly reify mark retired [ '/data/node_modules/@vue/server-renderer' ]
+28 silly reify mark retired [ '/data/node_modules/@vue/shared' ]
+29 silly reify mark retired [ '/data/node_modules/acorn', '/data/node_modules/.bin/acorn' ]
+30 silly reify mark retired [ '/data/node_modules/axios' ]
+31 silly reify mark retired [ '/data/node_modules/commander' ]
+32 silly reify mark retired [ '/data/node_modules/csstype' ]
+33 silly reify mark retired [ '/data/node_modules/d3' ]
+34 silly reify mark retired [ '/data/node_modules/d3-array' ]
+35 silly reify mark retired [ '/data/node_modules/d3-axis' ]
+36 silly reify mark retired [ '/data/node_modules/d3-brush' ]
+37 silly reify mark retired [ '/data/node_modules/d3-chord' ]
+38 silly reify mark retired [ '/data/node_modules/d3-color' ]
+39 silly reify mark retired [ '/data/node_modules/d3-contour' ]
+40 silly reify mark retired [ '/data/node_modules/d3-delaunay' ]
+41 silly reify mark retired [ '/data/node_modules/d3-dispatch' ]
+42 silly reify mark retired [ '/data/node_modules/d3-drag' ]
+43 silly reify mark retired [
+43 silly reify   '/data/node_modules/d3-dsv',
+43 silly reify   '/data/node_modules/.bin/csv2json',
+43 silly reify   '/data/node_modules/.bin/csv2tsv',
+43 silly reify   '/data/node_modules/.bin/dsv2dsv',
+43 silly reify   '/data/node_modules/.bin/dsv2json',
+43 silly reify   '/data/node_modules/.bin/json2csv',
+43 silly reify   '/data/node_modules/.bin/json2dsv',
+43 silly reify   '/data/node_modules/.bin/json2tsv',
+43 silly reify   '/data/node_modules/.bin/tsv2csv',
+43 silly reify   '/data/node_modules/.bin/tsv2json'
+43 silly reify ]
+44 silly reify mark retired [ '/data/node_modules/d3-ease' ]
+45 silly reify mark retired [ '/data/node_modules/d3-fetch' ]
+46 silly reify mark retired [ '/data/node_modules/d3-force' ]
+47 silly reify mark retired [ '/data/node_modules/d3-format' ]
+48 silly reify mark retired [ '/data/node_modules/d3-geo' ]
+49 silly reify mark retired [ '/data/node_modules/d3-hierarchy' ]
+50 silly reify mark retired [ '/data/node_modules/d3-interpolate' ]
+51 silly reify mark retired [ '/data/node_modules/d3-path' ]
+52 silly reify mark retired [ '/data/node_modules/d3-polygon' ]
+53 silly reify mark retired [ '/data/node_modules/d3-quadtree' ]
+54 silly reify mark retired [ '/data/node_modules/d3-random' ]
+55 silly reify mark retired [ '/data/node_modules/d3-scale' ]
+56 silly reify mark retired [ '/data/node_modules/d3-scale-chromatic' ]
+57 silly reify mark retired [ '/data/node_modules/d3-selection' ]
+58 silly reify mark retired [ '/data/node_modules/d3-shape' ]
+59 silly reify mark retired [ '/data/node_modules/d3-time' ]
+60 silly reify mark retired [ '/data/node_modules/d3-time-format' ]
+61 silly reify mark retired [ '/data/node_modules/d3-timer' ]
+62 silly reify mark retired [ '/data/node_modules/d3-transition' ]
+63 silly reify mark retired [ '/data/node_modules/d3-zoom' ]
+64 silly reify mark retired [ '/data/node_modules/delaunator' ]
+65 silly reify mark retired [ '/data/node_modules/echarts' ]
+66 silly reify mark retired [ '/data/node_modules/entities' ]
+67 silly reify mark retired [
+67 silly reify   '/data/node_modules/escodegen',
+67 silly reify   '/data/node_modules/.bin/escodegen',
+67 silly reify   '/data/node_modules/.bin/esgenerate'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/data/node_modules/esprima',
+68 silly reify   '/data/node_modules/.bin/esparse',
+68 silly reify   '/data/node_modules/.bin/esvalidate'
+68 silly reify ]
+69 silly reify mark retired [ '/data/node_modules/estraverse' ]
+70 silly reify mark retired [ '/data/node_modules/estree-walker' ]
+71 silly reify mark retired [ '/data/node_modules/esutils' ]
+72 silly reify mark retired [ '/data/node_modules/follow-redirects' ]
+73 silly reify mark retired [ '/data/node_modules/internmap' ]
+74 silly reify mark retired [ '/data/node_modules/lodash.merge' ]
+75 silly reify mark retired [ '/data/node_modules/magic-string' ]
+76 silly reify mark retired [ '/data/node_modules/nanoid', '/data/node_modules/.bin/nanoid' ]
+77 silly reify mark retired [ '/data/node_modules/picocolors' ]
+78 silly reify mark retired [ '/data/node_modules/postcss' ]
+79 silly reify mark retired [ '/data/node_modules/proxy-from-env' ]
+80 silly reify mark retired [ '/data/node_modules/robust-predicates' ]
+81 silly reify mark retired [ '/data/node_modules/rw' ]
+82 silly reify mark retired [ '/data/node_modules/source-map' ]
+83 silly reify mark retired [ '/data/node_modules/source-map-js' ]
+84 silly reify mark retired [ '/data/node_modules/tslib' ]
+85 silly reify mark retired [ '/data/node_modules/vue' ]
+86 silly reify mark retired [ '/data/node_modules/zrender' ]
+87 silly reify moves {
+87 silly reify   '/data/node_modules/@babel/helper-string-parser': '/data/node_modules/@babel/.helper-string-parser-H4pVhzV5',
+87 silly reify   '/data/node_modules/@babel/helper-validator-identifier': '/data/node_modules/@babel/.helper-validator-identifier-65lMf8A3',
+87 silly reify   '/data/node_modules/@babel/parser': '/data/node_modules/@babel/.parser-6D3MqtRH',
+87 silly reify   '/data/node_modules/.bin/parser': '/data/node_modules/.bin/.parser-UyDbWgpa',
+87 silly reify   '/data/node_modules/@babel/types': '/data/node_modules/@babel/.types-5mqlBHXV',
+87 silly reify   '/data/node_modules/@flowfuse/node-red-dashboard': '/data/node_modules/@flowfuse/.node-red-dashboard-HpBEdVjM',
+87 silly reify   '/data/node_modules/@jridgewell/sourcemap-codec': '/data/node_modules/@jridgewell/.sourcemap-codec-IBcvRAu8',
+87 silly reify   '/data/node_modules/@vue/compiler-core': '/data/node_modules/@vue/.compiler-core-9Rz6pRsw',
+87 silly reify   '/data/node_modules/@vue/compiler-dom': '/data/node_modules/@vue/.compiler-dom-bUJ2EqeE',
+87 silly reify   '/data/node_modules/@vue/compiler-sfc': '/data/node_modules/@vue/.compiler-sfc-pMfrE6Dh',
+87 silly reify   '/data/node_modules/@vue/compiler-ssr': '/data/node_modules/@vue/.compiler-ssr-urKUMzSy',
+87 silly reify   '/data/node_modules/@vue/reactivity': '/data/node_modules/@vue/.reactivity-s4KBj6kB',
+87 silly reify   '/data/node_modules/@vue/runtime-core': '/data/node_modules/@vue/.runtime-core-vttDPbRo',
+87 silly reify   '/data/node_modules/@vue/runtime-dom': '/data/node_modules/@vue/.runtime-dom-E6fqLSVG',
+87 silly reify   '/data/node_modules/@vue/server-renderer': '/data/node_modules/@vue/.server-renderer-qG4eoyy7',
+87 silly reify   '/data/node_modules/@vue/shared': '/data/node_modules/@vue/.shared-9q1JFpPt',
+87 silly reify   '/data/node_modules/acorn': '/data/node_modules/.acorn-cD9ZHKC5',
+87 silly reify   '/data/node_modules/.bin/acorn': '/data/node_modules/.bin/.acorn-IivZOz2L',
+87 silly reify   '/data/node_modules/axios': '/data/node_modules/.axios-zQJ0VzMj',
+87 silly reify   '/data/node_modules/commander': '/data/node_modules/.commander-JPBnCpEB',
+87 silly reify   '/data/node_modules/csstype': '/data/node_modules/.csstype-CJPprcLF',
+87 silly reify   '/data/node_modules/d3': '/data/node_modules/.d3-PtxMI2rB',
+87 silly reify   '/data/node_modules/d3-array': '/data/node_modules/.d3-array-cyanlasS',
+87 silly reify   '/data/node_modules/d3-axis': '/data/node_modules/.d3-axis-2rHgsUhz',
+87 silly reify   '/data/node_modules/d3-brush': '/data/node_modules/.d3-brush-CTRfvIVh',
+87 silly reify   '/data/node_modules/d3-chord': '/data/node_modules/.d3-chord-2W4Tr5Gv',
+87 silly reify   '/data/node_modules/d3-color': '/data/node_modules/.d3-color-WWZlF53W',
+87 silly reify   '/data/node_modules/d3-contour': '/data/node_modules/.d3-contour-kSLfHwC2',
+87 silly reify   '/data/node_modules/d3-delaunay': '/data/node_modules/.d3-delaunay-9OyMtdEe',
+87 silly reify   '/data/node_modules/d3-dispatch': '/data/node_modules/.d3-dispatch-d3VZxrKa',
+87 silly reify   '/data/node_modules/d3-drag': '/data/node_modules/.d3-drag-R7GfRdhM',
+87 silly reify   '/data/node_modules/d3-dsv': '/data/node_modules/.d3-dsv-7O7b77Ae',
+87 silly reify   '/data/node_modules/.bin/csv2json': '/data/node_modules/.bin/.csv2json-CdoZDnv3',
+87 silly reify   '/data/node_modules/.bin/csv2tsv': '/data/node_modules/.bin/.csv2tsv-bNrbqRVg',
+87 silly reify   '/data/node_modules/.bin/dsv2dsv': '/data/node_modules/.bin/.dsv2dsv-RcwMrmHn',
+87 silly reify   '/data/node_modules/.bin/dsv2json': '/data/node_modules/.bin/.dsv2json-6tBb1aWr',
+87 silly reify   '/data/node_modules/.bin/json2csv': '/data/node_modules/.bin/.json2csv-JflRnriJ',
+87 silly reify   '/data/node_modules/.bin/json2dsv': '/data/node_modules/.bin/.json2dsv-maUOkfUP',
+87 silly reify   '/data/node_modules/.bin/json2tsv': '/data/node_modules/.bin/.json2tsv-PTwT1YUD',
+87 silly reify   '/data/node_modules/.bin/tsv2csv': '/data/node_modules/.bin/.tsv2csv-uOou8dyg',
+87 silly reify   '/data/node_modules/.bin/tsv2json': '/data/node_modules/.bin/.tsv2json-KWXiEzMp',
+87 silly reify   '/data/node_modules/d3-ease': '/data/node_modules/.d3-ease-8ogq86FN',
+87 silly reify   '/data/node_modules/d3-fetch': '/data/node_modules/.d3-fetch-hOB33yBu',
+87 silly reify   '/data/node_modules/d3-force': '/data/node_modules/.d3-force-xZTRwq6s',
+87 silly reify   '/data/node_modules/d3-format': '/data/node_modules/.d3-format-2XYpF0OY',
+87 silly reify   '/data/node_modules/d3-geo': '/data/node_modules/.d3-geo-sfPzWXzB',
+87 silly reify   '/data/node_modules/d3-hierarchy': '/data/node_modules/.d3-hierarchy-KwD0RPRe',
+87 silly reify   '/data/node_modules/d3-interpolate': '/data/node_modules/.d3-interpolate-8YPTwBTF',
+87 silly reify   '/data/node_modules/d3-path': '/data/node_modules/.d3-path-0pUCjy56',
+87 silly reify   '/data/node_modules/d3-polygon': '/data/node_modules/.d3-polygon-HQQqf9el',
+87 silly reify   '/data/node_modules/d3-quadtree': '/data/node_modules/.d3-quadtree-roQ9uwY9',
+87 silly reify   '/data/node_modules/d3-random': '/data/node_modules/.d3-random-9ymtpWLd',
+87 silly reify   '/data/node_modules/d3-scale': '/data/node_modules/.d3-scale-2ccY3aYX',
+87 silly reify   '/data/node_modules/d3-scale-chromatic': '/data/node_modules/.d3-scale-chromatic-PfxK3LtN',
+87 silly reify   '/data/node_modules/d3-selection': '/data/node_modules/.d3-selection-bLHu2fuF',
+87 silly reify   '/data/node_modules/d3-shape': '/data/node_modules/.d3-shape-B2RXypy1',
+87 silly reify   '/data/node_modules/d3-time': '/data/node_modules/.d3-time-w4nacAnj',
+87 silly reify   '/data/node_modules/d3-time-format': '/data/node_modules/.d3-time-format-NMG9ICBv',
+87 silly reify   '/data/node_modules/d3-timer': '/data/node_modules/.d3-timer-puAqLrFC',
+87 silly reify   '/data/node_modules/d3-transition': '/data/node_modules/.d3-transition-XIckfYaB',
+87 silly reify   '/data/node_modules/d3-zoom': '/data/node_modules/.d3-zoom-NXMD6dhp',
+87 silly reify   '/data/node_modules/delaunator': '/data/node_modules/.delaunator-EGDj4RIE',
+87 silly reify   '/data/node_modules/echarts': '/data/node_modules/.echarts-gGWDy3dr',
+87 silly reify   '/data/node_modules/entities': '/data/node_modules/.entities-3aUmZoHF',
+87 silly reify   '/data/node_modules/escodegen': '/data/node_modules/.escodegen-o5zuiV0h',
+87 silly reify   '/data/node_modules/.bin/escodegen': '/data/node_modules/.bin/.escodegen-bwYuGNG6',
+87 silly reify   '/data/node_modules/.bin/esgenerate': '/data/node_modules/.bin/.esgenerate-TXIYPEWl',
+87 silly reify   '/data/node_modules/esprima': '/data/node_modules/.esprima-L6qq6aLG',
+87 silly reify   '/data/node_modules/.bin/esparse': '/data/node_modules/.bin/.esparse-ezVhmHLC',
+87 silly reify   '/data/node_modules/.bin/esvalidate': '/data/node_modules/.bin/.esvalidate-keH9Df9E',
+87 silly reify   '/data/node_modules/estraverse': '/data/node_modules/.estraverse-w5bm9D9w',
+87 silly reify   '/data/node_modules/estree-walker': '/data/node_modules/.estree-walker-PyzuUCMp',
+87 silly reify   '/data/node_modules/esutils': '/data/node_modules/.esutils-e4OmO6ys',
+87 silly reify   '/data/node_modules/follow-redirects': '/data/node_modules/.follow-redirects-A0Z0RHjx',
+87 silly reify   '/data/node_modules/internmap': '/data/node_modules/.internmap-3cJqWjsz',
+87 silly reify   '/data/node_modules/lodash.merge': '/data/node_modules/.lodash.merge-WOIDhrPf',
+87 silly reify   '/data/node_modules/magic-string': '/data/node_modules/.magic-string-quibwSs4',
+87 silly reify   '/data/node_modules/nanoid': '/data/node_modules/.nanoid-L9UPicAa',
+87 silly reify   '/data/node_modules/.bin/nanoid': '/data/node_modules/.bin/.nanoid-fNP0g3Ds',
+87 silly reify   '/data/node_modules/picocolors': '/data/node_modules/.picocolors-xFAis9xc',
+87 silly reify   '/data/node_modules/postcss': '/data/node_modules/.postcss-7W5anpNd',
+87 silly reify   '/data/node_modules/proxy-from-env': '/data/node_modules/.proxy-from-env-QIsPg7Bq',
+87 silly reify   '/data/node_modules/robust-predicates': '/data/node_modules/.robust-predicates-6fszSb6o',
+87 silly reify   '/data/node_modules/rw': '/data/node_modules/.rw-Ms8fp9d4',
+87 silly reify   '/data/node_modules/source-map': '/data/node_modules/.source-map-pKl1iUwT',
+87 silly reify   '/data/node_modules/source-map-js': '/data/node_modules/.source-map-js-domxs7k0',
+87 silly reify   '/data/node_modules/tslib': '/data/node_modules/.tslib-6LOZ5WH5',
+87 silly reify   '/data/node_modules/vue': '/data/node_modules/.vue-i4YtCCd3',
+87 silly reify   '/data/node_modules/zrender': '/data/node_modules/.zrender-ADbQtB0s'
+87 silly reify }
+88 silly REMOVE node_modules/zrender
+89 silly REMOVE node_modules/vue
+90 silly REMOVE node_modules/tslib
+91 silly REMOVE node_modules/source-map-js
+92 silly REMOVE node_modules/source-map
+93 silly REMOVE node_modules/rw
+94 silly REMOVE node_modules/robust-predicates
+95 silly REMOVE node_modules/proxy-from-env
+96 silly REMOVE node_modules/postcss
+97 silly REMOVE node_modules/picocolors
+98 silly REMOVE node_modules/nanoid
+99 silly REMOVE node_modules/magic-string
+100 silly REMOVE node_modules/lodash.merge
+101 silly REMOVE node_modules/internmap
+102 silly REMOVE node_modules/follow-redirects
+103 silly REMOVE node_modules/esutils
+104 silly REMOVE node_modules/estree-walker
+105 silly REMOVE node_modules/estraverse
+106 silly REMOVE node_modules/esprima
+107 silly REMOVE node_modules/escodegen
+108 silly REMOVE node_modules/entities
+109 silly REMOVE node_modules/echarts
+110 silly REMOVE node_modules/delaunator
+111 silly REMOVE node_modules/d3-zoom
+112 silly REMOVE node_modules/d3-transition
+113 silly REMOVE node_modules/d3-timer
+114 silly REMOVE node_modules/d3-time-format
+115 silly REMOVE node_modules/d3-time
+116 silly REMOVE node_modules/d3-shape
+117 silly REMOVE node_modules/d3-selection
+118 silly REMOVE node_modules/d3-scale-chromatic
+119 silly REMOVE node_modules/d3-scale
+120 silly REMOVE node_modules/d3-random
+121 silly REMOVE node_modules/d3-quadtree
+122 silly REMOVE node_modules/d3-polygon
+123 silly REMOVE node_modules/d3-path
+124 silly REMOVE node_modules/d3-interpolate
+125 silly REMOVE node_modules/d3-hierarchy
+126 silly REMOVE node_modules/d3-geo
+127 silly REMOVE node_modules/d3-format
+128 silly REMOVE node_modules/d3-force
+129 silly REMOVE node_modules/d3-fetch
+130 silly REMOVE node_modules/d3-ease
+131 silly REMOVE node_modules/d3-dsv
+132 silly REMOVE node_modules/d3-dsv/node_modules/iconv-lite
+133 silly REMOVE node_modules/d3-drag
+134 silly REMOVE node_modules/d3-dispatch
+135 silly REMOVE node_modules/d3-delaunay
+136 silly REMOVE node_modules/d3-contour
+137 silly REMOVE node_modules/d3-color
+138 silly REMOVE node_modules/d3-chord
+139 silly REMOVE node_modules/d3-brush
+140 silly REMOVE node_modules/d3-axis
+141 silly REMOVE node_modules/d3-array
+142 silly REMOVE node_modules/d3
+143 silly REMOVE node_modules/csstype
+144 silly REMOVE node_modules/commander
+145 silly REMOVE node_modules/axios
+146 silly REMOVE node_modules/axios/node_modules/ms
+147 silly REMOVE node_modules/axios/node_modules/https-proxy-agent
+148 silly REMOVE node_modules/axios/node_modules/debug
+149 silly REMOVE node_modules/axios/node_modules/agent-base
+150 silly REMOVE node_modules/acorn
+151 silly REMOVE node_modules/@vue/shared
+152 silly REMOVE node_modules/@vue/server-renderer
+153 silly REMOVE node_modules/@vue/runtime-dom
+154 silly REMOVE node_modules/@vue/runtime-core
+155 silly REMOVE node_modules/@vue/reactivity
+156 silly REMOVE node_modules/@vue/compiler-ssr
+157 silly REMOVE node_modules/@vue/compiler-sfc
+158 silly REMOVE node_modules/@vue/compiler-dom
+159 silly REMOVE node_modules/@vue/compiler-core
+160 silly REMOVE node_modules/@jridgewell/sourcemap-codec
+161 silly REMOVE node_modules/@flowfuse/node-red-dashboard
+162 silly REMOVE node_modules/@babel/types
+163 silly REMOVE node_modules/@babel/parser
+164 silly REMOVE node_modules/@babel/helper-validator-identifier
+165 silly REMOVE node_modules/@babel/helper-string-parser
+166 warn allow-scripts 4 packages have install scripts not yet covered by allowScripts:
+166 warn allow-scripts   @tensorflow/tfjs-node@3.21.1 (install: node-gyp rebuild)
+166 warn allow-scripts   core-js@3.49.0 (install: (install scripts present))
+166 warn allow-scripts   node-red-contrib-tfjs-coco-ssd@1.0.6 (install: (install scripts present))
+166 warn allow-scripts   node-red-dashboard@3.6.6 (install: (install scripts present))
+166 warn allow-scripts
+166 warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+167 verbose cwd /data
+168 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+169 verbose node v24.16.0
+170 verbose npm  v11.16.0
+171 verbose exit 0
+172 info ok

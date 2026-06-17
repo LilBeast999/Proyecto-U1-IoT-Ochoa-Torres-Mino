@@ -1,0 +1,33 @@
+0 verbose cli /usr/local/bin/node /usr/src/node-red/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.16.0
+2 info using node@v24.16.0
+3 silly config load:file:/usr/src/node-red/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install node-red-dashboard@3.6.6
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "--" "node-red-dashboard@3.6.6"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-17T17_14_37_824Z-
+10 verbose logfile /data/.npm/_logs/2026-06-17T17_14_37_824Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest node-red-dashboard@3.6.6
+15 silly packumentCache full:https://registry.npmjs.org/node-red-dashboard cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/node-red-dashboard 604ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/node-red-dashboard set size:549868 disposed:false
+18 silly placeDep ROOT node-red-dashboard@3.6.6 REPLACE for: node-red-project@0.0.1 want: 3.6.6
+19 silly reify moves {}
+20 warn allow-scripts 4 packages have install scripts not yet covered by allowScripts:
+20 warn allow-scripts   @tensorflow/tfjs-node@3.21.1 (install: node-gyp rebuild)
+20 warn allow-scripts   core-js@3.49.0 (install: (install scripts present))
+20 warn allow-scripts   node-red-contrib-tfjs-coco-ssd@1.0.6 (install: (install scripts present))
+20 warn allow-scripts   node-red-dashboard@3.6.6 (postinstall: node fixgrid.js)
+20 warn allow-scripts
+20 warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+21 verbose cwd /data
+22 verbose os Linux 6.6.87.2-microsoft-standard-WSL2
+23 verbose node v24.16.0
+24 verbose npm  v11.16.0
+25 verbose exit 0
+26 info ok

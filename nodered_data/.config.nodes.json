@@ -1,7 +1,7 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "4.1.10",
+        "version": "5.0.0",
         "local": false,
         "user": false,
         "nodes": {
@@ -446,6 +446,25 @@
             }
         }
     },
+    "node-red-contrib-image-output": {
+        "name": "node-red-contrib-image-output",
+        "version": "0.6.4",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "image": {
+                "name": "image",
+                "types": [
+                    "image"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-image-output",
+                "file": "/data/node_modules/node-red-contrib-image-output/image/image.js"
+            }
+        }
+    },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
         "version": "3.6.6",
@@ -682,25 +701,6 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "/data/node_modules/node-red-dashboard/nodes/ui_spacer.js"
-            }
-        }
-    },
-    "node-red-contrib-image-output": {
-        "name": "node-red-contrib-image-output",
-        "version": "0.6.4",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "image": {
-                "name": "image",
-                "types": [
-                    "image"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-image-output",
-                "file": "/data/node_modules/node-red-contrib-image-output/image/image.js"
             }
         }
     }
