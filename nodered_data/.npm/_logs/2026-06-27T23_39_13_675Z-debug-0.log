@@ -1,0 +1,153 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v18.20.8
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install node-red-contrib-coap@0.8.0
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "node-red-contrib-coap@0.8.0"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-27T23_39_13_675Z-
+10 verbose logfile /data/.npm/_logs/2026-06-27T23_39_13_675Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest node-red-contrib-coap@0.8.0
+16 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-coap cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-coap 855ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-coap set size:54666 disposed:false
+19 silly placeDep ROOT node-red-contrib-coap@0.8.0 OK for: node-red-project@0.0.1 want: 0.8.0
+20 silly fetch manifest cbor@^8.1.0
+21 silly packumentCache full:https://registry.npmjs.org/cbor cache-miss
+22 silly fetch manifest coap@^1.0.5
+23 silly packumentCache full:https://registry.npmjs.org/coap cache-miss
+24 silly fetch manifest h5.linkformat@0.0.0
+25 silly packumentCache full:https://registry.npmjs.org/h5.linkformat cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/coap 291ms (cache revalidated)
+27 silly packumentCache full:https://registry.npmjs.org/coap set size:181704 disposed:false
+28 http fetch GET 200 https://registry.npmjs.org/cbor 324ms (cache revalidated)
+29 silly packumentCache full:https://registry.npmjs.org/cbor set size:204729 disposed:false
+30 http fetch GET 200 https://registry.npmjs.org/h5.linkformat 461ms (cache revalidated)
+31 silly packumentCache full:https://registry.npmjs.org/h5.linkformat set size:14414 disposed:false
+32 silly placeDep ROOT cbor@8.1.0 OK for: node-red-contrib-coap@0.8.0 want: ^8.1.0
+33 silly placeDep ROOT coap@1.5.0 OK for: node-red-contrib-coap@0.8.0 want: ^1.0.5
+34 silly placeDep ROOT h5.linkformat@0.0.0 OK for: node-red-contrib-coap@0.8.0 want: 0.0.0
+35 silly fetch manifest nofilter@^3.1.0
+36 silly packumentCache full:https://registry.npmjs.org/nofilter cache-miss
+37 silly fetch manifest bl@^6.0.12
+38 silly packumentCache full:https://registry.npmjs.org/bl cache-miss
+39 silly fetch manifest @types/readable-stream@^4.0.14
+40 silly packumentCache full:https://registry.npmjs.org/@types%2freadable-stream cache-miss
+41 silly fetch manifest capitalize@^2.0.4
+42 silly packumentCache full:https://registry.npmjs.org/capitalize cache-miss
+43 silly fetch manifest coap-packet@^1.1.1
+44 silly packumentCache full:https://registry.npmjs.org/coap-packet cache-miss
+45 silly fetch manifest debug@^4.3.5
+46 silly packumentCache full:https://registry.npmjs.org/debug cache-miss
+47 silly fetch manifest fastseries@^2.0.0
+48 silly packumentCache full:https://registry.npmjs.org/fastseries cache-miss
+49 silly fetch manifest lru-cache@^11.0.2
+50 silly packumentCache full:https://registry.npmjs.org/lru-cache cache-miss
+51 silly fetch manifest readable-stream@^4.5.2
+52 silly packumentCache full:https://registry.npmjs.org/readable-stream cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/nofilter 246ms (cache revalidated)
+54 silly packumentCache full:https://registry.npmjs.org/nofilter set size:83253 disposed:false
+55 http fetch GET 200 https://registry.npmjs.org/bl 248ms (cache revalidated)
+56 silly packumentCache full:https://registry.npmjs.org/bl set size:206789 disposed:false
+57 http fetch GET 200 https://registry.npmjs.org/fastseries 435ms (cache revalidated)
+58 silly packumentCache full:https://registry.npmjs.org/fastseries set size:33162 disposed:false
+59 http fetch GET 200 https://registry.npmjs.org/debug 440ms (cache revalidated)
+60 silly packumentCache full:https://registry.npmjs.org/debug set size:195840 disposed:false
+61 http fetch GET 200 https://registry.npmjs.org/lru-cache 442ms (cache revalidated)
+62 silly packumentCache full:https://registry.npmjs.org/lru-cache set size:456196 disposed:false
+63 http fetch GET 200 https://registry.npmjs.org/readable-stream 448ms (cache revalidated)
+64 silly packumentCache full:https://registry.npmjs.org/readable-stream set size:261096 disposed:false
+65 http fetch GET 200 https://registry.npmjs.org/coap-packet 540ms (cache revalidated)
+66 silly packumentCache full:https://registry.npmjs.org/coap-packet set size:33231 disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/capitalize 544ms (cache revalidated)
+68 silly packumentCache full:https://registry.npmjs.org/capitalize set size:35889 disposed:false
+69 http fetch GET 200 https://registry.npmjs.org/@types%2freadable-stream 723ms (cache revalidated)
+70 silly packumentCache full:https://registry.npmjs.org/@types%2freadable-stream set size:81253 disposed:false
+71 silly placeDep ROOT nofilter@3.1.0 OK for: cbor@8.1.0 want: ^3.1.0
+72 silly placeDep ROOT @types/readable-stream@4.0.23 OK for: coap@1.5.0 want: ^4.0.14
+73 silly placeDep ROOT bl@6.1.6 OK for: coap@1.5.0 want: ^6.0.12
+74 silly placeDep ROOT capitalize@2.0.4 OK for: coap@1.5.0 want: ^2.0.4
+75 silly placeDep ROOT coap-packet@1.1.1 OK for: coap@1.5.0 want: ^1.1.1
+76 silly placeDep node_modules/coap debug@4.4.3 OK for: coap@1.5.0 want: ^4.3.5
+77 silly placeDep ROOT fastseries@2.0.0 OK for: coap@1.5.0 want: ^2.0.0
+78 silly placeDep ROOT lru-cache@11.5.1 OK for: coap@1.5.0 want: ^11.0.2
+79 silly placeDep node_modules/coap readable-stream@4.7.0 OK for: coap@1.5.0 want: ^4.5.2
+80 silly fetch manifest buffer@^6.0.3
+81 silly packumentCache full:https://registry.npmjs.org/buffer cache-miss
+82 silly fetch manifest readable-stream@^4.2.0
+83 silly packumentCache full:https://registry.npmjs.org/readable-stream cache-hit
+84 silly fetch manifest ms@^2.1.3
+85 silly packumentCache full:https://registry.npmjs.org/ms cache-miss
+86 silly fetch manifest abort-controller@^3.0.0
+87 silly packumentCache full:https://registry.npmjs.org/abort-controller cache-miss
+88 silly fetch manifest buffer@^6.0.3
+89 silly packumentCache full:https://registry.npmjs.org/buffer cache-miss
+90 silly fetch manifest events@^3.3.0
+91 silly packumentCache full:https://registry.npmjs.org/events cache-miss
+92 silly fetch manifest process@^0.11.10
+93 silly packumentCache full:https://registry.npmjs.org/process cache-miss
+94 http fetch GET 200 https://registry.npmjs.org/events 227ms (cache revalidated)
+95 silly packumentCache full:https://registry.npmjs.org/events set size:35240 disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/buffer 233ms (cache revalidated)
+97 silly packumentCache full:https://registry.npmjs.org/buffer set size:280480 disposed:false
+98 http fetch GET 200 https://registry.npmjs.org/ms 240ms (cache revalidated)
+99 silly packumentCache full:https://registry.npmjs.org/ms set size:92208 disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/buffer 245ms (cache revalidated)
+101 silly packumentCache full:https://registry.npmjs.org/buffer set size:280480 disposed:false
+102 silly packumentCache full:https://registry.npmjs.org/buffer dispose
+103 http fetch GET 200 https://registry.npmjs.org/abort-controller 247ms (cache revalidated)
+104 silly packumentCache full:https://registry.npmjs.org/abort-controller set size:47272 disposed:false
+105 http fetch GET 200 https://registry.npmjs.org/process 247ms (cache revalidated)
+106 silly packumentCache full:https://registry.npmjs.org/process set size:31260 disposed:false
+107 silly placeDep ROOT buffer@6.0.3 OK for: bl@6.1.6 want: ^6.0.3
+108 silly placeDep node_modules/bl readable-stream@4.7.0 OK for: bl@6.1.6 want: ^4.2.0
+109 silly fetch manifest base64-js@^1.3.1
+110 silly packumentCache full:https://registry.npmjs.org/base64-js cache-miss
+111 silly fetch manifest ieee754@^1.2.1
+112 silly packumentCache full:https://registry.npmjs.org/ieee754 cache-miss
+113 http fetch GET 200 https://registry.npmjs.org/base64-js 123ms (cache revalidated)
+114 silly packumentCache full:https://registry.npmjs.org/base64-js set size:41270 disposed:false
+115 http fetch GET 200 https://registry.npmjs.org/ieee754 124ms (cache revalidated)
+116 silly packumentCache full:https://registry.npmjs.org/ieee754 set size:34910 disposed:false
+117 silly placeDep ROOT base64-js@1.5.1 OK for: buffer@6.0.3 want: ^1.3.1
+118 silly placeDep ROOT ieee754@1.2.1 OK for: buffer@6.0.3 want: ^1.2.1
+119 silly placeDep ROOT abort-controller@3.0.0 OK for: readable-stream@4.7.0 want: ^3.0.0
+120 silly placeDep ROOT events@3.3.0 OK for: readable-stream@4.7.0 want: ^3.3.0
+121 silly placeDep ROOT process@0.11.10 OK for: readable-stream@4.7.0 want: ^0.11.10
+122 silly fetch manifest event-target-shim@^5.0.0
+123 silly packumentCache full:https://registry.npmjs.org/event-target-shim cache-miss
+124 http fetch GET 200 https://registry.npmjs.org/event-target-shim 83ms (cache revalidated)
+125 silly packumentCache full:https://registry.npmjs.org/event-target-shim set size:103601 disposed:false
+126 silly placeDep ROOT event-target-shim@5.0.1 OK for: abort-controller@3.0.0 want: ^5.0.0
+127 silly placeDep node_modules/coap ms@2.1.3 OK for: debug@4.4.3 want: ^2.1.3
+128 verbose stack Error: Unsupported engine
+128 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/lib/index.js:14:25)
+128 verbose stack     at #checkEngineAndPlatform (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:198:11)
+128 verbose stack     at Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:184:41)
+128 verbose stack     at async Promise.all (index 1)
+128 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:131:5)
+128 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+128 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+128 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+129 verbose pkgid lru-cache@11.5.1
+130 error code EBADENGINE
+131 error engine Unsupported engine
+132 error engine Not compatible with your version of node/npm: lru-cache@11.5.1
+133 error notsup Not compatible with your version of node/npm: lru-cache@11.5.1
+133 error notsup Required: {"node":"20 || >=22"}
+133 error notsup Actual:   {"npm":"10.8.2","node":"v18.20.8"}
+134 silly unfinished npm timer reify 1782603554066
+135 silly unfinished npm timer reify:loadTrees 1782603554070
+136 verbose cwd /data
+137 verbose os Linux 5.15.153.1-microsoft-standard-WSL2
+138 verbose node v18.20.8
+139 verbose npm  v10.8.2
+140 verbose exit 1
+141 verbose code 1
+142 error A complete log of this run can be found in: /data/.npm/_logs/2026-06-27T23_39_13_675Z-debug-0.log

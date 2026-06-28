@@ -1,0 +1,34 @@
+0 verbose cli /usr/local/bin/node /usr/src/node-red/node_modules/npm/bin/npm-cli.js
+1 info using npm@11.16.0
+2 info using node@v24.16.0
+3 silly config load:file:/usr/src/node-red/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install node-red-contrib-image-output@0.6.4
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "--" "node-red-contrib-image-output@0.6.4"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-27T21_52_18_863Z-
+10 verbose logfile /data/.npm/_logs/2026-06-27T21_52_18_863Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest node-red-contrib-image-output@0.6.4
+16 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-image-output cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-image-output 789ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-image-output set size:53053 disposed:false
+19 silly placeDep ROOT node-red-contrib-image-output@0.6.4 REPLACE for: node-red-project@0.0.1 want: 0.6.4
+20 silly reify moves {}
+21 warn allow-scripts 4 packages have install scripts not yet covered by allowScripts:
+21 warn allow-scripts   @tensorflow/tfjs-node@3.21.1 (install: node-gyp rebuild)
+21 warn allow-scripts   core-js@3.49.0 (install: (install scripts present))
+21 warn allow-scripts   node-red-contrib-tfjs-coco-ssd@1.0.6 (install: (install scripts present))
+21 warn allow-scripts   node-red-dashboard@3.6.6 (install: (install scripts present))
+21 warn allow-scripts
+21 warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+22 verbose cwd /data
+23 verbose os Linux 5.15.153.1-microsoft-standard-WSL2
+24 verbose node v24.16.0
+25 verbose npm  v11.16.0
+26 verbose exit 0
+27 info ok

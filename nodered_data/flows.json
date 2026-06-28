@@ -8,37 +8,6 @@
         "env": []
     },
     {
-        "id": "1aace3cbeb0d6dfd",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "mosquitto",
-        "port": 1883,
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": 60,
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "03c03abb95d94b96",
         "type": "ui_tab",
         "name": "Controles",
@@ -205,6 +174,52 @@
         "height": 1
     },
     {
+        "id": "bc3f599b66574fb1",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "1aace3cbeb0d6dfd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "8883",
+        "tls": "bc3f599b66574fb1",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
         "id": "4f2d7218ecbbaae2",
         "type": "http in",
         "z": "cba3b38867a78e6d",
@@ -212,7 +227,6 @@
         "url": "/upload-image",
         "method": "post",
         "upload": false,
-        "skipBodyParsing": false,
         "swaggerDoc": "",
         "x": 110,
         "y": 260,
@@ -439,7 +453,8 @@
                 "d596676ac93f72a7",
                 "d5b835194dcfbe6f",
                 "7ede61f1787cfab7",
-                "d2e41f13fc10f35f"
+                "d2e41f13fc10f35f",
+                "3e44dcb9af3ce6e7"
             ]
         ]
     },
@@ -1342,5 +1357,331 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "659f7415a20c0df5",
+        "type": "inject",
+        "z": "cba3b38867a78e6d",
+        "name": "Coa gas",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "1ff9e5cf7c395576"
+            ]
+        ]
+    },
+    {
+        "id": "1ff9e5cf7c395576",
+        "type": "coap request",
+        "z": "cba3b38867a78e6d",
+        "method": "GET",
+        "confirmable": true,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://192.168.137.50:5683/gas",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "",
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "60e3bb2d4ca7ae48"
+            ]
+        ]
+    },
+    {
+        "id": "60e3bb2d4ca7ae48",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$string(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 540,
+        "wires": [
+            [
+                "4f6082eb2d84ec14",
+                "0d3e1c0d8109aea8"
+            ]
+        ]
+    },
+    {
+        "id": "4f6082eb2d84ec14",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/gas_coap",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 830,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0d3e1c0d8109aea8",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3e44dcb9af3ce6e7",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "guadar estado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "estado",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecd044fb87013bd0",
+        "type": "inject",
+        "z": "cba3b38867a78e6d",
+        "name": "LLM cada 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 1340,
+        "wires": [
+            [
+                "ce9c60e3f7b45672"
+            ]
+        ]
+    },
+    {
+        "id": "ce9c60e3f7b45672",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Construir prompt",
+        "func": "let e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n             `gas=${e.gas ?? 'NA'} (rango 0-4095), microfono=${e.microfono ?? 'NA'}, ` +\n             `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el sistema de control de una casa inteligente. Clasifica el nivel de alerta comparando los numeros de gas y temperatura.\n\nREGLAS:\n- critico: gas mayor que 2500 O temperatura mayor que 40\n- advertencia: gas mayor que 1800 pero no critico\n- normal: cualquier otro caso\n\nEJEMPLOS:\n- gas=3200 => critico (3200 > 2500)\n- gas=2600 => critico (2600 > 2500)\n- gas=2000 => advertencia (2000 > 1800 y <= 2500)\n- gas=1500 => normal\n- temperatura=45 => critico\n\nACCIONES: critico => activar_led=true, activar_buzzer=true. advertencia => activar_led=true, activar_buzzer=false. normal => ambos false.\n\nEstado actual: ${estado}.\n\nResponde UNICAMENTE en JSON, sin texto adicional:\n{\"nivel_alerta\":\"...\",\"activar_led\":false,\"activar_buzzer\":false,\"mensaje_alerta\":\"texto breve\",\"razonamiento\":\"explica que regla aplicaste\"}`;\n\nmsg.payload = {\n    model: 'llama3.2:3b', prompt: prompt, stream: false, format: 'json',\n    keep_alive: -1, options: { temperature: 0, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 1420,
+        "wires": [
+            [
+                "2c5efe22f51c212a"
+            ]
+        ]
+    },
+    {
+        "id": "2c5efe22f51c212a",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Ollama",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 240,
+        "y": 1500,
+        "wires": [
+            [
+                "01de07af338cfdf9",
+                "dc338203c680796d"
+            ]
+        ]
+    },
+    {
+        "id": "01de07af338cfdf9",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "dc338203c680796d",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "parsear decisión",
+        "func": "let raw = msg.payload && msg.payload.response;\nlet dec;\ntry {\n    dec = JSON.parse(raw);\n    // valida que el LLM devolvio algo usable\n    if (typeof dec.activar_led === 'undefined' || typeof dec.activar_buzzer === 'undefined'\n        || !['normal','advertencia','critico'].includes(dec.nivel_alerta)) {\n        throw new Error('respuesta incompleta');\n    }\n} catch (err) {\n    // FALLBACK: solo si el LLM no responde o el JSON es invalido\n    node.warn('LLM no disponible/JSON invalido, fallback por regla: ' + raw);\n    let e = flow.get('estado') || {};\n    let gas = Number(e.gas) || 0, temp = Number(e.temperatura) || 0;\n    let critico = (gas > 2500) || (temp > 40), adv = (gas > 1800);\n    dec = {\n        nivel_alerta: critico ? 'critico' : (adv ? 'advertencia' : 'normal'),\n        activar_led: critico || adv, activar_buzzer: critico,\n        mensaje_alerta: 'Decision por regla (LLM no disponible)', razonamiento: 'fallback'\n    };\n}\n\nlet luz      = { topic: 'smarthome/equipoXX/luz_manual',     payload: dec.activar_led    ? '1' : '0' };\nlet buz      = { topic: 'smarthome/equipoXX/control/buzzer', payload: dec.activar_buzzer ? '1' : '0' };\nlet decision = { topic: 'smarthome/equipoXX/llm/decision',   payload: JSON.stringify(dec) };\nlet dbg      = { payload: dec };\nreturn [luz, buz, decision, dbg];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 1500,
+        "wires": [
+            [
+                "556bb722f54cc596",
+                "c788355120e1e3ee"
+            ],
+            [
+                "703e9b44288eb716"
+            ],
+            [
+                "ba726e49a19a3474"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ba726e49a19a3474",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/llm/decision",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 800,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "703e9b44288eb716",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/control/buzzer",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 810,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "556bb722f54cc596",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 800,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "c788355120e1e3ee",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1380,
+        "wires": []
     }
 ]

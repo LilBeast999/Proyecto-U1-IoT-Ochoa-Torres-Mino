@@ -33,7 +33,8 @@
                                 "help",
                                 "config",
                                 "context",
-                                "dashboard-2.0"
+                                "dashboard-2.0",
+                                "dashboard"
                             ],
                             "height": 306,
                             "hidden": false,

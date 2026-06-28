@@ -1,0 +1,739 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v18.20.7
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @tensorflow/tfjs-node
+8 verbose argv "install" "@tensorflow/tfjs-node"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-27T22_01_43_095Z-
+10 verbose logfile /data/.npm/_logs/2026-06-27T22_01_43_095Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest @tensorflow/tfjs-node@*
+16 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-node cache-miss
+17 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+18 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-node 1525ms (cache revalidated)
+19 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-node set size:706263 disposed:false
+20 silly placeDep ROOT @tensorflow/tfjs-node@4.22.0 REPLACE for: node-red-project@0.0.1 want: *
+21 silly fetch manifest tar@^6.2.1
+22 silly packumentCache full:https://registry.npmjs.org/tar cache-miss
+23 silly fetch manifest @tensorflow/tfjs@4.22.0
+24 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/tar 294ms (cache updated)
+26 silly packumentCache full:https://registry.npmjs.org/tar set size:undefined disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs 620ms (cache revalidated)
+28 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs set size:733945 disposed:false
+29 silly placeDep ROOT @tensorflow/tfjs@4.22.0 OK for: @tensorflow/tfjs-node@4.22.0 want: 4.22.0
+30 silly placeDep ROOT tar@6.2.1 OK for: @tensorflow/tfjs-node@4.22.0 want: ^6.2.1
+31 silly fetch manifest chalk@^4.1.0
+32 silly packumentCache full:https://registry.npmjs.org/chalk cache-miss
+33 silly fetch manifest yargs@^16.0.3
+34 silly packumentCache full:https://registry.npmjs.org/yargs cache-miss
+35 silly fetch manifest core-js@3.29.1
+36 silly packumentCache full:https://registry.npmjs.org/core-js cache-miss
+37 silly fetch manifest argparse@^1.0.10
+38 silly packumentCache full:https://registry.npmjs.org/argparse cache-miss
+39 silly fetch manifest regenerator-runtime@^0.13.5
+40 silly packumentCache full:https://registry.npmjs.org/regenerator-runtime cache-miss
+41 silly fetch manifest @tensorflow/tfjs-data@4.22.0
+42 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-data cache-miss
+43 silly fetch manifest @tensorflow/tfjs-layers@4.22.0
+44 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-layers cache-miss
+45 silly fetch manifest @tensorflow/tfjs-backend-cpu@4.22.0
+46 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-cpu cache-miss
+47 silly fetch manifest @tensorflow/tfjs-backend-webgl@4.22.0
+48 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-webgl cache-miss
+49 silly fetch manifest chownr@^2.0.0
+50 silly packumentCache full:https://registry.npmjs.org/chownr cache-miss
+51 silly fetch manifest mkdirp@^1.0.3
+52 silly packumentCache full:https://registry.npmjs.org/mkdirp cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/regenerator-runtime 313ms (cache revalidated)
+54 silly packumentCache full:https://registry.npmjs.org/regenerator-runtime set size:59671 disposed:false
+55 silly fetch manifest yallist@^4.0.0
+56 silly packumentCache full:https://registry.npmjs.org/yallist cache-miss
+57 http fetch GET 200 https://registry.npmjs.org/argparse 319ms (cache revalidated)
+58 silly packumentCache full:https://registry.npmjs.org/argparse set size:49266 disposed:false
+59 silly fetch manifest minipass@^5.0.0
+60 silly packumentCache full:https://registry.npmjs.org/minipass cache-miss
+61 http fetch GET 200 https://registry.npmjs.org/chalk 441ms (cache revalidated)
+62 silly packumentCache full:https://registry.npmjs.org/chalk set size:117861 disposed:false
+63 silly fetch manifest minizlib@^2.1.1
+64 silly packumentCache full:https://registry.npmjs.org/minizlib cache-miss
+65 http fetch GET 200 https://registry.npmjs.org/core-js 450ms (cache revalidated)
+66 silly packumentCache full:https://registry.npmjs.org/core-js set size:814557 disposed:false
+67 silly fetch manifest fs-minipass@^2.0.0
+68 silly packumentCache full:https://registry.npmjs.org/fs-minipass cache-miss
+69 http fetch GET 200 https://registry.npmjs.org/chownr 467ms (cache revalidated)
+70 silly packumentCache full:https://registry.npmjs.org/chownr set size:22157 disposed:false
+71 http fetch GET 200 https://registry.npmjs.org/mkdirp 485ms (cache revalidated)
+72 silly packumentCache full:https://registry.npmjs.org/mkdirp set size:116431 disposed:false
+73 http fetch GET 200 https://registry.npmjs.org/yallist 222ms (cache revalidated)
+74 silly packumentCache full:https://registry.npmjs.org/yallist set size:34610 disposed:false
+75 http fetch GET 200 https://registry.npmjs.org/minipass 222ms (cache revalidated)
+76 silly packumentCache full:https://registry.npmjs.org/minipass set size:276925 disposed:false
+77 http fetch GET 200 https://registry.npmjs.org/yargs 610ms (cache updated)
+78 silly packumentCache full:https://registry.npmjs.org/yargs set size:undefined disposed:false
+79 http fetch GET 200 https://registry.npmjs.org/fs-minipass 219ms (cache revalidated)
+80 silly packumentCache full:https://registry.npmjs.org/fs-minipass set size:44606 disposed:false
+81 http fetch GET 200 https://registry.npmjs.org/minizlib 243ms (cache revalidated)
+82 silly packumentCache full:https://registry.npmjs.org/minizlib set size:62862 disposed:false
+83 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-layers 804ms (cache revalidated)
+84 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-layers set size:622028 disposed:false
+85 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-backend-cpu 889ms (cache revalidated)
+86 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-cpu set size:306366 disposed:false
+87 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-backend-webgl 946ms (cache revalidated)
+88 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-webgl set size:326301 disposed:false
+89 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-data 963ms (cache revalidated)
+90 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-data set size:517379 disposed:false
+91 silly fetch manifest @tensorflow/tfjs-core@4.22.0
+92 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-core cache-miss
+93 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-core 664ms (cache revalidated)
+94 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-core set size:856686 disposed:false
+95 silly fetch manifest seedrandom@^3.0.5
+96 silly packumentCache full:https://registry.npmjs.org/seedrandom cache-miss
+97 http fetch GET 200 https://registry.npmjs.org/seedrandom 306ms (cache revalidated)
+98 silly packumentCache full:https://registry.npmjs.org/seedrandom set size:55202 disposed:false
+99 silly placeDep ROOT @tensorflow/tfjs-backend-cpu@4.22.0 OK for: @tensorflow/tfjs@4.22.0 want: 4.22.0
+100 silly placeDep ROOT @tensorflow/tfjs-backend-webgl@4.22.0 OK for: @tensorflow/tfjs@4.22.0 want: 4.22.0
+101 silly placeDep ROOT @tensorflow/tfjs-data@4.22.0 OK for: @tensorflow/tfjs@4.22.0 want: 4.22.0
+102 silly placeDep ROOT @tensorflow/tfjs-layers@4.22.0 OK for: @tensorflow/tfjs@4.22.0 want: 4.22.0
+103 silly placeDep ROOT argparse@1.0.10 OK for: @tensorflow/tfjs@4.22.0 want: ^1.0.10
+104 silly placeDep ROOT chalk@4.1.2 OK for: @tensorflow/tfjs@4.22.0 want: ^4.1.0
+105 silly placeDep ROOT core-js@3.29.1 OK for: @tensorflow/tfjs@4.22.0 want: 3.29.1
+106 silly placeDep ROOT regenerator-runtime@0.13.11 OK for: @tensorflow/tfjs@4.22.0 want: ^0.13.5
+107 silly placeDep ROOT yargs@16.2.2 OK for: @tensorflow/tfjs@4.22.0 want: ^16.0.3
+108 silly fetch manifest @types/offscreencanvas@~2019.3.0
+109 silly packumentCache full:https://registry.npmjs.org/@types%2foffscreencanvas cache-miss
+110 silly fetch manifest @types/node-fetch@^2.1.2
+111 silly packumentCache full:https://registry.npmjs.org/@types%2fnode-fetch cache-miss
+112 silly fetch manifest sprintf-js@~1.0.2
+113 silly packumentCache full:https://registry.npmjs.org/sprintf-js cache-miss
+114 silly fetch manifest ansi-styles@^4.1.0
+115 silly packumentCache full:https://registry.npmjs.org/ansi-styles cache-miss
+116 silly fetch manifest supports-color@^7.1.0
+117 silly packumentCache full:https://registry.npmjs.org/supports-color cache-miss
+118 silly fetch manifest y18n@^5.0.5
+119 silly packumentCache full:https://registry.npmjs.org/y18n cache-miss
+120 silly fetch manifest cliui@^7.0.2
+121 silly packumentCache full:https://registry.npmjs.org/cliui cache-miss
+122 silly fetch manifest escalade@^3.1.1
+123 silly packumentCache full:https://registry.npmjs.org/escalade cache-miss
+124 silly fetch manifest yargs-parser@^20.2.2
+125 silly packumentCache full:https://registry.npmjs.org/yargs-parser cache-miss
+126 silly fetch manifest get-caller-file@^2.0.5
+127 silly packumentCache full:https://registry.npmjs.org/get-caller-file cache-miss
+128 silly fetch manifest require-directory@^2.1.1
+129 silly packumentCache full:https://registry.npmjs.org/require-directory cache-miss
+130 http fetch GET 200 https://registry.npmjs.org/y18n 344ms (cache revalidated)
+131 silly packumentCache full:https://registry.npmjs.org/y18n set size:76155 disposed:false
+132 http fetch GET 200 https://registry.npmjs.org/sprintf-js 369ms (cache revalidated)
+133 silly packumentCache full:https://registry.npmjs.org/sprintf-js set size:20495 disposed:false
+134 http fetch GET 200 https://registry.npmjs.org/supports-color 367ms (cache revalidated)
+135 silly packumentCache full:https://registry.npmjs.org/supports-color set size:118680 disposed:false
+136 http fetch GET 200 https://registry.npmjs.org/ansi-styles 376ms (cache revalidated)
+137 silly packumentCache full:https://registry.npmjs.org/ansi-styles set size:63233 disposed:false
+138 http fetch GET 200 https://registry.npmjs.org/escalade 381ms (cache revalidated)
+139 silly packumentCache full:https://registry.npmjs.org/escalade set size:33724 disposed:false
+140 http fetch GET 200 https://registry.npmjs.org/@types%2fnode-fetch 396ms (cache revalidated)
+141 silly packumentCache full:https://registry.npmjs.org/@types%2fnode-fetch set size:145604 disposed:false
+142 http fetch GET 200 https://registry.npmjs.org/@types%2foffscreencanvas 402ms (cache revalidated)
+143 silly packumentCache full:https://registry.npmjs.org/@types%2foffscreencanvas set size:23312 disposed:false
+144 http fetch GET 200 https://registry.npmjs.org/get-caller-file 402ms (cache revalidated)
+145 silly packumentCache full:https://registry.npmjs.org/get-caller-file set size:26456 disposed:false
+146 http fetch GET 200 https://registry.npmjs.org/cliui 425ms (cache revalidated)
+147 silly packumentCache full:https://registry.npmjs.org/cliui set size:69089 disposed:false
+148 http fetch GET 200 https://registry.npmjs.org/require-directory 439ms (cache revalidated)
+149 silly packumentCache full:https://registry.npmjs.org/require-directory set size:26866 disposed:false
+150 http fetch GET 200 https://registry.npmjs.org/yargs-parser 444ms (cache revalidated)
+151 silly packumentCache full:https://registry.npmjs.org/yargs-parser set size:238630 disposed:false
+152 silly placeDep node_modules/@tensorflow/tfjs-backend-webgl @types/offscreencanvas@2019.3.0 OK for: @tensorflow/tfjs-backend-webgl@4.22.0 want: ~2019.3.0
+153 silly placeDep ROOT @types/node-fetch@2.6.13 OK for: @tensorflow/tfjs-data@4.22.0 want: ^2.1.2
+154 silly fetch manifest form-data@^4.0.4
+155 silly packumentCache full:https://registry.npmjs.org/form-data cache-miss
+156 http fetch GET 200 https://registry.npmjs.org/form-data 138ms (cache updated)
+157 silly packumentCache full:https://registry.npmjs.org/form-data set size:undefined disposed:false
+158 silly placeDep ROOT form-data@4.0.6 OK for: @types/node-fetch@2.6.13 want: ^4.0.4
+159 silly fetch manifest hasown@^2.0.4
+160 silly packumentCache full:https://registry.npmjs.org/hasown cache-miss
+161 silly fetch manifest asynckit@^0.4.0
+162 silly packumentCache full:https://registry.npmjs.org/asynckit cache-miss
+163 silly fetch manifest combined-stream@^1.0.8
+164 silly packumentCache full:https://registry.npmjs.org/combined-stream cache-miss
+165 silly fetch manifest es-set-tostringtag@^2.1.0
+166 silly packumentCache full:https://registry.npmjs.org/es-set-tostringtag cache-miss
+167 http fetch GET 200 https://registry.npmjs.org/es-set-tostringtag 159ms (cache revalidated)
+168 silly packumentCache full:https://registry.npmjs.org/es-set-tostringtag set size:22094 disposed:false
+169 http fetch GET 200 https://registry.npmjs.org/hasown 187ms (cache updated)
+170 silly packumentCache full:https://registry.npmjs.org/hasown set size:undefined disposed:false
+171 http fetch GET 200 https://registry.npmjs.org/asynckit 199ms (cache revalidated)
+172 silly packumentCache full:https://registry.npmjs.org/asynckit set size:18932 disposed:false
+173 http fetch GET 200 https://registry.npmjs.org/combined-stream 197ms (cache revalidated)
+174 silly packumentCache full:https://registry.npmjs.org/combined-stream set size:40337 disposed:false
+175 silly placeDep ROOT sprintf-js@1.0.3 OK for: argparse@1.0.10 want: ~1.0.2
+176 silly placeDep ROOT ansi-styles@4.3.0 OK for: chalk@4.1.2 want: ^4.1.0
+177 silly placeDep ROOT supports-color@7.2.0 OK for: chalk@4.1.2 want: ^7.1.0
+178 silly fetch manifest color-convert@^2.0.1
+179 silly packumentCache full:https://registry.npmjs.org/color-convert cache-miss
+180 silly fetch manifest has-flag@^4.0.0
+181 silly packumentCache full:https://registry.npmjs.org/has-flag cache-miss
+182 http fetch GET 200 https://registry.npmjs.org/color-convert 146ms (cache revalidated)
+183 silly packumentCache full:https://registry.npmjs.org/color-convert set size:72663 disposed:false
+184 http fetch GET 200 https://registry.npmjs.org/has-flag 149ms (cache revalidated)
+185 silly packumentCache full:https://registry.npmjs.org/has-flag set size:15180 disposed:false
+186 silly placeDep ROOT color-convert@2.0.1 OK for: ansi-styles@4.3.0 want: ^2.0.1
+187 silly fetch manifest color-name@~1.1.4
+188 silly packumentCache full:https://registry.npmjs.org/color-name cache-miss
+189 http fetch GET 200 https://registry.npmjs.org/color-name 165ms (cache revalidated)
+190 silly packumentCache full:https://registry.npmjs.org/color-name set size:19467 disposed:false
+191 silly placeDep ROOT color-name@1.1.4 OK for: color-convert@2.0.1 want: ~1.1.4
+192 silly placeDep ROOT asynckit@0.4.0 OK for: form-data@4.0.6 want: ^0.4.0
+193 silly placeDep ROOT combined-stream@1.0.8 OK for: form-data@4.0.6 want: ^1.0.8
+194 silly placeDep ROOT es-set-tostringtag@2.1.0 OK for: form-data@4.0.6 want: ^2.1.0
+195 silly placeDep ROOT hasown@2.0.4 REPLACE for: form-data@4.0.6 want: ^2.0.4
+196 silly fetch manifest delayed-stream@~1.0.0
+197 silly packumentCache full:https://registry.npmjs.org/delayed-stream cache-miss
+198 silly fetch manifest has-tostringtag@^1.0.2
+199 silly packumentCache full:https://registry.npmjs.org/has-tostringtag cache-miss
+200 http fetch GET 200 https://registry.npmjs.org/delayed-stream 137ms (cache revalidated)
+201 silly packumentCache full:https://registry.npmjs.org/delayed-stream set size:15820 disposed:false
+202 http fetch GET 200 https://registry.npmjs.org/has-tostringtag 143ms (cache revalidated)
+203 silly packumentCache full:https://registry.npmjs.org/has-tostringtag set size:13945 disposed:false
+204 silly placeDep ROOT delayed-stream@1.0.0 OK for: combined-stream@1.0.8 want: ~1.0.0
+205 silly placeDep ROOT has-tostringtag@1.0.2 OK for: es-set-tostringtag@2.1.0 want: ^1.0.2
+206 silly fetch manifest @tensorflow/tfjs-node@^3.21.1
+207 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-node cache-hit
+208 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-node@3.21.1 OK for: node-red-contrib-tfjs-coco-ssd@1.0.6 want: ^3.21.1
+209 silly fetch manifest tar@^4.4.6
+210 silly packumentCache full:https://registry.npmjs.org/tar cache-miss
+211 silly fetch manifest @tensorflow/tfjs@3.21.0
+212 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs cache-hit
+213 http fetch GET 200 https://registry.npmjs.org/tar 50ms (cache hit)
+214 silly packumentCache full:https://registry.npmjs.org/tar set size:557905 disposed:false
+215 silly placeDep ROOT has-flag@4.0.0 OK for: supports-color@7.2.0 want: ^4.0.0
+216 silly placeDep ROOT chownr@2.0.0 OK for: tar@6.2.1 want: ^2.0.0
+217 silly placeDep ROOT fs-minipass@2.1.0 OK for: tar@6.2.1 want: ^2.0.0
+218 silly placeDep ROOT minipass@5.0.0 OK for: tar@6.2.1 want: ^5.0.0
+219 silly placeDep ROOT minizlib@2.1.2 OK for: tar@6.2.1 want: ^2.1.1
+220 silly placeDep ROOT mkdirp@1.0.4 OK for: tar@6.2.1 want: ^1.0.3
+221 silly placeDep ROOT yallist@4.0.0 OK for: tar@6.2.1 want: ^4.0.0
+222 silly fetch manifest minipass@^3.0.0
+223 silly packumentCache full:https://registry.npmjs.org/minipass cache-hit
+224 silly fetch manifest minipass@^3.0.0
+225 silly packumentCache full:https://registry.npmjs.org/minipass cache-hit
+226 silly placeDep node_modules/fs-minipass minipass@3.3.6 OK for: fs-minipass@2.1.0 want: ^3.0.0
+227 silly placeDep node_modules/minizlib minipass@3.3.6 OK for: minizlib@2.1.2 want: ^3.0.0
+228 silly placeDep ROOT cliui@7.0.4 OK for: yargs@16.2.2 want: ^7.0.2
+229 silly placeDep ROOT escalade@3.2.0 OK for: yargs@16.2.2 want: ^3.1.1
+230 silly placeDep ROOT get-caller-file@2.0.5 OK for: yargs@16.2.2 want: ^2.0.5
+231 silly placeDep ROOT require-directory@2.1.1 OK for: yargs@16.2.2 want: ^2.1.1
+232 silly placeDep ROOT y18n@5.0.8 OK for: yargs@16.2.2 want: ^5.0.5
+233 silly placeDep ROOT yargs-parser@20.2.9 OK for: yargs@16.2.2 want: ^20.2.2
+234 silly fetch manifest wrap-ansi@^7.0.0
+235 silly packumentCache full:https://registry.npmjs.org/wrap-ansi cache-miss
+236 http fetch GET 200 https://registry.npmjs.org/wrap-ansi 151ms (cache revalidated)
+237 silly packumentCache full:https://registry.npmjs.org/wrap-ansi set size:55299 disposed:false
+238 silly placeDep ROOT wrap-ansi@7.0.0 OK for: cliui@7.0.4 want: ^7.0.0
+239 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs@3.21.0 OK for: @tensorflow/tfjs-node@3.21.1 want: 3.21.0
+240 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd tar@4.4.19 OK for: @tensorflow/tfjs-node@3.21.1 want: ^4.4.6
+241 silly fetch manifest @tensorflow/tfjs-core@3.21.0
+242 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-core cache-hit
+243 silly fetch manifest @tensorflow/tfjs-data@3.21.0
+244 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-data cache-hit
+245 silly fetch manifest @tensorflow/tfjs-layers@3.21.0
+246 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-layers cache-hit
+247 silly fetch manifest @tensorflow/tfjs-converter@3.21.0
+248 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-converter cache-miss
+249 silly fetch manifest @tensorflow/tfjs-backend-cpu@3.21.0
+250 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-cpu cache-hit
+251 silly fetch manifest @tensorflow/tfjs-backend-webgl@3.21.0
+252 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-backend-webgl cache-hit
+253 silly fetch manifest chownr@^1.1.4
+254 silly packumentCache full:https://registry.npmjs.org/chownr cache-hit
+255 silly fetch manifest mkdirp@^0.5.5
+256 silly packumentCache full:https://registry.npmjs.org/mkdirp cache-hit
+257 silly fetch manifest yallist@^3.1.1
+258 silly packumentCache full:https://registry.npmjs.org/yallist cache-hit
+259 silly fetch manifest minipass@^2.9.0
+260 silly packumentCache full:https://registry.npmjs.org/minipass cache-hit
+261 silly fetch manifest minizlib@^1.3.3
+262 silly packumentCache full:https://registry.npmjs.org/minizlib cache-hit
+263 silly fetch manifest fs-minipass@^1.2.7
+264 silly packumentCache full:https://registry.npmjs.org/fs-minipass cache-hit
+265 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-converter 654ms (cache revalidated)
+266 silly packumentCache full:https://registry.npmjs.org/@tensorflow%2ftfjs-converter set size:695997 disposed:false
+267 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-backend-cpu@3.21.0 OK for: @tensorflow/tfjs@3.21.0 want: 3.21.0
+268 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-core@3.21.0 OK for: @tensorflow/tfjs-backend-cpu@3.21.0 want: 3.21.0
+269 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-backend-webgl@3.21.0 OK for: @tensorflow/tfjs@3.21.0 want: 3.21.0
+270 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-converter@3.21.0 OK for: @tensorflow/tfjs@3.21.0 want: 3.21.0
+271 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-data@3.21.0 OK for: @tensorflow/tfjs@3.21.0 want: 3.21.0
+272 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @tensorflow/tfjs-layers@3.21.0 OK for: @tensorflow/tfjs@3.21.0 want: 3.21.0
+273 silly fetch manifest @webgpu/types@0.1.16
+274 silly packumentCache full:https://registry.npmjs.org/@webgpu%2ftypes cache-miss
+275 silly fetch manifest @types/webgl-ext@0.0.30
+276 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl-ext cache-miss
+277 silly fetch manifest @types/webgl2@0.0.6
+278 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl2 cache-miss
+279 silly fetch manifest @types/webgl-ext@0.0.30
+280 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl-ext cache-miss
+281 http fetch GET 200 https://registry.npmjs.org/@types%2fwebgl-ext 517ms (cache revalidated)
+282 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl-ext set size:35125 disposed:false
+283 http fetch GET 200 https://registry.npmjs.org/@types%2fwebgl-ext 509ms (cache revalidated)
+284 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl-ext set size:35125 disposed:false
+285 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl-ext dispose
+286 http fetch GET 200 https://registry.npmjs.org/@types%2fwebgl2 513ms (cache revalidated)
+287 silly packumentCache full:https://registry.npmjs.org/@types%2fwebgl2 set size:24023 disposed:false
+288 http fetch GET 200 https://registry.npmjs.org/@webgpu%2ftypes 680ms (cache updated)
+289 silly packumentCache full:https://registry.npmjs.org/@webgpu%2ftypes set size:undefined disposed:false
+290 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @types/offscreencanvas@2019.3.0 OK for: @tensorflow/tfjs-backend-webgl@3.21.0 want: ~2019.3.0
+291 silly placeDep ROOT @types/webgl-ext@0.0.30 OK for: @tensorflow/tfjs-backend-webgl@3.21.0 want: 0.0.30
+292 silly placeDep ROOT @types/webgl2@0.0.6 OK for: @tensorflow/tfjs-backend-webgl@3.21.0 want: 0.0.6
+293 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd @webgpu/types@0.1.16 OK for: @tensorflow/tfjs-core@3.21.0 want: 0.1.16
+294 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd chownr@1.1.4 OK for: tar@4.4.19 want: ^1.1.4
+295 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd fs-minipass@1.2.7 OK for: tar@4.4.19 want: ^1.2.7
+296 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd minipass@2.9.0 OK for: tar@4.4.19 want: ^2.9.0
+297 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd minizlib@1.3.3 OK for: tar@4.4.19 want: ^1.3.3
+298 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd mkdirp@0.5.6 OK for: tar@4.4.19 want: ^0.5.5
+299 silly placeDep node_modules/node-red-contrib-tfjs-coco-ssd yallist@3.1.1 OK for: tar@4.4.19 want: ^3.1.1
+300 silly fetch manifest minipass@^2.6.0
+301 silly packumentCache full:https://registry.npmjs.org/minipass cache-hit
+302 silly fetch manifest yallist@^3.0.0
+303 silly packumentCache full:https://registry.npmjs.org/yallist cache-hit
+304 silly fetch manifest minimist@^1.2.6
+305 silly packumentCache full:https://registry.npmjs.org/minimist cache-miss
+306 http fetch GET 200 https://registry.npmjs.org/minimist 180ms (cache revalidated)
+307 silly packumentCache full:https://registry.npmjs.org/minimist set size:77063 disposed:false
+308 silly placeDep ROOT minimist@1.2.8 OK for: mkdirp@0.5.6 want: ^1.2.6
+309 silly reify mark retired [ '/data/node_modules/chownr' ]
+310 silly reify mark retired [ '/data/node_modules/core-js' ]
+311 silly reify mark retired [ '/data/node_modules/form-data' ]
+312 silly reify mark retired [ '/data/node_modules/fs-minipass' ]
+313 silly reify mark retired [ '/data/node_modules/hasown' ]
+314 silly reify mark retired [ '/data/node_modules/minizlib' ]
+315 silly reify mark retired [ '/data/node_modules/minipass' ]
+316 silly reify mark retired [ '/data/node_modules/mkdirp', '/data/node_modules/.bin/mkdirp' ]
+317 silly reify mark retired [ '/data/node_modules/tar' ]
+318 silly reify mark retired [ '/data/node_modules/yargs' ]
+319 silly reify mark retired [ '/data/node_modules/yallist' ]
+320 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/chownr' ]
+321 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/fs-minipass' ]
+322 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/minizlib' ]
+323 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/minipass' ]
+324 silly reify mark retired [
+324 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/mkdirp',
+324 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/mkdirp'
+324 silly reify ]
+325 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/tar' ]
+326 silly reify mark retired [ '/data/node_modules/@mapbox/node-pre-gyp/node_modules/yallist' ]
+327 silly reify moves {
+327 silly reify   '/data/node_modules/chownr': '/data/node_modules/.chownr-07v3qbUi',
+327 silly reify   '/data/node_modules/core-js': '/data/node_modules/.core-js-uC7tynRy',
+327 silly reify   '/data/node_modules/form-data': '/data/node_modules/.form-data-VxlkrdGS',
+327 silly reify   '/data/node_modules/fs-minipass': '/data/node_modules/.fs-minipass-yjOoH6Uz',
+327 silly reify   '/data/node_modules/hasown': '/data/node_modules/.hasown-7vUUDMas',
+327 silly reify   '/data/node_modules/minizlib': '/data/node_modules/.minizlib-TP11BXom',
+327 silly reify   '/data/node_modules/minipass': '/data/node_modules/.minipass-FwuRyaDr',
+327 silly reify   '/data/node_modules/mkdirp': '/data/node_modules/.mkdirp-kfx2waep',
+327 silly reify   '/data/node_modules/.bin/mkdirp': '/data/node_modules/.bin/.mkdirp-VJGUnSum',
+327 silly reify   '/data/node_modules/tar': '/data/node_modules/.tar-JvtJ6GT7',
+327 silly reify   '/data/node_modules/yargs': '/data/node_modules/.yargs-0QWI5jwv',
+327 silly reify   '/data/node_modules/yallist': '/data/node_modules/.yallist-nRCT2Oqy',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/chownr': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.chownr-7eA2Vxd0',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/fs-minipass': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.fs-minipass-16yfAHQF',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/minizlib': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.minizlib-oU6bBACb',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/minipass': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.minipass-XrhOympi',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/mkdirp': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.mkdirp-P7O6jxDD',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/mkdirp': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.bin/.mkdirp-BfahFbZF',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/tar': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.tar-S5fYvWxh',
+327 silly reify   '/data/node_modules/@mapbox/node-pre-gyp/node_modules/yallist': '/data/node_modules/@mapbox/node-pre-gyp/node_modules/.yallist-48V3N4Ze'
+327 silly reify }
+328 silly audit bulk request {
+328 silly audit   '@mapbox/node-pre-gyp': [ '1.0.9' ],
+328 silly audit   'agent-base': [ '6.0.2', '4.3.0' ],
+328 silly audit   debug: [ '4.4.3', '2.6.9', '3.2.7' ],
+328 silly audit   'https-proxy-agent': [ '5.0.1', '2.2.4' ],
+328 silly audit   ms: [ '2.1.3', '2.0.0' ],
+328 silly audit   rimraf: [ '3.0.2', '2.7.1' ],
+328 silly audit   tar: [ '6.2.1', '4.4.19' ],
+328 silly audit   '@socket.io/component-emitter': [ '3.1.2' ],
+328 silly audit   '@tensorflow-models/coco-ssd': [ '2.2.3' ],
+328 silly audit   '@tensorflow/tfjs-converter': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@tensorflow/tfjs-core': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@types/offscreencanvas': [ '2019.7.3', '2019.3.0' ],
+328 silly audit   '@webgpu/types': [ '0.1.38', '0.1.16' ],
+328 silly audit   '@types/cors': [ '2.8.19' ],
+328 silly audit   '@types/long': [ '4.0.2' ],
+328 silly audit   '@types/node': [ '25.9.0' ],
+328 silly audit   '@types/seedrandom': [ '2.4.34' ],
+328 silly audit   '@types/ws': [ '8.18.1' ],
+328 silly audit   abbrev: [ '1.1.1' ],
+328 silly audit   accepts: [ '1.3.8' ],
+328 silly audit   negotiator: [ '0.6.3', '0.6.4' ],
+328 silly audit   'adm-zip': [ '0.5.17' ],
+328 silly audit   'ansi-regex': [ '5.0.1' ],
+328 silly audit   aproba: [ '2.1.0' ],
+328 silly audit   'are-we-there-yet': [ '2.0.0' ],
+328 silly audit   'array-flatten': [ '1.1.1' ],
+328 silly audit   'balanced-match': [ '1.0.2' ],
+328 silly audit   base64id: [ '2.0.0' ],
+328 silly audit   'body-parser': [ '1.20.5' ],
+328 silly audit   'brace-expansion': [ '1.1.14' ],
+328 silly audit   bytes: [ '3.1.2' ],
+328 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+328 silly audit   'call-bound': [ '1.0.4' ],
+328 silly audit   'color-support': [ '1.1.3' ],
+328 silly audit   compressible: [ '2.0.18' ],
+328 silly audit   compression: [ '1.8.1' ],
+328 silly audit   'concat-map': [ '0.0.1' ],
+328 silly audit   'console-control-strings': [ '1.1.0' ],
+328 silly audit   'content-disposition': [ '0.5.4' ],
+328 silly audit   'content-type': [ '1.0.5' ],
+328 silly audit   cookie: [ '0.7.2' ],
+328 silly audit   'cookie-signature': [ '1.0.7' ],
+328 silly audit   cors: [ '2.8.6' ],
+328 silly audit   delegates: [ '1.0.0' ],
+328 silly audit   depd: [ '2.0.0' ],
+328 silly audit   destroy: [ '1.2.0' ],
+328 silly audit   'detect-libc': [ '2.1.2' ],
+328 silly audit   'dunder-proto': [ '1.0.1' ],
+328 silly audit   'ee-first': [ '1.1.1' ],
+328 silly audit   'emoji-regex': [ '8.0.0' ],
+328 silly audit   encodeurl: [ '2.0.0' ],
+328 silly audit   'engine.io': [ '6.6.8' ],
+328 silly audit   'engine.io-parser': [ '5.2.3' ],
+328 silly audit   'es-define-property': [ '1.0.1' ],
+328 silly audit   'es-errors': [ '1.3.0' ],
+328 silly audit   'es-object-atoms': [ '1.1.1' ],
+328 silly audit   'es6-promise': [ '4.2.8' ],
+328 silly audit   'es6-promisify': [ '5.0.0' ],
+328 silly audit   'escape-html': [ '1.0.3' ],
+328 silly audit   etag: [ '1.8.1' ],
+328 silly audit   express: [ '4.22.2' ],
+328 silly audit   finalhandler: [ '1.3.2' ],
+328 silly audit   forwarded: [ '0.2.0' ],
+328 silly audit   fresh: [ '0.5.2' ],
+328 silly audit   'fs.realpath': [ '1.0.0' ],
+328 silly audit   'function-bind': [ '1.1.2' ],
+328 silly audit   gauge: [ '3.0.2' ],
+328 silly audit   'get-intrinsic': [ '1.3.0' ],
+328 silly audit   'get-proto': [ '1.0.1' ],
+328 silly audit   glob: [ '7.2.3' ],
+328 silly audit   'google-protobuf': [ '3.21.4' ],
+328 silly audit   gopd: [ '1.2.0' ],
+328 silly audit   gridstack: [ '0.6.4' ],
+328 silly audit   'has-symbols': [ '1.1.0' ],
+328 silly audit   'has-unicode': [ '2.0.1' ],
+328 silly audit   'http-errors': [ '2.0.1' ],
+328 silly audit   'iconv-lite': [ '0.4.24' ],
+328 silly audit   inflight: [ '1.0.6' ],
+328 silly audit   inherits: [ '2.0.4' ],
+328 silly audit   'ipaddr.js': [ '1.9.1' ],
+328 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+328 silly audit   'jimp-compact': [ '0.10.3' ],
+328 silly audit   'jpeg-js': [ '0.4.4' ],
+328 silly audit   jquery: [ '3.7.1' ],
+328 silly audit   long: [ '4.0.0' ],
+328 silly audit   'make-dir': [ '3.1.0' ],
+328 silly audit   semver: [ '6.3.1', '7.8.0' ],
+328 silly audit   'math-intrinsics': [ '1.1.0' ],
+328 silly audit   'media-typer': [ '0.3.0' ],
+328 silly audit   'merge-descriptors': [ '1.0.3' ],
+328 silly audit   methods: [ '1.1.2' ],
+328 silly audit   mime: [ '1.6.0' ],
+328 silly audit   'mime-db': [ '1.54.0', '1.52.0' ],
+328 silly audit   'mime-types': [ '2.1.35' ],
+328 silly audit   minimatch: [ '3.1.5' ],
+328 silly audit   'node-fetch': [ '2.6.13' ],
+328 silly audit   'node-red-contrib-image-output': [ '0.6.4' ],
+328 silly audit   'node-red-contrib-tfjs-coco-ssd': [ '1.0.6' ],
+328 silly audit   'node-red-dashboard': [ '3.6.6' ],
+328 silly audit   nopt: [ '5.0.0' ],
+328 silly audit   npmlog: [ '5.0.1' ],
+328 silly audit   'object-assign': [ '4.1.1' ],
+328 silly audit   'object-inspect': [ '1.13.4' ],
+328 silly audit   'on-finished': [ '2.4.1' ],
+328 silly audit   'on-headers': [ '1.1.0' ],
+328 silly audit   once: [ '1.4.0' ],
+328 silly audit   'opentype.js': [ '0.4.11' ],
+328 silly audit   parseurl: [ '1.3.3' ],
+328 silly audit   'path-is-absolute': [ '1.0.1' ],
+328 silly audit   'path-to-regexp': [ '0.1.13' ],
+328 silly audit   pngjs: [ '3.4.0' ],
+328 silly audit   progress: [ '2.0.3' ],
+328 silly audit   'proxy-addr': [ '2.0.7' ],
+328 silly audit   pureimage: [ '0.3.17' ],
+328 silly audit   qs: [ '6.15.2' ],
+328 silly audit   'range-parser': [ '1.2.1' ],
+328 silly audit   'raw-body': [ '2.5.3' ],
+328 silly audit   'readable-stream': [ '3.6.2' ],
+328 silly audit   'safe-buffer': [ '5.2.1' ],
+328 silly audit   'safer-buffer': [ '2.1.2' ],
+328 silly audit   seedrandom: [ '3.0.5' ],
+328 silly audit   send: [ '0.19.2' ],
+328 silly audit   'serve-static': [ '1.16.3' ],
+328 silly audit   'set-blocking': [ '2.0.0' ],
+328 silly audit   setprototypeof: [ '1.2.0' ],
+328 silly audit   'side-channel': [ '1.1.0' ],
+328 silly audit   'side-channel-list': [ '1.0.1' ],
+328 silly audit   'side-channel-map': [ '1.0.1' ],
+328 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+328 silly audit   'signal-exit': [ '3.0.7' ],
+328 silly audit   'socket.io': [ '4.8.3' ],
+328 silly audit   'socket.io-adapter': [ '2.5.7' ],
+328 silly audit   'socket.io-parser': [ '4.2.6' ],
+328 silly audit   statuses: [ '2.0.2' ],
+328 silly audit   string_decoder: [ '1.3.0' ],
+328 silly audit   'string-width': [ '4.2.3' ],
+328 silly audit   'strip-ansi': [ '6.0.1' ],
+328 silly audit   toidentifier: [ '1.0.1' ],
+328 silly audit   tr46: [ '0.0.3' ],
+328 silly audit   'type-is': [ '1.6.18' ],
+328 silly audit   'undici-types': [ '7.24.6' ],
+328 silly audit   unpipe: [ '1.0.0' ],
+328 silly audit   'util-deprecate': [ '1.0.2' ],
+328 silly audit   'utils-merge': [ '1.0.1' ],
+328 silly audit   vary: [ '1.1.2' ],
+328 silly audit   'webidl-conversions': [ '3.0.1' ],
+328 silly audit   'whatwg-url': [ '5.0.0' ],
+328 silly audit   'wide-align': [ '1.1.5' ],
+328 silly audit   wrappy: [ '1.0.2' ],
+328 silly audit   ws: [ '8.20.1' ],
+328 silly audit   '@tensorflow/tfjs-node': [ '4.22.0', '3.21.1' ],
+328 silly audit   '@tensorflow/tfjs': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@tensorflow/tfjs-backend-cpu': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@tensorflow/tfjs-backend-webgl': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@tensorflow/tfjs-data': [ '4.22.0', '3.21.0' ],
+328 silly audit   '@tensorflow/tfjs-layers': [ '4.22.0', '3.21.0' ],
+328 silly audit   argparse: [ '1.0.10' ],
+328 silly audit   chalk: [ '4.1.2' ],
+328 silly audit   'core-js': [ '3.29.1' ],
+328 silly audit   'regenerator-runtime': [ '0.13.11' ],
+328 silly audit   yargs: [ '16.2.2' ],
+328 silly audit   '@types/node-fetch': [ '2.6.13' ],
+328 silly audit   'form-data': [ '4.0.6' ],
+328 silly audit   'sprintf-js': [ '1.0.3' ],
+328 silly audit   'ansi-styles': [ '4.3.0' ],
+328 silly audit   'supports-color': [ '7.2.0' ],
+328 silly audit   'color-convert': [ '2.0.1' ],
+328 silly audit   'color-name': [ '1.1.4' ],
+328 silly audit   asynckit: [ '0.4.0' ],
+328 silly audit   'combined-stream': [ '1.0.8' ],
+328 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+328 silly audit   hasown: [ '2.0.4' ],
+328 silly audit   'delayed-stream': [ '1.0.0' ],
+328 silly audit   'has-tostringtag': [ '1.0.2' ],
+328 silly audit   'has-flag': [ '4.0.0' ],
+328 silly audit   chownr: [ '2.0.0', '1.1.4' ],
+328 silly audit   'fs-minipass': [ '2.1.0', '1.2.7' ],
+328 silly audit   minipass: [ '5.0.0', '3.3.6', '2.9.0' ],
+328 silly audit   minizlib: [ '2.1.2', '1.3.3' ],
+328 silly audit   mkdirp: [ '1.0.4', '0.5.6' ],
+328 silly audit   yallist: [ '4.0.0', '3.1.1' ],
+328 silly audit   cliui: [ '7.0.4' ],
+328 silly audit   escalade: [ '3.2.0' ],
+328 silly audit   'get-caller-file': [ '2.0.5' ],
+328 silly audit   'require-directory': [ '2.1.1' ],
+328 silly audit   y18n: [ '5.0.8' ],
+328 silly audit   'yargs-parser': [ '20.2.9' ],
+328 silly audit   'wrap-ansi': [ '7.0.0' ],
+328 silly audit   '@types/webgl-ext': [ '0.0.30' ],
+328 silly audit   '@types/webgl2': [ '0.0.6' ],
+328 silly audit   minimist: [ '1.2.8' ]
+328 silly audit }
+329 silly tarball no local data for @tensorflow/tfjs@https://registry.npmjs.org/@tensorflow/tfjs/-/tfjs-4.22.0.tgz. Extracting by manifest.
+330 silly tarball no local data for @tensorflow/tfjs-data@https://registry.npmjs.org/@tensorflow/tfjs-data/-/tfjs-data-4.22.0.tgz. Extracting by manifest.
+331 silly tarball no local data for @tensorflow/tfjs-backend-cpu@https://registry.npmjs.org/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-4.22.0.tgz. Extracting by manifest.
+332 silly tarball no local data for @tensorflow/tfjs-layers@https://registry.npmjs.org/@tensorflow/tfjs-layers/-/tfjs-layers-4.22.0.tgz. Extracting by manifest.
+333 silly tarball no local data for @tensorflow/tfjs-backend-webgl@https://registry.npmjs.org/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-4.22.0.tgz. Extracting by manifest.
+334 silly tarball no local data for @tensorflow/tfjs-node@https://registry.npmjs.org/@tensorflow/tfjs-node/-/tfjs-node-4.22.0.tgz. Extracting by manifest.
+335 silly tarball no local data for yargs@https://registry.npmjs.org/yargs/-/yargs-16.2.2.tgz. Extracting by manifest.
+336 silly tarball no local data for hasown@https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz. Extracting by manifest.
+337 silly tarball no local data for core-js@https://registry.npmjs.org/core-js/-/core-js-3.29.1.tgz. Extracting by manifest.
+338 silly tarball no local data for form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz. Extracting by manifest.
+339 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1278ms
+340 silly audit report {
+340 silly audit report   tar: [
+340 silly audit report     {
+340 silly audit report       id: 1112659,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-34x7-hfp2-rc4v',
+340 silly audit report       title: 'node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink Path Traversal',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<7.5.7',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1113300,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-8qq5-rm4j-mr97',
+340 silly audit report       title: 'node-tar is Vulnerable to Arbitrary File Overwrite and Symlink Poisoning via Insufficient Path Sanitization',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<=7.5.2',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1113375,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-83g3-92jg-28cx',
+340 silly audit report       title: 'Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in node-tar Extraction',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<7.5.8',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1114200,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-qffp-2rhf-9h96',
+340 silly audit report       title: 'tar has Hardlink Path Traversal via Drive-Relative Linkpath',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<=7.5.9',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1114302,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-9ppj-qmqm-q256',
+340 silly audit report       title: 'node-tar Symlink Path Traversal via Drive-Relative Linkpath',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<=7.5.10',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1120782,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-vmf3-w455-68vh',
+340 silly audit report       title: 'node-tar applies PAX size override to intermediary GNU long-name/long-link headers, causing tar parser interpretation differential (file smuggling)',
+340 silly audit report       severity: 'moderate',
+340 silly audit report       vulnerable_versions: '<=7.5.15',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1114680,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-r6q2-hw4h-h46w',
+340 silly audit report       title: 'Race Condition in node-tar Path Reservations via Unicode Ligature Collisions on macOS APFS',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '<=7.5.3',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     },
+340 silly audit report     {
+340 silly audit report       id: 1097493,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-f5x3-32g6-xq36',
+340 silly audit report       title: 'Denial of service while parsing a tar file due to lack of folders count validation',
+340 silly audit report       severity: 'moderate',
+340 silly audit report       vulnerable_versions: '<6.2.1',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     }
+340 silly audit report   ],
+340 silly audit report   ws: [
+340 silly audit report     {
+340 silly audit report       id: 1120730,
+340 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+340 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+340 silly audit report       severity: 'high',
+340 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+340 silly audit report       cwe: [Array],
+340 silly audit report       cvss: [Object]
+340 silly audit report     }
+340 silly audit report   ]
+340 silly audit report }
+341 silly packumentCache corgi:https://registry.npmjs.org/tar cache-miss
+342 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+343 http fetch GET 200 https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz 3194ms (cache miss)
+344 http fetch GET 200 https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz 5183ms (cache miss)
+345 warn deprecated tar@4.4.19: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+346 warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+347 http fetch GET 200 https://registry.npmjs.org/ws 4795ms (cache miss)
+348 silly packumentCache corgi:https://registry.npmjs.org/ws set size:undefined disposed:false
+349 http fetch GET 200 https://registry.npmjs.org/tar 5551ms (cache miss)
+350 silly packumentCache corgi:https://registry.npmjs.org/tar set size:undefined disposed:false
+351 silly packumentCache corgi:https://registry.npmjs.org/@tensorflow%2ftfjs-node cache-miss
+352 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp cache-miss
+353 http fetch GET 200 https://registry.npmjs.org/yargs/-/yargs-16.2.2.tgz 11198ms (cache miss)
+354 http fetch GET 200 https://registry.npmjs.org/@mapbox%2fnode-pre-gyp 3264ms (cache miss)
+355 silly packumentCache corgi:https://registry.npmjs.org/@mapbox%2fnode-pre-gyp set size:undefined disposed:false
+356 http fetch GET 200 https://registry.npmjs.org/@tensorflow%2ftfjs-node 4533ms (cache miss)
+357 silly packumentCache corgi:https://registry.npmjs.org/@tensorflow%2ftfjs-node set size:undefined disposed:false
+358 silly packumentCache corgi:https://registry.npmjs.org/engine.io cache-miss
+359 silly packumentCache corgi:https://registry.npmjs.org/socket.io-adapter cache-miss
+360 http fetch GET 200 https://registry.npmjs.org/socket.io-adapter 3594ms (cache miss)
+361 silly packumentCache corgi:https://registry.npmjs.org/socket.io-adapter set size:undefined disposed:false
+362 http fetch GET 200 https://registry.npmjs.org/engine.io 6561ms (cache miss)
+363 silly packumentCache corgi:https://registry.npmjs.org/engine.io set size:undefined disposed:false
+364 silly packumentCache corgi:https://registry.npmjs.org/node-red-contrib-tfjs-coco-ssd cache-miss
+365 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-tfjs-coco-ssd 2702ms (cache miss)
+366 silly packumentCache corgi:https://registry.npmjs.org/node-red-contrib-tfjs-coco-ssd set size:undefined disposed:false
+367 silly packumentCache corgi:https://registry.npmjs.org/socket.io cache-miss
+368 http fetch GET 200 https://registry.npmjs.org/socket.io 4855ms (cache miss)
+369 silly packumentCache corgi:https://registry.npmjs.org/socket.io set size:undefined disposed:false
+370 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs-data/-/tfjs-data-4.22.0.tgz 33907ms (cache miss)
+371 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs-node/-/tfjs-node-4.22.0.tgz 66140ms (cache miss)
+372 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs-backend-cpu/-/tfjs-backend-cpu-4.22.0.tgz 84585ms (cache miss)
+373 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs-backend-webgl/-/tfjs-backend-webgl-4.22.0.tgz 108921ms (cache miss)
+374 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs-layers/-/tfjs-layers-4.22.0.tgz 117213ms (cache miss)
+375 http fetch GET 200 https://registry.npmjs.org/core-js/-/core-js-3.29.1.tgz 144983ms (cache miss)
+376 http fetch GET 200 https://registry.npmjs.org/@tensorflow/tfjs/-/tfjs-4.22.0.tgz 148621ms (cache miss)
+377 info run @tensorflow/tfjs-node@4.22.0 install node_modules/@tensorflow/tfjs-node node scripts/install.js
+378 info run @tensorflow/tfjs-node@3.21.1 install node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-node node scripts/install.js
+379 info run @tensorflow/tfjs-node@3.21.1 install { code: 0, signal: null }
+380 info run @tensorflow/tfjs-node@4.22.0 install { code: 0, signal: null }
+381 info run core-js@3.29.1 postinstall node_modules/core-js node -e "try{require('./postinstall')}catch(e){}"
+382 info run core-js@3.29.1 postinstall { code: 0, signal: null }
+383 silly ADD node_modules/@tensorflow/tfjs-layers
+384 silly ADD node_modules/@tensorflow/tfjs-data
+385 silly ADD node_modules/@tensorflow/tfjs-backend-webgl
+386 silly ADD node_modules/@tensorflow/tfjs-backend-webgl/node_modules/@types/offscreencanvas
+387 silly ADD node_modules/@tensorflow/tfjs-backend-cpu
+388 silly ADD node_modules/@tensorflow/tfjs
+389 silly ADD node_modules/@tensorflow/tfjs-node
+390 silly ADD node_modules/@tensorflow/tfjs-core
+391 silly ADD node_modules/@tensorflow/tfjs-converter
+392 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/yallist
+393 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/tar
+394 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/mkdirp
+395 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/minipass
+396 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/minizlib
+397 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/minizlib/node_modules/minipass
+398 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/fs-minipass
+399 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/fs-minipass/node_modules/minipass
+400 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/chownr
+401 silly CHANGE node_modules/yallist
+402 silly CHANGE node_modules/yargs
+403 silly CHANGE node_modules/tar
+404 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/yallist
+405 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/mkdirp
+406 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/minizlib
+407 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/minipass
+408 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/fs-minipass
+409 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/chownr
+410 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@webgpu/types
+411 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@types/offscreencanvas
+412 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-layers
+413 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-data
+414 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-converter
+415 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-backend-webgl
+416 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-core
+417 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-backend-cpu
+418 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/tar
+419 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs
+420 silly ADD node_modules/node-red-contrib-tfjs-coco-ssd/node_modules/@tensorflow/tfjs-node
+421 silly CHANGE node_modules/mkdirp
+422 silly CHANGE node_modules/minipass
+423 silly CHANGE node_modules/minizlib
+424 silly ADD node_modules/minizlib/node_modules/minipass
+425 silly CHANGE node_modules/hasown
+426 silly CHANGE node_modules/fs-minipass
+427 silly ADD node_modules/fs-minipass/node_modules/minipass
+428 silly CHANGE node_modules/form-data
+429 silly CHANGE node_modules/core-js
+430 silly CHANGE node_modules/chownr
+431 verbose cwd /data
+432 verbose os Linux 5.15.153.1-microsoft-standard-WSL2
+433 verbose node v18.20.7
+434 verbose npm  v10.8.2
+435 verbose exit 0
+436 info ok

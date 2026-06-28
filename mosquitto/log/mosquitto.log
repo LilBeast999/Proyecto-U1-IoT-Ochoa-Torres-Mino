@@ -282,3 +282,624 @@ To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
 1781719444: Opening ipv4 listen socket on port 8883.
 1781719444: Opening ipv6 listen socket on port 8883.
 1781719444: mosquitto version 2.1.2 running
+1782358502: mosquitto version 2.1.2 starting
+1782358502: Config loaded from /mosquitto/config/mosquitto.conf.
+1782358502: Bridge support available.
+1782358502: Persistence support available.
+1782358502: TLS support available.
+1782358502: TLS-PSK support available.
+1782358502: Websockets support available.
+1782358502: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782358502: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782358502: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782358502: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782358502: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782358502: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782358502: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782358502: Plugin builtin-security has registered to receive 'acl-check' events.
+1782358502: Opening ipv4 listen socket on port 8883.
+1782358502: Opening ipv6 listen socket on port 8883.
+1782358502: mosquitto version 2.1.2 running
+1782596856: mosquitto version 2.1.2 starting
+1782596856: Config loaded from /mosquitto/config/mosquitto.conf.
+1782596856: Bridge support available.
+1782596856: Persistence support available.
+1782596856: TLS support available.
+1782596856: TLS-PSK support available.
+1782596856: Websockets support available.
+1782596856: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782596856: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782596856: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782596856: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782596856: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782596856: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782596856: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782596856: Plugin builtin-security has registered to receive 'acl-check' events.
+1782596856: Opening ipv4 listen socket on port 8883.
+1782596856: Opening ipv6 listen socket on port 8883.
+1782596856: mosquitto version 2.1.2 running
+1782597617: mosquitto version 2.1.2 terminating
+1782597617: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782597682: mosquitto version 2.1.2 starting
+1782597682: Config loaded from /mosquitto/config/mosquitto.conf.
+1782597682: Bridge support available.
+1782597682: Persistence support available.
+1782597682: TLS support available.
+1782597682: TLS-PSK support available.
+1782597682: Websockets support available.
+1782597682: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782597682: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782597682: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782597682: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782597682: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782597682: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782597682: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782597682: Plugin builtin-security has registered to receive 'acl-check' events.
+1782597682: Opening ipv4 listen socket on port 8883.
+1782597682: Opening ipv6 listen socket on port 8883.
+1782597682: mosquitto version 2.1.2 running
+1782598675: New connection from 172.23.0.4:56380 on port 8883.
+1782598675: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598675: Client 172.23.0.4 [172.23.0.4:56380] disconnected: Protocol error.
+1782598690: mosquitto version 2.1.2 terminating
+1782598690: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782598693: mosquitto version 2.1.2 starting
+1782598693: Config loaded from /mosquitto/config/mosquitto.conf.
+1782598693: Bridge support available.
+1782598693: Persistence support available.
+1782598693: TLS support available.
+1782598693: TLS-PSK support available.
+1782598693: Websockets support available.
+1782598693: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782598693: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782598693: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782598693: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782598693: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782598693: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782598693: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782598693: Plugin builtin-security has registered to receive 'acl-check' events.
+1782598693: Opening ipv4 listen socket on port 8883.
+1782598693: Opening ipv6 listen socket on port 8883.
+1782598693: mosquitto version 2.1.2 running
+1782598707: New connection from 172.23.0.4:48234 on port 8883.
+1782598707: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598707: Client 172.23.0.4 [172.23.0.4:48234] disconnected: Protocol error.
+1782598722: New connection from 172.23.0.4:35040 on port 8883.
+1782598722: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598722: Client 172.23.0.4 [172.23.0.4:35040] disconnected: Protocol error.
+1782598737: New connection from 172.23.0.4:55402 on port 8883.
+1782598737: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598737: Client 172.23.0.4 [172.23.0.4:55402] disconnected: Protocol error.
+1782598752: New connection from 172.23.0.4:56574 on port 8883.
+1782598752: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598752: Client 172.23.0.4 [172.23.0.4:56574] disconnected: Protocol error.
+1782598767: New connection from 172.23.0.4:56324 on port 8883.
+1782598767: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598767: Client 172.23.0.4 [172.23.0.4:56324] disconnected: Protocol error.
+1782598782: New connection from 172.23.0.4:44416 on port 8883.
+1782598782: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598782: Client 172.23.0.4 [172.23.0.4:44416] disconnected: Protocol error.
+1782598797: New connection from 172.23.0.4:44926 on port 8883.
+1782598797: OpenSSL Error while trying to get the error[0]: error:0A00010B:SSL routines::wrong version number
+1782598797: Client 172.23.0.4 [172.23.0.4:44926] disconnected: Protocol error.
+1782598821: New connection from 172.23.0.4:36524 on port 8883.
+1782598821: Client nodered_cabd8a949b3c414b [172.23.0.4:36524] disconnected: not authorised.
+1782598836: New connection from 172.23.0.4:51994 on port 8883.
+1782598836: Client nodered_cabd8a949b3c414b [172.23.0.4:51994] disconnected: not authorised.
+1782598851: New connection from 172.23.0.4:38502 on port 8883.
+1782598851: Client nodered_cabd8a949b3c414b [172.23.0.4:38502] disconnected: not authorised.
+1782598866: New connection from 172.23.0.4:46422 on port 8883.
+1782598866: Client nodered_cabd8a949b3c414b [172.23.0.4:46422] disconnected: not authorised.
+1782598881: New connection from 172.23.0.4:59114 on port 8883.
+1782598881: Client nodered_cabd8a949b3c414b [172.23.0.4:59114] disconnected: not authorised.
+1782598896: New connection from 172.23.0.4:58870 on port 8883.
+1782598896: Client nodered_cabd8a949b3c414b [172.23.0.4:58870] disconnected: not authorised.
+1782598903: New connection from 172.23.0.4:57718 on port 8883.
+1782598903: New client connected from 172.23.0.4:57718 as nodered_997991d1439a12fc (p4, c1, k60, u'nodered').
+1782598903: Client nodered_997991d1439a12fc negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782599001: Client nodered_997991d1439a12fc [172.23.0.4:57718] disconnected.
+1782599002: mosquitto version 2.1.2 terminating
+1782599002: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782599060: mosquitto version 2.1.2 starting
+1782599060: Config loaded from /mosquitto/config/mosquitto.conf.
+1782599060: Bridge support available.
+1782599060: Persistence support available.
+1782599060: TLS support available.
+1782599060: TLS-PSK support available.
+1782599060: Websockets support available.
+1782599060: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782599060: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782599060: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782599060: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782599060: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782599060: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782599060: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782599060: Plugin builtin-security has registered to receive 'acl-check' events.
+1782599060: Opening ipv4 listen socket on port 8883.
+1782599060: Opening ipv6 listen socket on port 8883.
+1782599060: mosquitto version 2.1.2 running
+1782599076: New connection from 172.23.0.4:53406 on port 8883.
+1782599076: New client connected from 172.23.0.4:53406 as nodered_dcebaab2ff38f61b (p4, c1, k60, u'nodered').
+1782599076: Client nodered_dcebaab2ff38f61b negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782599773: Client nodered_dcebaab2ff38f61b [172.23.0.4:53406] disconnected.
+1782599793: New connection from 172.23.0.4:35360 on port 8883.
+1782599793: New client connected from 172.23.0.4:35360 as nodered_cc4916a5a67e286f (p4, c1, k60, u'nodered').
+1782599793: Client nodered_cc4916a5a67e286f negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782600067: New connection from 172.23.0.1:36260 on port 8883.
+1782600068: New client connected from 172.23.0.1:36260 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782600068: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782600113: New connection from 172.23.0.1:37746 on port 8883.
+1782600113: Client ESP32_SmartHome [172.23.0.1:36260] disconnected: session taken over.
+1782600113: New client connected from 172.23.0.1:37746 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782600113: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782600197: New connection from 172.23.0.1:59388 on port 8883.
+1782600197: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600197: Client 172.23.0.1 [172.23.0.1:59388] disconnected: Protocol error.
+1782600197: New connection from 172.23.0.1:59390 on port 8883.
+1782600197: New connection from 172.23.0.1:59392 on port 8883.
+1782600199: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600199: Client 172.23.0.1 [172.23.0.1:59390] disconnected: Protocol error.
+1782600199: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600199: Client 172.23.0.1 [172.23.0.1:59392] disconnected: Protocol error.
+1782600199: New connection from 172.23.0.1:59396 on port 8883.
+1782600199: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600199: Client 172.23.0.1 [172.23.0.1:59396] disconnected: Protocol error.
+1782600199: New connection from 172.23.0.1:59408 on port 8883.
+1782600199: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600199: Client 172.23.0.1 [172.23.0.1:59408] disconnected: Protocol error.
+1782600204: New connection from 172.23.0.1:55058 on port 8883.
+1782600204: New connection from 172.23.0.1:55066 on port 8883.
+1782600204: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600204: Client 172.23.0.1 [172.23.0.1:55058] disconnected: Protocol error.
+1782600204: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600204: Client 172.23.0.1 [172.23.0.1:55066] disconnected: Protocol error.
+1782600204: New connection from 172.23.0.1:55078 on port 8883.
+1782600204: OpenSSL Error while trying to get the error[0]: error:0A00009C:SSL routines::http request
+1782600204: Client 172.23.0.1 [172.23.0.1:55078] disconnected: Protocol error.
+1782600850: New connection from 172.23.0.1:35864 on port 8883.
+1782600851: Client ESP32_SmartHome [172.23.0.1:35864] disconnected: not authorised.
+1782600852: OpenSSL Error while trying to get the error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1782600852: Client ESP32_SmartHome [172.23.0.1:37746] disconnected: connection closed by client.
+1782600856: New connection from 172.23.0.1:34710 on port 8883.
+1782600856: Client ESP32_SmartHome [172.23.0.1:34710] disconnected: not authorised.
+1782600860: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782600861: New connection from 172.23.0.1:37338 on port 8883.
+1782600862: Client ESP32_SmartHome [172.23.0.1:37338] disconnected: not authorised.
+1782600867: New connection from 172.23.0.1:37342 on port 8883.
+1782600867: Client ESP32_SmartHome [172.23.0.1:37342] disconnected: not authorised.
+1782600872: New connection from 172.23.0.1:52058 on port 8883.
+1782600873: Client ESP32_SmartHome [172.23.0.1:52058] disconnected: not authorised.
+1782600878: New connection from 172.23.0.1:52062 on port 8883.
+1782600878: Client ESP32_SmartHome [172.23.0.1:52062] disconnected: not authorised.
+1782600883: New connection from 172.23.0.1:38930 on port 8883.
+1782600884: Client ESP32_SmartHome [172.23.0.1:38930] disconnected: not authorised.
+1782600889: New connection from 172.23.0.1:38946 on port 8883.
+1782600889: Client ESP32_SmartHome [172.23.0.1:38946] disconnected: not authorised.
+1782600894: New connection from 172.23.0.1:37978 on port 8883.
+1782600895: Client ESP32_SmartHome [172.23.0.1:37978] disconnected: not authorised.
+1782600900: New connection from 172.23.0.1:37988 on port 8883.
+1782600900: Client ESP32_SmartHome [172.23.0.1:37988] disconnected: not authorised.
+1782600905: New connection from 172.23.0.1:56342 on port 8883.
+1782600906: Client ESP32_SmartHome [172.23.0.1:56342] disconnected: not authorised.
+1782600911: New connection from 172.23.0.1:56358 on port 8883.
+1782600911: Client ESP32_SmartHome [172.23.0.1:56358] disconnected: not authorised.
+1782600916: New connection from 172.23.0.1:43968 on port 8883.
+1782600917: Client ESP32_SmartHome [172.23.0.1:43968] disconnected: not authorised.
+1782600922: New connection from 172.23.0.1:49964 on port 8883.
+1782600922: Client ESP32_SmartHome [172.23.0.1:49964] disconnected: not authorised.
+1782600927: New connection from 172.23.0.1:49980 on port 8883.
+1782600928: Client ESP32_SmartHome [172.23.0.1:49980] disconnected: not authorised.
+1782600933: New connection from 172.23.0.1:34262 on port 8883.
+1782600933: Client ESP32_SmartHome [172.23.0.1:34262] disconnected: not authorised.
+1782600938: New connection from 172.23.0.1:34264 on port 8883.
+1782600938: Client ESP32_SmartHome [172.23.0.1:34264] disconnected: not authorised.
+1782600943: New connection from 172.23.0.1:37086 on port 8883.
+1782600944: Client ESP32_SmartHome [172.23.0.1:37086] disconnected: not authorised.
+1782600949: New connection from 172.23.0.1:37092 on port 8883.
+1782600950: Client ESP32_SmartHome [172.23.0.1:37092] disconnected: not authorised.
+1782600955: New connection from 172.23.0.1:41040 on port 8883.
+1782600955: Client ESP32_SmartHome [172.23.0.1:41040] disconnected: not authorised.
+1782600960: New connection from 172.23.0.1:41050 on port 8883.
+1782600961: Client ESP32_SmartHome [172.23.0.1:41050] disconnected: not authorised.
+1782600966: New connection from 172.23.0.1:34524 on port 8883.
+1782600966: Client ESP32_SmartHome [172.23.0.1:34524] disconnected: not authorised.
+1782600971: New connection from 172.23.0.1:34536 on port 8883.
+1782600971: Client ESP32_SmartHome [172.23.0.1:34536] disconnected: not authorised.
+1782600976: New connection from 172.23.0.1:40158 on port 8883.
+1782600977: Client ESP32_SmartHome [172.23.0.1:40158] disconnected: not authorised.
+1782600982: New connection from 172.23.0.1:52520 on port 8883.
+1782600982: Client ESP32_SmartHome [172.23.0.1:52520] disconnected: not authorised.
+1782600987: New connection from 172.23.0.1:52526 on port 8883.
+1782600988: Client ESP32_SmartHome [172.23.0.1:52526] disconnected: not authorised.
+1782600993: New connection from 172.23.0.1:34748 on port 8883.
+1782600993: Client ESP32_SmartHome [172.23.0.1:34748] disconnected: not authorised.
+1782600998: New connection from 172.23.0.1:34758 on port 8883.
+1782600999: Client ESP32_SmartHome [172.23.0.1:34758] disconnected: not authorised.
+1782601004: New connection from 172.23.0.1:46108 on port 8883.
+1782601004: Client ESP32_SmartHome [172.23.0.1:46108] disconnected: not authorised.
+1782601009: New connection from 172.23.0.1:46120 on port 8883.
+1782601010: Client ESP32_SmartHome [172.23.0.1:46120] disconnected: not authorised.
+1782601015: New connection from 172.23.0.1:55282 on port 8883.
+1782601015: Client ESP32_SmartHome [172.23.0.1:55282] disconnected: not authorised.
+1782601020: New connection from 172.23.0.1:55298 on port 8883.
+1782601021: Client ESP32_SmartHome [172.23.0.1:55298] disconnected: not authorised.
+1782601026: New connection from 172.23.0.1:45120 on port 8883.
+1782601026: Client ESP32_SmartHome [172.23.0.1:45120] disconnected: not authorised.
+1782601031: New connection from 172.23.0.1:45126 on port 8883.
+1782601031: Client ESP32_SmartHome [172.23.0.1:45126] disconnected: not authorised.
+1782601036: New connection from 172.23.0.1:43718 on port 8883.
+1782601037: Client ESP32_SmartHome [172.23.0.1:43718] disconnected: not authorised.
+1782601042: New connection from 172.23.0.1:38560 on port 8883.
+1782601042: Client ESP32_SmartHome [172.23.0.1:38560] disconnected: not authorised.
+1782601047: New connection from 172.23.0.1:38570 on port 8883.
+1782601048: Client ESP32_SmartHome [172.23.0.1:38570] disconnected: not authorised.
+1782601053: New connection from 172.23.0.1:57104 on port 8883.
+1782601053: Client ESP32_SmartHome [172.23.0.1:57104] disconnected: not authorised.
+1782601058: New connection from 172.23.0.1:57114 on port 8883.
+1782601059: Client ESP32_SmartHome [172.23.0.1:57114] disconnected: not authorised.
+1782601063: New connection from ::1:36308 on port 8883.
+1782601063: Client auto-AB9A961E-255E-11C9-BF54-38823B5C5769 [::1:36308] disconnected: not authorised.
+1782601063: New connection from ::1:36310 on port 8883.
+1782601064: Client auto-6B560C06-5BCB-A90B-CBF1-F6046DD5955B [::1:36310] disconnected: not authorised.
+1782601064: New connection from 172.23.0.1:47140 on port 8883.
+1782601064: New connection from ::1:36312 on port 8883.
+1782601064: OpenSSL Error while trying to get the error[0]: error:0A000418:SSL routines::tlsv1 alert unknown ca
+1782601064: Client ::1 [::1:36312] disconnected: Protocol error.
+1782601064: Client ESP32_SmartHome [172.23.0.1:47140] disconnected: not authorised.
+1782601070: New connection from 172.23.0.1:47156 on port 8883.
+1782601070: Client ESP32_SmartHome [172.23.0.1:47156] disconnected: not authorised.
+1782601075: New connection from 172.23.0.1:54434 on port 8883.
+1782601076: Client ESP32_SmartHome [172.23.0.1:54434] disconnected: not authorised.
+1782601081: New connection from 172.23.0.1:54448 on port 8883.
+1782601081: Client ESP32_SmartHome [172.23.0.1:54448] disconnected: not authorised.
+1782601084: New connection from ::1:40476 on port 8883.
+1782601084: New client connected from ::1:40476 as auto-02B00740-F81B-4655-842A-FCE38D0346FD (p4, c1, k60, u'esp32').
+1782601084: Client auto-02B00740-F81B-4655-842A-FCE38D0346FD negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782601084: Client auto-02B00740-F81B-4655-842A-FCE38D0346FD [::1:40476] disconnected.
+1782601086: New connection from 172.23.0.1:40954 on port 8883.
+1782601087: Client ESP32_SmartHome [172.23.0.1:40954] disconnected: not authorised.
+1782601092: New connection from 172.23.0.1:36136 on port 8883.
+1782601092: Client ESP32_SmartHome [172.23.0.1:36136] disconnected: not authorised.
+1782601110: New connection from 172.23.0.1:48524 on port 8883.
+1782601110: New client connected from 172.23.0.1:48524 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782601110: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782602661: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782602755: New connection from 172.23.0.1:51222 on port 8883.
+1782602756: Client ESP32_SmartHome [172.23.0.1:48524] disconnected: session taken over.
+1782602756: New client connected from 172.23.0.1:51222 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782602756: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782603457: Client nodered_cc4916a5a67e286f [172.23.0.4:35360] disconnected.
+1782603457: mosquitto version 2.1.2 terminating
+1782603457: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782603498: mosquitto version 2.1.2 starting
+1782603498: Config loaded from /mosquitto/config/mosquitto.conf.
+1782603498: Bridge support available.
+1782603498: Persistence support available.
+1782603498: TLS support available.
+1782603498: TLS-PSK support available.
+1782603498: Websockets support available.
+1782603498: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782603498: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782603498: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782603498: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782603498: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782603498: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782603498: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782603498: Plugin builtin-security has registered to receive 'acl-check' events.
+1782603498: Opening ipv4 listen socket on port 8883.
+1782603498: Opening ipv6 listen socket on port 8883.
+1782603498: mosquitto version 2.1.2 running
+1782603499: New connection from 172.23.0.1:58472 on port 8883.
+1782603499: New client connected from 172.23.0.1:58472 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782603499: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782603517: New connection from 172.23.0.4:47376 on port 8883.
+1782603517: New client connected from 172.23.0.4:47376 as nodered1e3558b1058378cb (p4, c1, k60, u'nodered').
+1782603517: Client nodered1e3558b1058378cb negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782603523: New connection from 172.23.0.1:46338 on port 8883.
+1782603523: OpenSSL Error while trying to get the error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1782603523: Client 172.23.0.1 [172.23.0.1:46338] disconnected: Protocol error.
+1782603664: Client nodered1e3558b1058378cb [172.23.0.4:47376] disconnected.
+1782603665: mosquitto version 2.1.2 terminating
+1782603665: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782603701: mosquitto version 2.1.2 starting
+1782603701: Config loaded from /mosquitto/config/mosquitto.conf.
+1782603701: Bridge support available.
+1782603701: Persistence support available.
+1782603701: TLS support available.
+1782603701: TLS-PSK support available.
+1782603701: Websockets support available.
+1782603701: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782603701: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782603701: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782603701: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782603701: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782603701: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782603701: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782603701: Plugin builtin-security has registered to receive 'acl-check' events.
+1782603701: Opening ipv4 listen socket on port 8883.
+1782603701: Opening ipv6 listen socket on port 8883.
+1782603701: mosquitto version 2.1.2 running
+1782603702: New connection from 172.23.0.1:51092 on port 8883.
+1782603703: New client connected from 172.23.0.1:51092 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782603703: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782603719: New connection from 172.23.0.4:50236 on port 8883.
+1782603719: New client connected from 172.23.0.4:50236 as noderede9dca4b8f023a5cb (p4, c1, k60, u'nodered').
+1782603719: Client noderede9dca4b8f023a5cb negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782604074: Client noderede9dca4b8f023a5cb [172.23.0.4:50236] disconnected.
+1782604074: New connection from 172.23.0.4:54644 on port 8883.
+1782604074: New client connected from 172.23.0.4:54644 as nodered3e8b22b17bc77c05 (p4, c1, k60, u'nodered').
+1782604074: Client nodered3e8b22b17bc77c05 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782604311: Client nodered3e8b22b17bc77c05 [172.23.0.4:54644] disconnected.
+1782604311: New connection from 172.23.0.4:56088 on port 8883.
+1782604311: New client connected from 172.23.0.4:56088 as noderedb8f31e3dcab106d7 (p4, c1, k60, u'nodered').
+1782604311: Client noderedb8f31e3dcab106d7 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782604637: Client noderedb8f31e3dcab106d7 [172.23.0.4:56088] disconnected.
+1782604637: New connection from 172.23.0.4:39418 on port 8883.
+1782604637: New client connected from 172.23.0.4:39418 as noderede35b97d3c8fdab17 (p4, c1, k60, u'nodered').
+1782604637: Client noderede35b97d3c8fdab17 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782605502: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782607302: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782609103: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782610904: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782611491: Client noderede35b97d3c8fdab17 [172.23.0.4:39418] disconnected.
+1782611491: New connection from 172.23.0.4:44178 on port 8883.
+1782611491: New client connected from 172.23.0.4:44178 as noderedb53f7d0bb66c6bf1 (p4, c1, k60, u'nodered').
+1782611491: Client noderedb53f7d0bb66c6bf1 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782611582: New connection from ::1:42606 on port 8883.
+1782611582: Client auto-6C6654F5-127B-BB02-A065-D7060E2CF388 [::1:42606] disconnected: not authorised.
+1782611597: New connection from ::1:54884 on port 8883.
+1782611597: New client connected from ::1:54884 as auto-F9F993B2-4669-A487-B01B-C1E163ED98F2 (p4, c1, k60, u'nodered').
+1782611597: Client auto-F9F993B2-4669-A487-B01B-C1E163ED98F2 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782612240: Client noderedb53f7d0bb66c6bf1 [172.23.0.4:44178] disconnected.
+1782612240: New connection from 172.23.0.4:34806 on port 8883.
+1782612240: New client connected from 172.23.0.4:34806 as nodered75d47374a3bef23d (p4, c1, k60, u'nodered').
+1782612240: Client nodered75d47374a3bef23d negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782612705: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782613545: Client ESP32_SmartHome [172.23.0.1:51092] disconnected: exceeded timeout.
+1782613545: New connection from 172.23.0.1:48634 on port 8883.
+1782613546: New client connected from 172.23.0.1:48634 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782613546: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782614506: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782615972: Client nodered75d47374a3bef23d [172.23.0.4:34806] disconnected.
+1782615972: New connection from 172.23.0.4:50894 on port 8883.
+1782615972: New client connected from 172.23.0.4:50894 as nodered4799fe8a3ea3bfe2 (p4, c1, k60, u'nodered').
+1782615972: Client nodered4799fe8a3ea3bfe2 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616059: Client nodered4799fe8a3ea3bfe2 [172.23.0.4:50894] disconnected.
+1782616059: New connection from 172.23.0.4:37322 on port 8883.
+1782616059: New client connected from 172.23.0.4:37322 as noderede3fcfde3452850e3 (p4, c1, k60, u'nodered').
+1782616059: Client noderede3fcfde3452850e3 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616199: Client noderede3fcfde3452850e3 [172.23.0.4:37322] disconnected.
+1782616199: New connection from 172.23.0.4:43992 on port 8883.
+1782616199: New client connected from 172.23.0.4:43992 as noderedd3e989f22e430330 (p4, c1, k60, u'nodered').
+1782616199: Client noderedd3e989f22e430330 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616261: Client noderedd3e989f22e430330 [172.23.0.4:43992] disconnected.
+1782616261: New connection from 172.23.0.4:59826 on port 8883.
+1782616261: New client connected from 172.23.0.4:59826 as noderedbffbe9d6860b9312 (p4, c1, k60, u'nodered').
+1782616261: Client noderedbffbe9d6860b9312 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616307: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782616818: Client noderedbffbe9d6860b9312 [172.23.0.4:59826] disconnected.
+1782616818: New connection from 172.23.0.4:50586 on port 8883.
+1782616818: New client connected from 172.23.0.4:50586 as nodered2c6040c1ad2abb44 (p4, c1, k60, u'nodered').
+1782616818: Client nodered2c6040c1ad2abb44 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616867: Client nodered2c6040c1ad2abb44 [172.23.0.4:50586] disconnected.
+1782616868: New connection from 172.23.0.4:52578 on port 8883.
+1782616868: New client connected from 172.23.0.4:52578 as noderedabaf5b2490b11851 (p4, c1, k60, u'nodered').
+1782616868: Client noderedabaf5b2490b11851 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616932: Client noderedabaf5b2490b11851 [172.23.0.4:52578] disconnected.
+1782616932: New connection from 172.23.0.4:56846 on port 8883.
+1782616932: New client connected from 172.23.0.4:56846 as noderede8f424144488d3bf (p4, c1, k60, u'nodered').
+1782616932: Client noderede8f424144488d3bf negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616945: Client noderede8f424144488d3bf [172.23.0.4:56846] disconnected.
+1782616945: New connection from 172.23.0.4:45456 on port 8883.
+1782616945: New client connected from 172.23.0.4:45456 as noderedc8e7f808d19d0499 (p4, c1, k60, u'nodered').
+1782616945: Client noderedc8e7f808d19d0499 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782616954: Client noderedc8e7f808d19d0499 [172.23.0.4:45456] disconnected.
+1782616954: New connection from 172.23.0.4:41654 on port 8883.
+1782616954: New client connected from 172.23.0.4:41654 as noderedc4ad24dde5e4dbf4 (p4, c1, k60, u'nodered').
+1782616954: Client noderedc4ad24dde5e4dbf4 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782617769: Client noderedc4ad24dde5e4dbf4 [172.23.0.4:41654] disconnected.
+1782617769: New connection from 172.23.0.4:33990 on port 8883.
+1782617769: New client connected from 172.23.0.4:33990 as noderedc3a03b2aa0f77bc4 (p4, c1, k60, u'nodered').
+1782617769: Client noderedc3a03b2aa0f77bc4 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782617879: Client noderedc3a03b2aa0f77bc4 [172.23.0.4:33990] disconnected.
+1782617879: New connection from 172.23.0.4:37324 on port 8883.
+1782617879: New client connected from 172.23.0.4:37324 as noderedf7b6586f5d96e00d (p4, c1, k60, u'nodered').
+1782617879: Client noderedf7b6586f5d96e00d negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782617910: Client noderedf7b6586f5d96e00d [172.23.0.4:37324] disconnected.
+1782617910: New connection from 172.23.0.4:35014 on port 8883.
+1782617910: New client connected from 172.23.0.4:35014 as noderedea83c2debc3c6158 (p4, c1, k60, u'nodered').
+1782617910: Client noderedea83c2debc3c6158 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782617979: Client noderedea83c2debc3c6158 [172.23.0.4:35014] disconnected.
+1782617979: New connection from 172.23.0.4:41142 on port 8883.
+1782617979: New client connected from 172.23.0.4:41142 as noderedb03b3c63643d9fef (p4, c1, k60, u'nodered').
+1782617979: Client noderedb03b3c63643d9fef negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782618011: Client noderedb03b3c63643d9fef [172.23.0.4:41142] disconnected.
+1782618011: New connection from 172.23.0.4:53232 on port 8883.
+1782618011: New client connected from 172.23.0.4:53232 as nodered80f71ab4fa5ed255 (p4, c1, k60, u'nodered').
+1782618011: Client nodered80f71ab4fa5ed255 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782618108: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782618792: New connection from 172.23.0.1:44866 on port 8883.
+1782618793: Client ESP32_SmartHome [172.23.0.1:48634] disconnected: session taken over.
+1782618793: New client connected from 172.23.0.1:44866 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782618793: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782618919: Client ESP32_SmartHome [172.23.0.1:44866] disconnected: exceeded timeout.
+1782618933: New connection from 172.23.0.1:40726 on port 8883.
+1782618934: New client connected from 172.23.0.1:40726 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782618934: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782618984: Client ESP32_SmartHome [172.23.0.1:40726] disconnected: exceeded timeout.
+1782618984: New connection from 172.23.0.1:53538 on port 8883.
+1782618984: New client connected from 172.23.0.1:53538 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782618984: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782619157: Client ESP32_SmartHome [172.23.0.1:53538] disconnected: exceeded timeout.
+1782619211: New connection from 172.23.0.1:54582 on port 8883.
+1782619241: Client 172.23.0.1 [172.23.0.1:54582] disconnected: exceeded timeout.
+1782619247: New connection from 172.23.0.1:39894 on port 8883.
+1782619249: New connection from ::1:54012 on port 8883.
+1782619250: New client connected from ::1:54012 as auto-5FB5E5E8-B891-33B3-B15C-ED8013F596CB (p4, c1, k60, u'nodered').
+1782619250: Client auto-5FB5E5E8-B891-33B3-B15C-ED8013F596CB negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619250: Client auto-5FB5E5E8-B891-33B3-B15C-ED8013F596CB [::1:54012] disconnected.
+1782619263: New connection from ::1:55506 on port 8883.
+1782619263: New client connected from ::1:55506 as auto-ECCEBE2A-91E5-C5EC-BC46-01A7E251FBA2 (p4, c1, k60, u'nodered').
+1782619263: Client auto-ECCEBE2A-91E5-C5EC-BC46-01A7E251FBA2 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619263: Client auto-ECCEBE2A-91E5-C5EC-BC46-01A7E251FBA2 [::1:55506] disconnected.
+1782619276: New client connected from 172.23.0.1:39894 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782619276: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782619301: Client ESP32_SmartHome [172.23.0.1:39894] disconnected: exceeded timeout.
+1782619338: New connection from 172.23.0.1:33402 on port 8883.
+1782619352: New connection from ::1:54592 on port 8883.
+1782619352: New client connected from ::1:54592 as auto-043D796F-3AF9-044C-2007-D10D275F13F3 (p4, c1, k60, u'nodered').
+1782619352: Client auto-043D796F-3AF9-044C-2007-D10D275F13F3 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619353: Client auto-043D796F-3AF9-044C-2007-D10D275F13F3 [::1:54592] disconnected.
+1782619366: New connection from ::1:52874 on port 8883.
+1782619366: New client connected from ::1:52874 as auto-3B005225-C4E0-6672-3462-F58B2607B62F (p4, c1, k60, u'nodered').
+1782619366: Client auto-3B005225-C4E0-6672-3462-F58B2607B62F negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619366: Client auto-3B005225-C4E0-6672-3462-F58B2607B62F [::1:52874] disconnected.
+1782619369: Client 172.23.0.1 [172.23.0.1:33402] disconnected: exceeded timeout.
+1782619380: New connection from 172.23.0.1:53498 on port 8883.
+1782619381: New client connected from 172.23.0.1:53498 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782619381: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782619404: Client ESP32_SmartHome [172.23.0.1:53498] disconnected: exceeded timeout.
+1782619581: New connection from 172.23.0.1:48360 on port 8883.
+1782619581: New client connected from 172.23.0.1:48360 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782619581: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782619639: New connection from ::1:43712 on port 8883.
+1782619639: New client connected from ::1:43712 as auto-62835673-76A3-3A12-E58B-03DACA90739E (p4, c1, k60, u'nodered').
+1782619639: Client auto-62835673-76A3-3A12-E58B-03DACA90739E negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619639: Client auto-62835673-76A3-3A12-E58B-03DACA90739E [::1:43712] disconnected.
+1782619642: New connection from ::1:49036 on port 8883.
+1782619642: New client connected from ::1:49036 as auto-DC571632-EE9B-8C0A-604D-FABB01D40FC2 (p4, c1, k60, u'nodered').
+1782619642: Client auto-DC571632-EE9B-8C0A-604D-FABB01D40FC2 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619642: Client auto-DC571632-EE9B-8C0A-604D-FABB01D40FC2 [::1:49036] disconnected.
+1782619658: New connection from ::1:42322 on port 8883.
+1782619658: New client connected from ::1:42322 as auto-CF851382-4659-99C0-1397-C9F202412C17 (p4, c1, k60, u'nodered').
+1782619658: Client auto-CF851382-4659-99C0-1397-C9F202412C17 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619658: Client auto-CF851382-4659-99C0-1397-C9F202412C17 [::1:42322] disconnected.
+1782619670: New connection from ::1:36592 on port 8883.
+1782619670: New client connected from ::1:36592 as auto-8E9DA5FC-E80F-077E-A06D-9DDF8F7F368C (p4, c1, k60, u'nodered').
+1782619670: Client auto-8E9DA5FC-E80F-077E-A06D-9DDF8F7F368C negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619670: Client auto-8E9DA5FC-E80F-077E-A06D-9DDF8F7F368C [::1:36592] disconnected.
+1782619674: New connection from ::1:36598 on port 8883.
+1782619674: New client connected from ::1:36598 as auto-C471C103-FE55-9B3F-28F8-45A1204D7AAF (p4, c1, k60, u'nodered').
+1782619674: Client auto-C471C103-FE55-9B3F-28F8-45A1204D7AAF negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619674: Client auto-C471C103-FE55-9B3F-28F8-45A1204D7AAF [::1:36598] disconnected.
+1782619888: New connection from ::1:48390 on port 8883.
+1782619888: New client connected from ::1:48390 as auto-7C33C9CC-B070-AEF6-60C0-1A03322FAE2A (p4, c1, k60, u'esp32').
+1782619888: Client auto-7C33C9CC-B070-AEF6-60C0-1A03322FAE2A negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782619908: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782620090: Client nodered80f71ab4fa5ed255 [172.23.0.4:53232] disconnected.
+1782620103: New connection from ::1:49130 on port 8883.
+1782620103: New client connected from ::1:49130 as auto-46AF1716-8A37-ACFA-02AA-E727BF028204 (p4, c1, k60, u'esp32').
+1782620103: Client auto-46AF1716-8A37-ACFA-02AA-E727BF028204 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782620116: New connection from 172.23.0.4:58682 on port 8883.
+1782620116: New client connected from 172.23.0.4:58682 as nodered29e6b1848b86d01c (p4, c1, k60, u'nodered').
+1782620116: Client nodered29e6b1848b86d01c negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782620539: Client nodered29e6b1848b86d01c [172.23.0.4:58682] disconnected.
+1782620540: New connection from 172.23.0.4:52302 on port 8883.
+1782620540: New client connected from 172.23.0.4:52302 as nodered55ece3932d46b584 (p4, c1, k60, u'nodered').
+1782620540: Client nodered55ece3932d46b584 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782621007: Client nodered55ece3932d46b584 [172.23.0.4:52302] disconnected.
+1782621007: New connection from 172.23.0.4:51344 on port 8883.
+1782621007: New client connected from 172.23.0.4:51344 as noderedcd45df0abbcf5a9a (p4, c1, k60, u'nodered').
+1782621007: Client noderedcd45df0abbcf5a9a negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782621629: New connection from ::1:45816 on port 8883.
+1782621629: New client connected from ::1:45816 as auto-637EB49C-DCC1-3844-0132-9762FFEE0095 (p4, c1, k60, u'esp32').
+1782621629: Client auto-637EB49C-DCC1-3844-0132-9762FFEE0095 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782621709: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782621854: Client noderedcd45df0abbcf5a9a [172.23.0.4:51344] disconnected.
+1782621854: New connection from 172.23.0.4:37062 on port 8883.
+1782621854: New client connected from 172.23.0.4:37062 as nodered9eba23dbcba7ebb4 (p4, c1, k60, u'nodered').
+1782621854: Client nodered9eba23dbcba7ebb4 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782621959: Client nodered9eba23dbcba7ebb4 [172.23.0.4:37062] disconnected.
+1782621959: New connection from 172.23.0.4:53232 on port 8883.
+1782621959: New client connected from 172.23.0.4:53232 as nodered42daa66480b469d8 (p4, c1, k60, u'nodered').
+1782621959: Client nodered42daa66480b469d8 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782622837: Client nodered42daa66480b469d8 [172.23.0.4:53232] disconnected.
+1782622837: New connection from 172.23.0.4:38634 on port 8883.
+1782622837: New client connected from 172.23.0.4:38634 as nodered8f7d2fa5ba8e199c (p4, c1, k60, u'nodered').
+1782622837: Client nodered8f7d2fa5ba8e199c negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782622986: Client ESP32_SmartHome [172.23.0.1:48360] disconnected: exceeded timeout.
+1782622986: New connection from 172.23.0.1:43234 on port 8883.
+1782622987: New client connected from 172.23.0.1:43234 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782622987: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782623181: Client ESP32_SmartHome [172.23.0.1:43234] disconnected: exceeded timeout.
+1782623194: New connection from 172.23.0.1:39212 on port 8883.
+1782623215: New client connected from 172.23.0.1:39212 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782623215: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782623472: Client ESP32_SmartHome [172.23.0.1:39212] disconnected: exceeded timeout.
+1782623472: New connection from 172.23.0.1:50866 on port 8883.
+1782623473: New client connected from 172.23.0.1:50866 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782623473: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782623510: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782623932: Client ESP32_SmartHome [172.23.0.1:50866] disconnected: exceeded timeout.
+1782623939: New connection from 172.23.0.1:42142 on port 8883.
+1782623939: New client connected from 172.23.0.1:42142 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782623939: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782623992: Client ESP32_SmartHome [172.23.0.1:42142] disconnected: exceeded timeout.
+1782624001: New connection from 172.23.0.1:40260 on port 8883.
+1782624011: New client connected from 172.23.0.1:40260 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782624011: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782624036: Client ESP32_SmartHome [172.23.0.1:40260] disconnected: exceeded timeout.
+1782624039: New connection from 172.23.0.1:47042 on port 8883.
+1782624040: New client connected from 172.23.0.1:47042 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782624040: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782624082: Client ESP32_SmartHome [172.23.0.1:47042] disconnected: exceeded timeout.
+1782624089: New connection from 172.23.0.1:38774 on port 8883.
+1782624089: New client connected from 172.23.0.1:38774 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782624089: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782625311: Saving in-memory database to /mosquitto/data//mosquitto.db.

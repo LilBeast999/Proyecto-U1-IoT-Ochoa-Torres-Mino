@@ -1,0 +1,21 @@
+0 verbose cli /usr/local/bin/node /usr/src/node-red/node_modules/.bin/npm
+1 info using npm@11.16.0
+2 info using node@v24.16.0
+3 silly config load:file:/usr/src/node-red/node_modules/npm/npmrc
+4 silly config load:file:/data/node_modules/node-red-contrib-tfjs-coco-ssd/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm rebuild @tensorflow/tfjs-node
+8 verbose argv "rebuild" "@tensorflow/tfjs-node" "--build-from-source"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2026-06-27T21_52_14_561Z-
+10 verbose logfile /data/.npm/_logs/2026-06-27T21_52_14_561Z-debug-0.log
+11 warn Unknown cli config "--build-from-source". This will stop working in the next major version of npm.
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+15 verbose cwd /data/node_modules/node-red-contrib-tfjs-coco-ssd
+16 verbose os Linux 5.15.153.1-microsoft-standard-WSL2
+17 verbose node v24.16.0
+18 verbose npm  v11.16.0
+19 verbose exit 0
+20 info ok

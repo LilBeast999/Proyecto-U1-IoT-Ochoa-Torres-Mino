@@ -1,13 +1,43 @@
 #include "esp_camera.h"
 #include <WiFi.h>
+#include <WiFiClientSecure.h>
 #include <HTTPClient.h>
 
 // credenciales
 const char* ssid = "iot";
 const char* password = "password123";
 
-// ip y puerto
-String serverName = "http://192.168.137.253:1880/upload-image";
+// ip y puerto (HTTPS / TLS hacia Node-RED)
+String serverName = "https://192.168.137.1:1880/upload-image";
+
+// Certificado de la CA (mosquitto/certs/ca.crt) para validar a Node-RED por TLS.
+const char* ca_cert = R"EOF(
+-----BEGIN CERTIFICATE-----
+MIIDlzCCAn+gAwIBAgIUaL9onXqEnSMOOCELR4eclRvmAa8wDQYJKoZIhvcNAQEL
+BQAwWzELMAkGA1UEBhMCQ0wxDjAMBgNVBAgMBU1hdWxlMQ4wDAYDVQQHDAVUYWxj
+YTEVMBMGA1UECgwMU21hcnRIb21lSW9UMRUwEwYDVQQDDAxTbWFydEhvbWUtQ0Ew
+HhcNMjYwNjE3MTczMTU1WhcNMjcwNjE3MTczMTU1WjBbMQswCQYDVQQGEwJDTDEO
+MAwGA1UECAwFTWF1bGUxDjAMBgNVBAcMBVRhbGNhMRUwEwYDVQQKDAxTbWFydEhv
+bWVJb1QxFTATBgNVBAMMDFNtYXJ0SG9tZS1DQTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAL9DjXUXiNdQ/tKLSPYrw2cb6CaoodZ+2FbWocofSBF5F2GR
+R6ULH8qRwIT13QalFQAIu4T3aEHrRrnQCOpDb3B7n8K2lfnfkF3F7HlG0uN4U4xo
+Owhg7iphENEWk1OOIGlusQbEXxyI1NaAMudwSgg8gcEmnDZvl486IexiVup9VSPy
+mPVMPUd+xpnPG49rxHDxPawhFeARwCAysstRiLSGfayLPhpbHZM2JU0wYPO12+z7
+b885csdCU3AM+kMrhtvplgJnzn8Z3bTWzTwoSZ++l3UIaP1ctsS8KRjv+iPbav+D
+2lKoXW0CtwsM6alkbw1D8j2CFahucrcniA109s8CAwEAAaNTMFEwHQYDVR0OBBYE
+FEXwJ7HzVusRxowHWyNc6B8O/CmuMB8GA1UdIwQYMBaAFEXwJ7HzVusRxowHWyNc
+6B8O/CmuMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAFLD7XC3
+up6eBi4gQtCVwbHzPTPpt8ffOYYDpKh3AacqB7YwFnQfT/Q+Zkspg70+h2qWghMa
+l93EiF0bBZ3M0lKkQNg0ONxluQH4XN4DAFTR67DdOf6KxDdYGzUoitcVBlNI9I6h
+mBKHcuMxvz8TO0hHrvO/WzRL7sjqJJLrC+LhFVLC3ImwaW/iI3jHTixJwyXHemLF
+jsOr3g1xmyOSzrdIOylH+T8Ruv/yeUf0INkPF045qMQWGS8REEbgx0vJR+1HNill
+kQundKh7HiG1ba5L5sBFEoo2WylCg2H9btQdekldZr2ztE9BGN2abYxkUrVNfPfr
+HvInHqRe7EiCi6M=
+-----END CERTIFICATE-----
+)EOF";
+
+// cliente TLS reutilizable para las peticiones HTTPS
+WiFiClientSecure clienteSeguro;
 
 // pines correspondientes al modelo ai thinker
 #define PWDN_GPIO_NUM     32
@@ -77,6 +107,18 @@ void setup() {
     Serial.print(".");
   }
   Serial.println("\nwifi conectado");
+
+  // Sincronizar reloj por NTP: TLS valida la vigencia del certificado.
+  configTime(0, 0, "pool.ntp.org", "time.nist.gov");
+  time_t ahora = time(nullptr);
+  unsigned long t0 = millis();
+  while (ahora < 1700000000 && millis() - t0 < 15000) {
+    delay(500);
+    ahora = time(nullptr);
+  }
+
+  // Cargar la CA para validar la identidad de Node-RED por TLS.
+  clienteSeguro.setCACert(ca_cert);
 }
 
 void loop() {
@@ -91,10 +133,10 @@ void loop() {
   // asegura conexion activa antes del envio http
   if(WiFi.status() == WL_CONNECTED){
     HTTPClient http;
-    
-    // establece la ruta de destino
-    http.begin(serverName);
-    
+
+    // establece la ruta de destino sobre TLS (valida a Node-RED con la CA)
+    http.begin(clienteSeguro, serverName);
+
     // define el tipo de archivo que viaja en el cuerpo del mensaje
     http.addHeader("Content-Type", "image/jpeg");
     

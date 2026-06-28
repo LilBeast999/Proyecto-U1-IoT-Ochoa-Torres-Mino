@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
 
   nodered:
-    image: nodered/node-red:latest-debian
+    image: nodered/node-red:4.1.8-20      # Node 20: CoAP (lru-cache@11 exige >=20) y TensorFlow (util.isNullOrUndefined existe hasta Node 22) conviven. Node 24 lo rompia
     container_name: nodered_app
     ports:
       - "1880:1880"
