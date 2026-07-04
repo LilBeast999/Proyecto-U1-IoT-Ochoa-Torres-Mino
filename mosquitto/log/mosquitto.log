@@ -903,3 +903,103 @@ To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
 1782624089: New client connected from 172.23.0.1:38774 as ESP32_SmartHome (p4, c1, k15, u'esp32').
 1782624089: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
 1782625311: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782626507: Client ESP32_SmartHome [172.23.0.1:38774] disconnected: exceeded timeout.
+1782627112: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782628913: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782630714: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782632515: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782924015: mosquitto version 2.1.2 starting
+1782924015: Config loaded from /mosquitto/config/mosquitto.conf.
+1782924015: Bridge support available.
+1782924015: Persistence support available.
+1782924015: TLS support available.
+1782924015: TLS-PSK support available.
+1782924015: Websockets support available.
+1782924015: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1782924015: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1782924015: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782924015: Plugin builtin-security has registered to receive 'basic-auth' events.
+1782924015: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1782924015: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1782924015: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1782924015: Plugin builtin-security has registered to receive 'acl-check' events.
+1782924015: Opening ipv4 listen socket on port 8883.
+1782924015: Opening ipv6 listen socket on port 8883.
+1782924015: mosquitto version 2.1.2 running
+1782924084: New connection from 172.23.0.2:48402 on port 8883.
+1782924084: New client connected from 172.23.0.2:48402 as noderedd0104e3a39387d40 (p4, c1, k60, u'nodered').
+1782924084: Client noderedd0104e3a39387d40 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782925745: New connection from 172.23.0.1:53132 on port 8883.
+1782925746: New client connected from 172.23.0.1:53132 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1782925746: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1782925816: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782927504: Client noderedd0104e3a39387d40 [172.23.0.2:48402] disconnected.
+1782927566: New connection from 172.23.0.2:41966 on port 8883.
+1782927566: New client connected from 172.23.0.2:41966 as nodered31b6c41c121ac0f3 (p4, c1, k60, u'nodered').
+1782927566: Client nodered31b6c41c121ac0f3 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782927616: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1782927697: Client nodered31b6c41c121ac0f3 [172.23.0.2:41966] disconnected.
+1782927697: New connection from 172.23.0.2:44660 on port 8883.
+1782927697: New client connected from 172.23.0.2:44660 as nodered7b42fab660a5e7d5 (p4, c1, k60, u'nodered').
+1782927697: Client nodered7b42fab660a5e7d5 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782928239: Client nodered7b42fab660a5e7d5 [172.23.0.2:44660] disconnected.
+1782928256: New connection from 172.23.0.2:42832 on port 8883.
+1782928256: New client connected from 172.23.0.2:42832 as noderedb7d9894b084fcb87 (p4, c1, k60, u'nodered').
+1782928256: Client noderedb7d9894b084fcb87 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1782932927: OpenSSL Error while trying to get the error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1782932927: Client ESP32_SmartHome [172.23.0.1:53132] disconnected: connection closed by client.
+1783116659: mosquitto version 2.1.2 starting
+1783116659: Config loaded from /mosquitto/config/mosquitto.conf.
+1783116659: Bridge support available.
+1783116659: Persistence support available.
+1783116659: TLS support available.
+1783116659: TLS-PSK support available.
+1783116659: Websockets support available.
+1783116659: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+
+1783116659: Warning: File /mosquitto/config/passwordfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/passwordfile`.
+
+1783116659: Warning: File /mosquitto/config/passwordfile group is not mosquitto. Future versions will refuse to load this file.
+
+1783116659: Plugin builtin-security has registered to receive 'basic-auth' events.
+1783116659: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+
+1783116659: Warning: File /mosquitto/config/aclfile owner is not mosquitto. Future versions will refuse to load this file.To fix this, use `chown mosquitto /mosquitto/config/aclfile`.
+
+1783116659: Warning: File /mosquitto/config/aclfile group is not mosquitto. Future versions will refuse to load this file.
+
+1783116659: Plugin builtin-security has registered to receive 'acl-check' events.
+1783116659: Opening ipv4 listen socket on port 8883.
+1783116659: Opening ipv6 listen socket on port 8883.
+1783116659: mosquitto version 2.1.2 running
+1783116662: New connection from 172.23.0.1:56178 on port 8883.
+1783116662: New client connected from 172.23.0.1:56178 as ESP32_SmartHome (p4, c1, k15, u'esp32').
+1783116662: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
+1783116720: New connection from 172.23.0.2:58874 on port 8883.
+1783116720: New client connected from 172.23.0.2:58874 as nodered18cd189c71e93044 (p4, c1, k60, u'nodered').
+1783116720: Client nodered18cd189c71e93044 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1783117964: Client nodered18cd189c71e93044 [172.23.0.2:58874] disconnected.
+1783117964: New connection from 172.23.0.2:42250 on port 8883.
+1783117964: New client connected from 172.23.0.2:42250 as noderedbfc4f425014a3aae (p4, c1, k60, u'nodered').
+1783117964: Client noderedbfc4f425014a3aae negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1783118460: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783119899: Client noderedbfc4f425014a3aae [172.23.0.2:42250] disconnected.
+1783119899: New connection from 172.23.0.2:54964 on port 8883.
+1783119899: New client connected from 172.23.0.2:54964 as nodered6dbc104d4d3307e8 (p4, c1, k60, u'nodered').
+1783119899: Client nodered6dbc104d4d3307e8 negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1783120261: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783120472: Client nodered6dbc104d4d3307e8 [172.23.0.2:54964] disconnected.
+1783120472: New connection from 172.23.0.2:35810 on port 8883.
+1783120472: New client connected from 172.23.0.2:35810 as nodered037f57995cd83ccb (p4, c1, k60, u'nodered').
+1783120472: Client nodered037f57995cd83ccb negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
+1783122061: Saving in-memory database to /mosquitto/data//mosquitto.db.

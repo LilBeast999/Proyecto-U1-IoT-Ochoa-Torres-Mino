@@ -424,7 +424,7 @@
         "y": 260,
         "wires": [
             [
-                "b09bed846e736e47",
+                "f3e899b15555bec5",
                 "81fe041b85e05f34"
             ]
         ]
@@ -571,8 +571,8 @@
         "active": true,
         "pass": false,
         "outputs": 0,
-        "x": 300,
-        "y": 440,
+        "x": 440,
+        "y": 320,
         "wires": []
     },
     {
@@ -1095,23 +1095,6 @@
         ]
     },
     {
-        "id": "b3f61a124f1a0cbb",
-        "type": "debug",
-        "z": "cba3b38867a78e6d",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 80,
-        "wires": []
-    },
-    {
         "id": "6f52856032ded4b4",
         "type": "trigger",
         "z": "cba3b38867a78e6d",
@@ -1372,7 +1355,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -1516,8 +1499,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 1340,
+        "x": 320,
+        "y": 1440,
         "wires": [
             [
                 "ce9c60e3f7b45672"
@@ -1536,8 +1519,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 170,
-        "y": 1420,
+        "x": 410,
+        "y": 1560,
         "wires": [
             [
                 "2c5efe22f51c212a"
@@ -1560,8 +1543,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 240,
-        "y": 1500,
+        "x": 660,
+        "y": 1640,
         "wires": [
             [
                 "01de07af338cfdf9",
@@ -1582,8 +1565,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 1580,
+        "x": 880,
+        "y": 1720,
         "wires": []
     },
     {
@@ -1598,8 +1581,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 1500,
+        "x": 900,
+        "y": 1640,
         "wires": [
             [
                 "556bb722f54cc596",
@@ -1628,8 +1611,8 @@
         "correl": "",
         "expiry": "",
         "broker": "1aace3cbeb0d6dfd",
-        "x": 800,
-        "y": 1600,
+        "x": 1220,
+        "y": 1740,
         "wires": []
     },
     {
@@ -1646,8 +1629,8 @@
         "correl": "",
         "expiry": "",
         "broker": "1aace3cbeb0d6dfd",
-        "x": 810,
-        "y": 1540,
+        "x": 1230,
+        "y": 1680,
         "wires": []
     },
     {
@@ -1664,8 +1647,8 @@
         "correl": "",
         "expiry": "",
         "broker": "1aace3cbeb0d6dfd",
-        "x": 800,
-        "y": 1480,
+        "x": 1220,
+        "y": 1620,
         "wires": []
     },
     {
@@ -1680,8 +1663,139 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 1380,
+        "x": 1120,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "b3f61a124f1a0cbb",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "113d46af4798182a",
+        "type": "ui_text_input",
+        "z": "cba3b38867a78e6d",
+        "name": "entrada_nl",
+        "label": "preguntale a tu casita",
+        "tooltip": "",
+        "group": "d6d11e5f510da65c",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 270,
+        "y": 1880,
+        "wires": [
+            [
+                "25d6ce4d2b28971c"
+            ]
+        ]
+    },
+    {
+        "id": "25d6ce4d2b28971c",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Construir consulta NL",
+        "func": "// === F4.2 — Consulta en lenguaje natural al LLM ===\n// Entrada: msg.payload = texto que el usuario escribió en el text input\n\nlet pregunta = (msg.payload || '').toString().trim();\n\n// Si el campo está vacío, no dispares el LLM\nif (!pregunta) {\n    node.warn('Pregunta vacía, no se envía al LLM');\n    return null;\n}\n\n// Mismo contexto de sensores que usa F3 (flow.estado / flow.persona)\nlet e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n    `gas=${e.gas ?? 'NA'} (rango 0-4095, critico>2500), microfono=${e.microfono ?? 'NA'}, ` +\n    `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el asistente de una casa inteligente. Responde la pregunta del usuario de forma breve y clara, en español, basandote UNICAMENTE en el estado actual de los sensores. Si la pregunta no tiene relacion con la casa, dilo amablemente.\n\nEstado actual del hogar: ${estado}.\n\nPregunta del usuario: ${pregunta}\n\nRespuesta (2 o 3 frases, en texto plano, sin JSON):`;\n\n// Guardamos la pregunta para mostrarla junto a la respuesta más adelante (4.4)\nmsg.pregunta = pregunta;\n\nmsg.payload = {\n    model: 'llama3.2:3b',\n    prompt: prompt,\n    stream: false,\n    keep_alive: -1,\n    options: { temperature: 0.3, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1880,
+        "wires": [
+            [
+                "f700cf38116077a7"
+            ]
+        ]
+    },
+    {
+        "id": "f700cf38116077a7",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Ollama NL",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 1880,
+        "wires": [
+            [
+                "8f08438258250934"
+            ]
+        ]
+    },
+    {
+        "id": "8f08438258250934",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "parsear respuesta",
+        "func": "// === F4.3/4.4 — Mostrar respuesta NL del LLM ===\nlet raw = msg.payload && msg.payload.response;\nlet texto = (raw || '').toString().trim();\n\nif (!texto) {\n    texto = 'El asistente no respondió. ¿Está activo Ollama?';\n}\n\nlet pregunta = msg.pregunta || '';\n\n// Salida 1 -> ui_text (mostrar en el dashboard)\nlet out_ui = { payload: texto };\n\n// Salida 2 -> mqtt out (smarthome/equipoXX/llm/respuesta)\nlet out_mqtt = {\n    topic: 'smarthome/equipoXX/llm/respuesta',\n    payload: JSON.stringify({ pregunta: pregunta, respuesta: texto, ts: Date.now() })\n};\n\nreturn [out_ui, out_mqtt];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 1880,
+        "wires": [
+            [
+                "48343dda7590749b"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "48343dda7590749b",
+        "type": "ui_text",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "respuesta",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1300,
+        "y": 1880,
         "wires": []
     }
 ]
