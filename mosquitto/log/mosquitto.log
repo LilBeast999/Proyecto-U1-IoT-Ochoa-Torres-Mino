@@ -903,3 +903,18 @@ To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
 1782624089: New client connected from 172.23.0.1:38774 as ESP32_SmartHome (p4, c1, k15, u'esp32').
 1782624089: Client ESP32_SmartHome negotiated TLSv1.2 cipher ECDHE-RSA-AES256-GCM-SHA384
 1782625311: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783119183: mosquitto version 2.0.22 starting
+1783119183: Config loaded from /mosquitto/config/mosquitto.conf.
+1783119183: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783119183: Error: Unable to decode password salt for user esp32, removing entry.
+1783119183: Error: Unable to decode password salt for user esp32cam, removing entry.
+1783119183: Error: Unable to decode password salt for user nodered, removing entry.
+1783119183: Error: Unable to decode password salt for user admin, removing entry.
+1783119183: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783119183: Opening ipv4 listen socket on port 8883.
+1783119183: Opening ipv6 listen socket on port 8883.
+1783119183: mosquitto version 2.0.22 running
+1783120984: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783122785: Saving in-memory database to /mosquitto/data//mosquitto.db.

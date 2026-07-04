@@ -1,0 +1,17 @@
+# fuente de datos de grafana
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    isDefault: true
+    editable: true
+    jsonData:
+      version: Flux
+      organization: smarthome
+      defaultBucket: sensores
+      tlsSkipVerify: true
+    secureJsonData:
+      token: smarthome-token-super-secreto

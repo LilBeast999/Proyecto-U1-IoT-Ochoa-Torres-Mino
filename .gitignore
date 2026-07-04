@@ -4,3 +4,17 @@ imagenes_camara/*
 !nodered_data/package.json
 !nodered_data/flows.json
 !nodered_data/settings.js
+influxdb/data/*
+!influxdb/data/.gitkeep
+influxdb/config/*
+!influxdb/config/.gitkeep
+grafana/data/*
+!grafana/data/.gitkeep
+n8n/data/*
+!n8n/data/.gitkeep
+nodered_data/.npm/
+nodered_data/.config.*
+nodered_data/.flows*.backup
+nodered_data/.sessions.json
+mosquitto/data/
+mosquitto/log/
