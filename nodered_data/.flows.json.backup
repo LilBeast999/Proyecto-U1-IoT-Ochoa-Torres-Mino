@@ -220,6 +220,21 @@
         "sessionExpiry": ""
     },
     {
+        "id": "47621f6372d73d76",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "casaclever",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
         "id": "4f2d7218ecbbaae2",
         "type": "http in",
         "z": "cba3b38867a78e6d",
@@ -454,7 +469,8 @@
                 "d5b835194dcfbe6f",
                 "7ede61f1787cfab7",
                 "d2e41f13fc10f35f",
-                "3e44dcb9af3ce6e7"
+                "3e44dcb9af3ce6e7",
+                "a1b2gemeloupd001"
             ]
         ]
     },
@@ -1512,7 +1528,7 @@
         "type": "function",
         "z": "cba3b38867a78e6d",
         "name": "Construir prompt",
-        "func": "let e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n             `gas=${e.gas ?? 'NA'} (rango 0-4095), microfono=${e.microfono ?? 'NA'}, ` +\n             `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el sistema de control de una casa inteligente. Clasifica el nivel de alerta comparando los numeros de gas y temperatura.\n\nREGLAS:\n- critico: gas mayor que 2500 O temperatura mayor que 40\n- advertencia: gas mayor que 1800 pero no critico\n- normal: cualquier otro caso\n\nEJEMPLOS:\n- gas=3200 => critico (3200 > 2500)\n- gas=2600 => critico (2600 > 2500)\n- gas=2000 => advertencia (2000 > 1800 y <= 2500)\n- gas=1500 => normal\n- temperatura=45 => critico\n\nACCIONES: critico => activar_led=true, activar_buzzer=true. advertencia => activar_led=true, activar_buzzer=false. normal => ambos false.\n\nEstado actual: ${estado}.\n\nResponde UNICAMENTE en JSON, sin texto adicional:\n{\"nivel_alerta\":\"...\",\"activar_led\":false,\"activar_buzzer\":false,\"mensaje_alerta\":\"texto breve\",\"razonamiento\":\"explica que regla aplicaste\"}`;\n\nmsg.payload = {\n    model: 'llama3.2:3b', prompt: prompt, stream: false, format: 'json',\n    keep_alive: -1, options: { temperature: 0, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
+        "func": "let e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n             `gas=${e.gas ?? 'NA'} (rango 0-4095), microfono=${e.microfono ?? 'NA'}, ` +\n             `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el sistema de control de una casa inteligente. Clasifica el nivel de alerta comparando los numeros de gas, temperatura y humedad.\n\nREGLAS (basta que UNA condicion se cumpla para subir de nivel):\n- critico: gas mayor que 2500 O temperatura mayor que 40\n- advertencia: (gas mayor que 1800 O temperatura mayor que 24 O humedad mayor que 70) y no critico\n- normal: cualquier otro caso\n\nEJEMPLOS:\n- gas=3200 => critico (gas > 2500)\n- temperatura=45 => critico (temperatura > 40)\n- gas=2000 => advertencia (gas > 1800 y no critico)\n- temperatura=30 => advertencia (temperatura > 24)\n- humedad=75 => advertencia (humedad > 70)\n- gas=1500, temperatura=22, humedad=50 => normal\n\nACCIONES: critico => activar_led=true, activar_buzzer=true. advertencia => activar_led=true, activar_buzzer=false. normal => ambos false.\n\nEstado actual: ${estado}.\n\nResponde UNICAMENTE en JSON, sin texto adicional:\n{\"nivel_alerta\":\"...\",\"activar_led\":false,\"activar_buzzer\":false,\"mensaje_alerta\":\"texto breve\",\"razonamiento\":\"explica que regla aplicaste\"}`;\n\nmsg.payload = {\n    model: 'llama3.2:3b', prompt: prompt, stream: false, format: 'json',\n    keep_alive: -1, options: { temperature: 0, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1574,7 +1590,7 @@
         "type": "function",
         "z": "cba3b38867a78e6d",
         "name": "parsear decisión",
-        "func": "let raw = msg.payload && msg.payload.response;\nlet dec;\ntry {\n    dec = JSON.parse(raw);\n    // valida que el LLM devolvio algo usable\n    if (typeof dec.activar_led === 'undefined' || typeof dec.activar_buzzer === 'undefined'\n        || !['normal','advertencia','critico'].includes(dec.nivel_alerta)) {\n        throw new Error('respuesta incompleta');\n    }\n} catch (err) {\n    // FALLBACK: solo si el LLM no responde o el JSON es invalido\n    node.warn('LLM no disponible/JSON invalido, fallback por regla: ' + raw);\n    let e = flow.get('estado') || {};\n    let gas = Number(e.gas) || 0, temp = Number(e.temperatura) || 0;\n    let critico = (gas > 2500) || (temp > 40), adv = (gas > 1800);\n    dec = {\n        nivel_alerta: critico ? 'critico' : (adv ? 'advertencia' : 'normal'),\n        activar_led: critico || adv, activar_buzzer: critico,\n        mensaje_alerta: 'Decision por regla (LLM no disponible)', razonamiento: 'fallback'\n    };\n}\n\nlet luz      = { topic: 'smarthome/equipoXX/luz_manual',     payload: dec.activar_led    ? '1' : '0' };\nlet buz      = { topic: 'smarthome/equipoXX/control/buzzer', payload: dec.activar_buzzer ? '1' : '0' };\nlet decision = { topic: 'smarthome/equipoXX/llm/decision',   payload: JSON.stringify(dec) };\nlet dbg      = { payload: dec };\nreturn [luz, buz, decision, dbg];\n",
+        "func": "let raw = msg.payload && msg.payload.response;\nlet dec;\ntry {\n    dec = JSON.parse(raw);\n    // valida que el LLM devolvio algo usable\n    if (typeof dec.activar_led === 'undefined' || typeof dec.activar_buzzer === 'undefined'\n        || !['normal','advertencia','critico'].includes(dec.nivel_alerta)) {\n        throw new Error('respuesta incompleta');\n    }\n} catch (err) {\n    // FALLBACK: solo si el LLM no responde o el JSON es invalido\n    node.warn('LLM no disponible/JSON invalido, fallback por regla: ' + raw);\n    let e = flow.get('estado') || {};\n    let gas = Number(e.gas) || 0, temp = Number(e.temperatura) || 0, hum = Number(e.humedad) || 0;\n    let critico = (gas > 2500) || (temp > 40), adv = (gas > 1800) || (temp > 24) || (hum > 70);\n    dec = {\n        nivel_alerta: critico ? 'critico' : (adv ? 'advertencia' : 'normal'),\n        activar_led: critico || adv, activar_buzzer: critico,\n        mensaje_alerta: 'Decision por regla (LLM no disponible)', razonamiento: 'fallback'\n    };\n}\n\n// Gemelo: el agente actualiza resumen_llm cada ciclo\nlet gg = global.get('gemelo') || {};\ngg.resumen_llm = {nivel: dec.nivel_alerta, mensaje: dec.mensaje_alerta, razonamiento: dec.razonamiento, hora: new Date().toISOString()};\nglobal.set('gemelo', gg);\n\nlet luz      = { topic: 'smarthome/equipoXX/luz_manual',     payload: dec.activar_led    ? '1' : '0' };\nlet buz      = { topic: 'smarthome/equipoXX/control/buzzer', payload: dec.activar_buzzer ? '1' : '0' };\nlet decision = { topic: 'smarthome/equipoXX/llm/decision',   payload: JSON.stringify(dec) };\nlet dbg      = { payload: dec };\nreturn [luz, buz, decision, dbg];\n",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,
@@ -1769,10 +1785,10 @@
         "x": 990,
         "y": 1880,
         "wires": [
-            [],
             [
                 "48343dda7590749b"
             ],
+            [],
             [],
             []
         ]
@@ -1796,6 +1812,281 @@
         "color": "#000000",
         "x": 1300,
         "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "ad8a2becafd6ecbb",
+        "type": "influxdb out",
+        "z": "cba3b38867a78e6d",
+        "influxdb": "47621f6372d73d76",
+        "name": "",
+        "measurement": "ambiente",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "sensores",
+        "x": 1540,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "dc563162f48c7a41",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "a influx",
+        "func": "msg.payload = {\n    temperatura: Number(msg.payload.temperatura),\n    humedad: Number(msg.payload.humedad),\n    gas: Number(msg.payload.gas)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1320,
+        "wires": [
+            [
+                "ad8a2becafd6ecbb"
+            ]
+        ]
+    },
+    {
+        "id": "2028ed22b612589e",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1150,
+        "y": 1320,
+        "wires": [
+            [
+                "dc563162f48c7a41"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemeloupd001",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "actualizar gemelo",
+        "func": "// Gemelo digital: estado en vivo + historial (60 registros a 1/min)\nlet g = global.get('gemelo') || {estado:{},historial:{temperatura:[],humedad:[],gas:[]},prediccion:{},resumen_llm:'',actualizado:null,_lastHist:0};\nlet p = msg.payload || {};\nlet now = Date.now();\ng.estado = {temperatura:Number(p.temperatura), humedad:Number(p.humedad), gas:Number(p.gas)};\ng.persona = flow.get('persona') || 'ninguna';\ng.actualizado = new Date(now).toISOString();\nif (now - (g._lastHist||0) >= 60000) {\n    g._lastHist = now;\n    ['temperatura','humedad','gas'].forEach(function(k){\n        let v = g.estado[k];\n        if (!isNaN(v)) { g.historial[k].push({t:g.actualizado, v:v}); if (g.historial[k].length > 60) g.historial[k].shift(); }\n    });\n}\nglobal.set('gemelo', g);\nreturn null;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a1b2gemelohttpin",
+        "type": "http in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "url": "/gemelo/estado",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1620,
+        "wires": [
+            [
+                "a1b2gemeloresp01"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemeloresp01",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "responder gemelo",
+        "func": "msg.payload = global.get('gemelo') || {error:'gemelo aun sin datos'};\nmsg.headers = {'Content-Type':'application/json'};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1620,
+        "wires": [
+            [
+                "a1b2gemelohttpout"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemelohttpout",
+        "type": "http response",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 620,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "a1b2predmqttin",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/prediccion/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1720,
+        "wires": [
+            [
+                "a1b2predfunc001"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2predfunc001",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "gemelo <- prediccion",
+        "func": "// topic: smarthome/equipoXX/prediccion/<field>\nlet parts = msg.topic.split('/');\nlet field = parts[parts.length-1];\nlet data = msg.payload;\nif (typeof data === 'string') { try { data = JSON.parse(data); } catch(e){ return null; } }\nlet g = global.get('gemelo') || {};\ng.prediccion = g.prediccion || {};\ng.prediccion[field] = { valor: data.valor, horizon_min: data.horizon_min, actualizado: new Date().toISOString() };\nglobal.set('gemelo', g);\nreturn null;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "a1b2agentein01",
+        "type": "http in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "url": "/agente/accion",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 1820,
+        "wires": [
+            [
+                "a1b2agentedisp"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2agentedisp",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "dispatch agente",
+        "func": "let a = msg.payload || {};\nlet tipo = a.tipo;\nlet out = [null, null, null, null];  // [mqtt, telegram, influx, respuesta]\nconst TOPICOS = { led:'smarthome/equipoXX/control/led', buzzer:'smarthome/equipoXX/control/buzzer', luz:'smarthome/equipoXX/luz_manual' };\nif (tipo === 'activar_actuador') {\n    let t = TOPICOS[a.actuador];\n    if (t) out[0] = { topic: t, payload: (a.estado ? '1' : '0') };\n} else if (tipo === 'ajustar_umbral') {\n    flow.set('umbral_' + a.variable, a.valor);\n    out[0] = { topic: 'smarthome/equipoXX/umbral/' + a.variable, payload: String(a.valor) };\n} else if (tipo === 'enviar_notificacion') {\n    out[1] = { payload: { chat_id: '1455813427', text: '[agente] ' + (a.texto || a.mensaje || 'evento') } };\n}\nout[2] = { measurement: 'decisiones', payload: { tipo: String(tipo||''), detalle: JSON.stringify(a), razonamiento: String(a.razonamiento||'') } };\nout[3] = Object.assign({}, msg, { payload: { ok: true, tipo: tipo } });\nreturn out;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1820,
+        "wires": [
+            [
+                "a1b2agentemqtt"
+            ],
+            [
+                "a1b2agentetg"
+            ],
+            [
+                "a1b2agenteinflux"
+            ],
+            [
+                "a1b2agenteresp"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2agentemqtt",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 650,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "a1b2agentetg",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Telegram",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.telegram.org/bot8888114765:AAEg7mB50Fso7Q2uPsHKP7byBhoh1AVJtbw/sendMessage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 660,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1b2agenteinflux",
+        "type": "influxdb out",
+        "z": "cba3b38867a78e6d",
+        "influxdb": "47621f6372d73d76",
+        "name": "",
+        "measurement": "decisiones",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "sensores",
+        "x": 660,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "a1b2agenteresp",
+        "type": "http response",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 660,
+        "y": 2000,
         "wires": []
     }
 ]

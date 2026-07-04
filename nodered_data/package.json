@@ -7,6 +7,7 @@
         "@tensorflow/tfjs-node": "^4.22.0",
         "node-red-contrib-coap": "~0.8.0",
         "node-red-contrib-image-output": "~0.6.4",
+        "node-red-contrib-influxdb": "~0.7.0",
         "node-red-contrib-tfjs-coco-ssd": "~1.0.6",
         "node-red-dashboard": "~3.6.6"
     }

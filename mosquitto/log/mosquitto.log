@@ -1003,3 +1003,513 @@ To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
 1783120472: New client connected from 172.23.0.2:35810 as nodered037f57995cd83ccb (p4, c1, k60, u'nodered').
 1783120472: Client nodered037f57995cd83ccb negotiated TLSv1.3 cipher TLS_AES_256_GCM_SHA384
 1783122061: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783128256: mosquitto version 2.0.22 starting
+1783128256: Config loaded from /mosquitto/config/mosquitto.conf.
+1783128256: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783128256: Error: Unable to decode password salt for user esp32, removing entry.
+1783128256: Error: Unable to decode password salt for user esp32cam, removing entry.
+1783128256: Error: Unable to decode password salt for user nodered, removing entry.
+1783128256: Error: Unable to decode password salt for user admin, removing entry.
+1783128256: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783128256: Opening ipv4 listen socket on port 8883.
+1783128256: Opening ipv6 listen socket on port 8883.
+1783128256: mosquitto version 2.0.22 running
+1783128256: New connection from 172.23.0.1:58896 on port 8883.
+1783128256: Client ESP32_SmartHome disconnected, not authorised.
+1783128261: New connection from 172.23.0.1:33732 on port 8883.
+1783128262: Client ESP32_SmartHome disconnected, not authorised.
+1783128267: New connection from 172.23.0.1:33744 on port 8883.
+1783128267: Client ESP32_SmartHome disconnected, not authorised.
+1783128272: New connection from 172.23.0.1:57950 on port 8883.
+1783128273: Client ESP32_SmartHome disconnected, not authorised.
+1783128278: New connection from 172.23.0.1:57958 on port 8883.
+1783128278: Client ESP32_SmartHome disconnected, not authorised.
+1783128283: New connection from 172.23.0.1:33896 on port 8883.
+1783128284: Client ESP32_SmartHome disconnected, not authorised.
+1783128289: New connection from 172.23.0.1:33906 on port 8883.
+1783128289: Client ESP32_SmartHome disconnected, not authorised.
+1783128294: New connection from 172.23.0.1:49014 on port 8883.
+1783128294: Client ESP32_SmartHome disconnected, not authorised.
+1783128299: New connection from 172.23.0.1:49024 on port 8883.
+1783128300: New connection from 172.23.0.6:47392 on port 8883.
+1783128300: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128300: Client ESP32_SmartHome disconnected, not authorised.
+1783128305: New connection from 172.23.0.1:34232 on port 8883.
+1783128305: Client ESP32_SmartHome disconnected, not authorised.
+1783128310: New connection from 172.23.0.1:34234 on port 8883.
+1783128311: Client ESP32_SmartHome disconnected, not authorised.
+1783128315: New connection from 172.23.0.6:33784 on port 8883.
+1783128315: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128316: New connection from 172.23.0.1:38116 on port 8883.
+1783128316: Client ESP32_SmartHome disconnected, not authorised.
+1783128321: New connection from 172.23.0.1:52818 on port 8883.
+1783128322: Client ESP32_SmartHome disconnected, not authorised.
+1783128327: New connection from 172.23.0.1:52834 on port 8883.
+1783128327: Client ESP32_SmartHome disconnected, not authorised.
+1783128330: New connection from 172.23.0.6:52192 on port 8883.
+1783128330: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128332: New connection from 172.23.0.1:41636 on port 8883.
+1783128333: Client ESP32_SmartHome disconnected, not authorised.
+1783128338: New connection from 172.23.0.1:41648 on port 8883.
+1783128338: Client ESP32_SmartHome disconnected, not authorised.
+1783128343: New connection from 172.23.0.1:37026 on port 8883.
+1783128344: Client ESP32_SmartHome disconnected, not authorised.
+1783128345: New connection from 172.23.0.6:60024 on port 8883.
+1783128345: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128349: New connection from 172.23.0.1:37042 on port 8883.
+1783128349: Client ESP32_SmartHome disconnected, not authorised.
+1783128354: New connection from 172.23.0.1:33396 on port 8883.
+1783128355: Client ESP32_SmartHome disconnected, not authorised.
+1783128360: New connection from 172.23.0.1:33412 on port 8883.
+1783128360: New connection from 172.23.0.6:60846 on port 8883.
+1783128360: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128360: Client ESP32_SmartHome disconnected, not authorised.
+1783128365: New connection from 172.23.0.1:55350 on port 8883.
+1783128366: Client ESP32_SmartHome disconnected, not authorised.
+1783128371: New connection from 172.23.0.1:55354 on port 8883.
+1783128371: Client ESP32_SmartHome disconnected, not authorised.
+1783128375: New connection from 172.23.0.6:57812 on port 8883.
+1783128375: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128376: New connection from 172.23.0.1:46766 on port 8883.
+1783128376: Client ESP32_SmartHome disconnected, not authorised.
+1783128381: New connection from 172.23.0.1:54440 on port 8883.
+1783128382: Client ESP32_SmartHome disconnected, not authorised.
+1783128387: New connection from 172.23.0.1:54456 on port 8883.
+1783128387: Client ESP32_SmartHome disconnected, not authorised.
+1783128390: New connection from 172.23.0.6:60462 on port 8883.
+1783128390: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128392: New connection from 172.23.0.1:50072 on port 8883.
+1783128393: Client ESP32_SmartHome disconnected, not authorised.
+1783128398: New connection from 172.23.0.1:50076 on port 8883.
+1783128398: Client ESP32_SmartHome disconnected, not authorised.
+1783128403: New connection from 172.23.0.1:35884 on port 8883.
+1783128404: Client ESP32_SmartHome disconnected, not authorised.
+1783128405: New connection from 172.23.0.6:42594 on port 8883.
+1783128405: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128409: New connection from 172.23.0.1:35898 on port 8883.
+1783128409: Client ESP32_SmartHome disconnected, not authorised.
+1783128414: New connection from 172.23.0.1:36464 on port 8883.
+1783128415: Client ESP32_SmartHome disconnected, not authorised.
+1783128420: New connection from 172.23.0.1:36474 on port 8883.
+1783128420: New connection from 172.23.0.6:41136 on port 8883.
+1783128420: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128420: Client ESP32_SmartHome disconnected, not authorised.
+1783128425: New connection from 172.23.0.1:55472 on port 8883.
+1783128426: Client ESP32_SmartHome disconnected, not authorised.
+1783128431: New connection from 172.23.0.1:55484 on port 8883.
+1783128431: Client ESP32_SmartHome disconnected, not authorised.
+1783128435: New connection from 172.23.0.6:50464 on port 8883.
+1783128435: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128436: New connection from 172.23.0.1:49316 on port 8883.
+1783128436: Client ESP32_SmartHome disconnected, not authorised.
+1783128441: New connection from 172.23.0.1:35036 on port 8883.
+1783128442: Client ESP32_SmartHome disconnected, not authorised.
+1783128447: New connection from 172.23.0.1:35046 on port 8883.
+1783128447: Client ESP32_SmartHome disconnected, not authorised.
+1783128450: New connection from 172.23.0.6:33980 on port 8883.
+1783128450: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128452: New connection from 172.23.0.1:50870 on port 8883.
+1783128453: Client ESP32_SmartHome disconnected, not authorised.
+1783128458: New connection from 172.23.0.1:50882 on port 8883.
+1783128458: Client ESP32_SmartHome disconnected, not authorised.
+1783128463: New connection from 172.23.0.1:35850 on port 8883.
+1783128464: Client ESP32_SmartHome disconnected, not authorised.
+1783128465: New connection from 172.23.0.6:49206 on port 8883.
+1783128465: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128469: New connection from 172.23.0.1:35858 on port 8883.
+1783128469: Client ESP32_SmartHome disconnected, not authorised.
+1783128474: New connection from 172.23.0.1:59346 on port 8883.
+1783128475: Client ESP32_SmartHome disconnected, not authorised.
+1783128480: New connection from 172.23.0.1:59354 on port 8883.
+1783128480: New connection from 172.23.0.6:47290 on port 8883.
+1783128480: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128480: Client ESP32_SmartHome disconnected, not authorised.
+1783128485: New connection from 172.23.0.1:57908 on port 8883.
+1783128485: Client ESP32_SmartHome disconnected, not authorised.
+1783128490: New connection from 172.23.0.1:57924 on port 8883.
+1783128491: Client ESP32_SmartHome disconnected, not authorised.
+1783128495: New connection from 172.23.0.6:44276 on port 8883.
+1783128495: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128496: New connection from 172.23.0.1:36298 on port 8883.
+1783128496: Client ESP32_SmartHome disconnected, not authorised.
+1783128501: New connection from 172.23.0.1:40378 on port 8883.
+1783128502: Client ESP32_SmartHome disconnected, not authorised.
+1783128507: New connection from 172.23.0.1:40388 on port 8883.
+1783128507: Client ESP32_SmartHome disconnected, not authorised.
+1783128510: New connection from 172.23.0.6:41592 on port 8883.
+1783128510: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128512: New connection from 172.23.0.1:42862 on port 8883.
+1783128513: Client ESP32_SmartHome disconnected, not authorised.
+1783128517: mosquitto version 2.0.22 terminating
+1783128517: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783128518: mosquitto version 2.0.22 starting
+1783128518: Config loaded from /mosquitto/config/mosquitto.conf.
+1783128518: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783128518: Error: Unable to decode password salt for user esp32, removing entry.
+1783128518: Error: Unable to decode password salt for user esp32cam, removing entry.
+1783128518: Error: Unable to decode password salt for user nodered, removing entry.
+1783128518: Error: Unable to decode password salt for user admin, removing entry.
+1783128518: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783128518: Opening ipv4 listen socket on port 8883.
+1783128518: Opening ipv6 listen socket on port 8883.
+1783128518: mosquitto version 2.0.22 running
+1783128523: New connection from 172.23.0.1:50334 on port 8883.
+1783128523: Client ESP32_SmartHome disconnected, not authorised.
+1783128525: New connection from 172.23.0.6:47116 on port 8883.
+1783128525: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128528: New connection from 172.23.0.1:50342 on port 8883.
+1783128529: Client ESP32_SmartHome disconnected, not authorised.
+1783128534: New connection from 172.23.0.1:54882 on port 8883.
+1783128534: Client ESP32_SmartHome disconnected, not authorised.
+1783128539: New connection from 172.23.0.1:54892 on port 8883.
+1783128539: Client ESP32_SmartHome disconnected, not authorised.
+1783128540: New connection from 172.23.0.6:54142 on port 8883.
+1783128540: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128545: New connection from 172.23.0.1:52028 on port 8883.
+1783128545: Client ESP32_SmartHome disconnected, not authorised.
+1783128550: New connection from 172.23.0.1:52036 on port 8883.
+1783128550: Client ESP32_SmartHome disconnected, not authorised.
+1783128555: New connection from 172.23.0.6:32890 on port 8883.
+1783128555: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128555: New connection from 172.23.0.1:41866 on port 8883.
+1783128556: Client ESP32_SmartHome disconnected, not authorised.
+1783128561: New connection from 172.23.0.1:41878 on port 8883.
+1783128561: Client ESP32_SmartHome disconnected, not authorised.
+1783128566: New connection from 172.23.0.1:40546 on port 8883.
+1783128567: Client ESP32_SmartHome disconnected, not authorised.
+1783128570: New connection from 172.23.0.6:43290 on port 8883.
+1783128570: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128572: New connection from 172.23.0.1:33384 on port 8883.
+1783128572: Client ESP32_SmartHome disconnected, not authorised.
+1783128577: New connection from 172.23.0.1:33398 on port 8883.
+1783128578: Client ESP32_SmartHome disconnected, not authorised.
+1783128583: New connection from 172.23.0.1:39364 on port 8883.
+1783128583: Client ESP32_SmartHome disconnected, not authorised.
+1783128585: New connection from 172.23.0.6:52414 on port 8883.
+1783128585: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128588: New connection from 172.23.0.1:39368 on port 8883.
+1783128588: Client ESP32_SmartHome disconnected, not authorised.
+1783128594: New connection from 172.23.0.1:47964 on port 8883.
+1783128594: Client ESP32_SmartHome disconnected, not authorised.
+1783128599: New connection from 172.23.0.1:47968 on port 8883.
+1783128599: Client ESP32_SmartHome disconnected, not authorised.
+1783128600: New connection from 172.23.0.6:41466 on port 8883.
+1783128600: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128605: New connection from 172.23.0.1:60580 on port 8883.
+1783128605: Client ESP32_SmartHome disconnected, not authorised.
+1783128610: New connection from 172.23.0.1:60584 on port 8883.
+1783128610: Client ESP32_SmartHome disconnected, not authorised.
+1783128615: New connection from 172.23.0.6:39106 on port 8883.
+1783128615: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128615: New connection from 172.23.0.1:50586 on port 8883.
+1783128616: Client ESP32_SmartHome disconnected, not authorised.
+1783128621: New connection from 172.23.0.1:50596 on port 8883.
+1783128621: Client ESP32_SmartHome disconnected, not authorised.
+1783128626: New connection from 172.23.0.1:55814 on port 8883.
+1783128627: Client ESP32_SmartHome disconnected, not authorised.
+1783128630: New connection from 172.23.0.6:53898 on port 8883.
+1783128630: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128632: New connection from 172.23.0.1:50012 on port 8883.
+1783128632: Client ESP32_SmartHome disconnected, not authorised.
+1783128637: New connection from 172.23.0.1:50020 on port 8883.
+1783128638: Client ESP32_SmartHome disconnected, not authorised.
+1783128643: New connection from 172.23.0.1:43054 on port 8883.
+1783128643: Client ESP32_SmartHome disconnected, not authorised.
+1783128645: New connection from 172.23.0.6:52118 on port 8883.
+1783128645: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128648: New connection from 172.23.0.1:43064 on port 8883.
+1783128648: Client ESP32_SmartHome disconnected, not authorised.
+1783128653: New connection from 172.23.0.1:57764 on port 8883.
+1783128654: Client ESP32_SmartHome disconnected, not authorised.
+1783128659: New connection from 172.23.0.1:57768 on port 8883.
+1783128659: Client ESP32_SmartHome disconnected, not authorised.
+1783128660: New connection from 172.23.0.6:36954 on port 8883.
+1783128660: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128664: New connection from 172.23.0.1:35134 on port 8883.
+1783128665: Client ESP32_SmartHome disconnected, not authorised.
+1783128670: New connection from 172.23.0.1:35138 on port 8883.
+1783128670: Client ESP32_SmartHome disconnected, not authorised.
+1783128675: New connection from 172.23.0.6:51082 on port 8883.
+1783128675: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128675: New connection from 172.23.0.1:44406 on port 8883.
+1783128676: Client ESP32_SmartHome disconnected, not authorised.
+1783128681: New connection from 172.23.0.1:44420 on port 8883.
+1783128681: Client ESP32_SmartHome disconnected, not authorised.
+1783128686: New connection from 172.23.0.1:43424 on port 8883.
+1783128687: Client ESP32_SmartHome disconnected, not authorised.
+1783128690: New connection from 172.23.0.6:40124 on port 8883.
+1783128690: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128692: New connection from 172.23.0.1:42412 on port 8883.
+1783128692: Client ESP32_SmartHome disconnected, not authorised.
+1783128697: New connection from 172.23.0.1:42414 on port 8883.
+1783128697: Client ESP32_SmartHome disconnected, not authorised.
+1783128702: New connection from 172.23.0.1:44518 on port 8883.
+1783128703: Client ESP32_SmartHome disconnected, not authorised.
+1783128705: New connection from 172.23.0.6:38780 on port 8883.
+1783128705: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128708: New connection from 172.23.0.1:44534 on port 8883.
+1783128708: Client ESP32_SmartHome disconnected, not authorised.
+1783128713: New connection from 172.23.0.1:59180 on port 8883.
+1783128714: Client ESP32_SmartHome disconnected, not authorised.
+1783128719: New connection from 172.23.0.1:59194 on port 8883.
+1783128719: Client ESP32_SmartHome disconnected, not authorised.
+1783128720: New connection from 172.23.0.6:34064 on port 8883.
+1783128720: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128724: New connection from 172.23.0.1:42082 on port 8883.
+1783128724: Client ESP32_SmartHome disconnected, not authorised.
+1783128729: New connection from 172.23.0.1:42098 on port 8883.
+1783128730: Client ESP32_SmartHome disconnected, not authorised.
+1783128735: New connection from 172.23.0.1:38200 on port 8883.
+1783128735: New connection from 172.23.0.6:54710 on port 8883.
+1783128735: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128735: Client ESP32_SmartHome disconnected, not authorised.
+1783128740: New connection from 172.23.0.1:38202 on port 8883.
+1783128741: Client ESP32_SmartHome disconnected, not authorised.
+1783128746: New connection from 172.23.0.1:42258 on port 8883.
+1783128746: Client ESP32_SmartHome disconnected, not authorised.
+1783128750: New connection from 172.23.0.6:60194 on port 8883.
+1783128750: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128751: New connection from 172.23.0.1:38962 on port 8883.
+1783128752: Client ESP32_SmartHome disconnected, not authorised.
+1783128757: New connection from 172.23.0.1:38972 on port 8883.
+1783128757: Client ESP32_SmartHome disconnected, not authorised.
+1783128762: New connection from 172.23.0.1:36912 on port 8883.
+1783128763: Client ESP32_SmartHome disconnected, not authorised.
+1783128765: New connection from 172.23.0.6:49704 on port 8883.
+1783128765: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128768: New connection from 172.23.0.1:36926 on port 8883.
+1783128768: Client ESP32_SmartHome disconnected, not authorised.
+1783128773: New connection from 172.23.0.1:55530 on port 8883.
+1783128774: Client ESP32_SmartHome disconnected, not authorised.
+1783128779: New connection from 172.23.0.1:55544 on port 8883.
+1783128779: Client ESP32_SmartHome disconnected, not authorised.
+1783128780: New connection from 172.23.0.6:56630 on port 8883.
+1783128780: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128784: New connection from 172.23.0.1:39808 on port 8883.
+1783128784: Client ESP32_SmartHome disconnected, not authorised.
+1783128789: New connection from 172.23.0.1:39816 on port 8883.
+1783128790: Client ESP32_SmartHome disconnected, not authorised.
+1783128795: New connection from 172.23.0.1:34092 on port 8883.
+1783128795: New connection from 172.23.0.6:57660 on port 8883.
+1783128795: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128795: Client ESP32_SmartHome disconnected, not authorised.
+1783128800: New connection from 172.23.0.1:34098 on port 8883.
+1783128801: Client ESP32_SmartHome disconnected, not authorised.
+1783128806: New connection from 172.23.0.1:35764 on port 8883.
+1783128806: Client ESP32_SmartHome disconnected, not authorised.
+1783128810: New connection from 172.23.0.6:60812 on port 8883.
+1783128810: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128811: New connection from 172.23.0.1:33910 on port 8883.
+1783128812: Client ESP32_SmartHome disconnected, not authorised.
+1783128817: New connection from 172.23.0.1:33916 on port 8883.
+1783128817: Client ESP32_SmartHome disconnected, not authorised.
+1783128822: New connection from 172.23.0.1:38912 on port 8883.
+1783128823: Client ESP32_SmartHome disconnected, not authorised.
+1783128825: New connection from 172.23.0.6:39844 on port 8883.
+1783128825: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128828: New connection from 172.23.0.1:38918 on port 8883.
+1783128828: Client ESP32_SmartHome disconnected, not authorised.
+1783128833: New connection from 172.23.0.1:44402 on port 8883.
+1783128834: Client ESP32_SmartHome disconnected, not authorised.
+1783128839: New connection from 172.23.0.1:44418 on port 8883.
+1783128839: Client ESP32_SmartHome disconnected, not authorised.
+1783128840: New connection from 172.23.0.6:43750 on port 8883.
+1783128840: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128844: New connection from 172.23.0.1:35196 on port 8883.
+1783128844: Client ESP32_SmartHome disconnected, not authorised.
+1783128849: New connection from 172.23.0.1:35212 on port 8883.
+1783128850: Client ESP32_SmartHome disconnected, not authorised.
+1783128855: New connection from 172.23.0.1:43054 on port 8883.
+1783128855: New connection from 172.23.0.6:44002 on port 8883.
+1783128855: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128855: Client ESP32_SmartHome disconnected, not authorised.
+1783128860: New connection from 172.23.0.1:43070 on port 8883.
+1783128861: Client ESP32_SmartHome disconnected, not authorised.
+1783128866: New connection from 172.23.0.1:34316 on port 8883.
+1783128866: Client ESP32_SmartHome disconnected, not authorised.
+1783128870: New connection from 172.23.0.6:33230 on port 8883.
+1783128870: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128871: New connection from 172.23.0.1:37310 on port 8883.
+1783128871: Client ESP32_SmartHome disconnected, not authorised.
+1783128877: New connection from 172.23.0.1:37326 on port 8883.
+1783128877: Client ESP32_SmartHome disconnected, not authorised.
+1783128882: New connection from 172.23.0.1:50430 on port 8883.
+1783128882: Client ESP32_SmartHome disconnected, not authorised.
+1783128885: New connection from 172.23.0.6:51120 on port 8883.
+1783128885: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128887: New connection from 172.23.0.1:50440 on port 8883.
+1783128888: Client ESP32_SmartHome disconnected, not authorised.
+1783128893: New connection from 172.23.0.1:34066 on port 8883.
+1783128893: Client ESP32_SmartHome disconnected, not authorised.
+1783128899: New connection from 172.23.0.1:34072 on port 8883.
+1783128899: Client ESP32_SmartHome disconnected, not authorised.
+1783128900: New connection from 172.23.0.6:35326 on port 8883.
+1783128900: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128904: New connection from 172.23.0.1:55112 on port 8883.
+1783128904: Client ESP32_SmartHome disconnected, not authorised.
+1783128909: New connection from 172.23.0.1:55116 on port 8883.
+1783128910: Client ESP32_SmartHome disconnected, not authorised.
+1783128915: New connection from 172.23.0.1:60028 on port 8883.
+1783128915: Client ESP32_SmartHome disconnected, not authorised.
+1783128915: New connection from 172.23.0.6:51552 on port 8883.
+1783128915: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128920: New connection from 172.23.0.1:60040 on port 8883.
+1783128921: Client ESP32_SmartHome disconnected, not authorised.
+1783128926: New connection from 172.23.0.1:35218 on port 8883.
+1783128926: Client ESP32_SmartHome disconnected, not authorised.
+1783128930: New connection from 172.23.0.6:59720 on port 8883.
+1783128930: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128931: New connection from 172.23.0.1:40884 on port 8883.
+1783128932: Client ESP32_SmartHome disconnected, not authorised.
+1783128937: New connection from 172.23.0.1:40890 on port 8883.
+1783128937: Client ESP32_SmartHome disconnected, not authorised.
+1783128942: New connection from 172.23.0.1:49370 on port 8883.
+1783128942: Client ESP32_SmartHome disconnected, not authorised.
+1783128945: New connection from 172.23.0.6:48848 on port 8883.
+1783128945: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128947: New connection from 172.23.0.1:49382 on port 8883.
+1783128948: Client ESP32_SmartHome disconnected, not authorised.
+1783128953: New connection from 172.23.0.1:44814 on port 8883.
+1783128953: Client ESP32_SmartHome disconnected, not authorised.
+1783128958: New connection from 172.23.0.1:44824 on port 8883.
+1783128959: Client ESP32_SmartHome disconnected, not authorised.
+1783128960: New connection from 172.23.0.6:38484 on port 8883.
+1783128960: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128964: New connection from 172.23.0.1:37008 on port 8883.
+1783128964: Client ESP32_SmartHome disconnected, not authorised.
+1783128969: New connection from 172.23.0.1:37010 on port 8883.
+1783128970: Client ESP32_SmartHome disconnected, not authorised.
+1783128975: New connection from 172.23.0.1:38726 on port 8883.
+1783128975: Client ESP32_SmartHome disconnected, not authorised.
+1783128975: New connection from 172.23.0.6:57220 on port 8883.
+1783128975: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128980: New connection from 172.23.0.1:38732 on port 8883.
+1783128981: Client ESP32_SmartHome disconnected, not authorised.
+1783128986: New connection from 172.23.0.1:33846 on port 8883.
+1783128986: Client ESP32_SmartHome disconnected, not authorised.
+1783128990: New connection from 172.23.0.6:44892 on port 8883.
+1783128990: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783128991: New connection from 172.23.0.1:33852 on port 8883.
+1783128991: Client ESP32_SmartHome disconnected, not authorised.
+1783128996: New connection from 172.23.0.1:34336 on port 8883.
+1783128997: Client ESP32_SmartHome disconnected, not authorised.
+1783129002: New connection from 172.23.0.1:47786 on port 8883.
+1783129002: Client ESP32_SmartHome disconnected, not authorised.
+1783129005: New connection from 172.23.0.6:57952 on port 8883.
+1783129005: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783129007: New connection from 172.23.0.1:47790 on port 8883.
+1783129008: Client ESP32_SmartHome disconnected, not authorised.
+1783129013: New connection from 172.23.0.1:52810 on port 8883.
+1783129013: Client ESP32_SmartHome disconnected, not authorised.
+1783129018: New connection from 172.23.0.1:52814 on port 8883.
+1783129019: Client ESP32_SmartHome disconnected, not authorised.
+1783129020: New connection from 172.23.0.6:56240 on port 8883.
+1783129020: Client noderedb665d1ce97a2b6cd disconnected, not authorised.
+1783129024: New connection from 172.23.0.1:52826 on port 8883.
+1783129024: Client ESP32_SmartHome disconnected, not authorised.
+1783129029: New connection from 172.23.0.1:52840 on port 8883.
+1783129030: Client ESP32_SmartHome disconnected, not authorised.
+1783129031: mosquitto version 2.0.22 terminating
+1783129031: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783129031: mosquitto version 2.0.22 starting
+1783129031: Config loaded from /mosquitto/config/mosquitto.conf.
+1783129031: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783129031: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783129031: Opening ipv4 listen socket on port 8883.
+1783129031: Opening ipv6 listen socket on port 8883.
+1783129031: mosquitto version 2.0.22 running
+1783129035: New connection from 172.23.0.1:38544 on port 8883.
+1783129035: New client connected from 172.23.0.1:38544 as ESP32_SmartHome (p2, c1, k15, u'esp32').
+1783129035: New connection from 172.23.0.6:57670 on port 8883.
+1783129035: New client connected from 172.23.0.6:57670 as noderedb665d1ce97a2b6cd (p2, c1, k60, u'nodered').
+1783129045: New connection from ::1:33770 on port 8883.
+1783129045: New client connected from ::1:33770 as auto-8B82971C-CF43-58A8-402C-C59180662F87 (p2, c1, k60, u'nodered').
+1783129045: Client auto-8B82971C-CF43-58A8-402C-C59180662F87 disconnected.
+1783129045: New connection from ::1:33780 on port 8883.
+1783129045: Client auto-9A125332-4E13-619A-0638-72D235F1FF01 disconnected, not authorised.
+1783130022: Client noderedb665d1ce97a2b6cd disconnected.
+1783130022: New connection from 172.23.0.6:56416 on port 8883.
+1783130022: New client connected from 172.23.0.6:56416 as nodered8e2d63405f1db9c8 (p2, c1, k60, u'nodered').
+1783130254: Client nodered8e2d63405f1db9c8 disconnected.
+1783130254: New connection from 172.23.0.6:54750 on port 8883.
+1783130254: New client connected from 172.23.0.6:54750 as nodered9460487d752f8b8e (p2, c1, k60, u'nodered').
+1783130543: Client nodered9460487d752f8b8e disconnected.
+1783130545: mosquitto version 2.0.22 terminating
+1783130545: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783130557: mosquitto version 2.0.22 starting
+1783130557: Config loaded from /mosquitto/config/mosquitto.conf.
+1783130557: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783130557: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783130557: Opening ipv4 listen socket on port 8883.
+1783130557: Opening ipv6 listen socket on port 8883.
+1783130557: mosquitto version 2.0.22 running
+1783130559: New connection from 172.23.0.1:35686 on port 8883.
+1783130559: New client connected from 172.23.0.1:35686 as ESP32_SmartHome (p2, c1, k15, u'esp32').
+1783130584: New connection from 172.23.0.7:34458 on port 8883.
+1783130584: New client connected from 172.23.0.7:34458 as noderedda52ea36af7a782a (p2, c1, k60, u'nodered').
+1783131596: Client noderedda52ea36af7a782a disconnected.
+1783131624: New connection from 172.23.0.7:49674 on port 8883.
+1783131624: New client connected from 172.23.0.7:49674 as noderedcfb9e9c275100dfa (p2, c1, k60, u'nodered').
+1783132358: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783132643: mosquitto version 2.0.22 terminating
+1783132643: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783132643: mosquitto version 2.0.22 starting
+1783132643: Config loaded from /mosquitto/config/mosquitto.conf.
+1783132643: Warning: File /mosquitto/config/passwordfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/passwordfile`.
+1783132643: Warning: File /mosquitto/config/aclfile has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/aclfile`.
+1783132643: Opening ipv4 listen socket on port 8883.
+1783132643: Opening ipv6 listen socket on port 8883.
+1783132643: mosquitto version 2.0.22 running
+1783132644: Client connection from 172.23.0.1 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1783132648: New connection from 172.23.0.1:36224 on port 8883.
+1783132649: New client connected from 172.23.0.1:36224 as ESP32_SmartHome (p2, c1, k15, u'esp32').
+1783132653: New connection from ::1:55686 on port 8883.
+1783132653: New client connected from ::1:55686 as auto-CEA5D677-D6C0-5BF5-F1AE-C8EEDF6A84F1 (p2, c1, k60, u'prediccion').
+1783132653: Client auto-CEA5D677-D6C0-5BF5-F1AE-C8EEDF6A84F1 disconnected.
+1783132658: New connection from 172.23.0.7:58452 on port 8883.
+1783132658: New client connected from 172.23.0.7:58452 as noderedcfb9e9c275100dfa (p2, c1, k60, u'nodered').
+1783132781: New connection from 172.23.0.8:56051 on port 8883.
+1783132781: New client connected from 172.23.0.8:56051 as servicio_prediccion (p2, c1, k60, u'prediccion').
+1783132815: New connection from ::1:45448 on port 8883.
+1783132815: New client connected from ::1:45448 as auto-E124D395-C2BA-4145-7FDF-F9070E246D0B (p2, c1, k60, u'nodered').
+1783132818: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1783132818: Client servicio_prediccion closed its connection.
+1783132818: New connection from 172.23.0.8:58545 on port 8883.
+1783132818: New client connected from 172.23.0.8:58545 as servicio_prediccion (p2, c1, k60, u'prediccion').
+1783132818: Client auto-E124D395-C2BA-4145-7FDF-F9070E246D0B disconnected.
+1783132973: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1783132973: Client servicio_prediccion closed its connection.
+1783132974: Client noderedcfb9e9c275100dfa disconnected.
+1783132974: New connection from 172.23.0.8:37947 on port 8883.
+1783132974: New client connected from 172.23.0.8:37947 as servicio_prediccion (p2, c1, k60, u'prediccion').
+1783132993: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1783132993: Client servicio_prediccion closed its connection.
+1783132994: New connection from 172.23.0.8:58495 on port 8883.
+1783132994: New client connected from 172.23.0.8:58495 as servicio_prediccion (p2, c1, k60, u'prediccion').
+1783133001: New connection from 172.23.0.7:49258 on port 8883.
+1783133001: New client connected from 172.23.0.7:49258 as noderedc86b50c5c27d1b2f (p2, c1, k60, u'nodered').
+1783133026: New connection from ::1:39870 on port 8883.
+1783133026: New client connected from ::1:39870 as auto-D67E2650-6074-C1A0-CF3E-3CCA2E4027A0 (p2, c1, k60, u'prediccion').
+1783133026: Client auto-D67E2650-6074-C1A0-CF3E-3CCA2E4027A0 disconnected.
+1783133026: New connection from ::1:39872 on port 8883.
+1783133026: New client connected from ::1:39872 as auto-E8D74D23-3232-6816-1877-47C6B83AE111 (p2, c1, k60, u'prediccion').
+1783133026: Client auto-E8D74D23-3232-6816-1877-47C6B83AE111 disconnected.
+1783133840: Client noderedc86b50c5c27d1b2f disconnected.
+1783133867: New connection from 172.23.0.7:45170 on port 8883.
+1783133867: New client connected from 172.23.0.7:45170 as nodered081af17002d9fa39 (p2, c1, k60, u'nodered').
+1783134270: Client nodered081af17002d9fa39 disconnected.
+1783134270: New connection from 172.23.0.7:56278 on port 8883.
+1783134270: New client connected from 172.23.0.7:56278 as noderedcb9501f10c7a4097 (p2, c1, k60, u'nodered').
+1783134443: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783136244: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1783138045: Saving in-memory database to /mosquitto/data//mosquitto.db.

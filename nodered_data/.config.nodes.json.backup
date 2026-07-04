@@ -427,6 +427,76 @@
             }
         }
     },
+    "node-red-contrib-coap": {
+        "name": "node-red-contrib-coap",
+        "version": "0.8.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "coap-in": {
+                "name": "coap-in",
+                "types": [
+                    "coap-server",
+                    "coap in",
+                    "coap response"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-coap",
+                "file": "/data/node_modules/node-red-contrib-coap/coap/coap-in.js"
+            },
+            "coap-request": {
+                "name": "coap-request",
+                "types": [
+                    "coap request"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-coap",
+                "file": "/data/node_modules/node-red-contrib-coap/coap/coap-request.js"
+            }
+        }
+    },
+    "node-red-contrib-image-output": {
+        "name": "node-red-contrib-image-output",
+        "version": "0.6.4",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "image": {
+                "name": "image",
+                "types": [
+                    "image"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-image-output",
+                "file": "/data/node_modules/node-red-contrib-image-output/image/image.js"
+            }
+        }
+    },
+    "node-red-contrib-tfjs-coco-ssd": {
+        "name": "node-red-contrib-tfjs-coco-ssd",
+        "version": "1.0.6",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "tensorflowCoco": {
+                "name": "tensorflowCoco",
+                "types": [
+                    "tensorflowCoco"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-tfjs-coco-ssd",
+                "file": "/data/node_modules/node-red-contrib-tfjs-coco-ssd/tfjs.js"
+            }
+        }
+    },
     "node-red-dashboard": {
         "name": "node-red-dashboard",
         "version": "3.6.6",
@@ -663,76 +733,6 @@
                 "user": false,
                 "module": "node-red-dashboard",
                 "file": "/data/node_modules/node-red-dashboard/nodes/ui_spacer.js"
-            }
-        }
-    },
-    "node-red-contrib-image-output": {
-        "name": "node-red-contrib-image-output",
-        "version": "0.6.4",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "image": {
-                "name": "image",
-                "types": [
-                    "image"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-image-output",
-                "file": "/data/node_modules/node-red-contrib-image-output/image/image.js"
-            }
-        }
-    },
-    "node-red-contrib-tfjs-coco-ssd": {
-        "name": "node-red-contrib-tfjs-coco-ssd",
-        "version": "1.0.6",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "tensorflowCoco": {
-                "name": "tensorflowCoco",
-                "types": [
-                    "tensorflowCoco"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-tfjs-coco-ssd",
-                "file": "/data/node_modules/node-red-contrib-tfjs-coco-ssd/tfjs.js"
-            }
-        }
-    },
-    "node-red-contrib-coap": {
-        "name": "node-red-contrib-coap",
-        "version": "0.8.0",
-        "local": true,
-        "user": true,
-        "nodes": {
-            "coap-in": {
-                "name": "coap-in",
-                "types": [
-                    "coap-server",
-                    "coap in",
-                    "coap response"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-coap",
-                "file": "/data/node_modules/node-red-contrib-coap/coap/coap-in.js"
-            },
-            "coap-request": {
-                "name": "coap-request",
-                "types": [
-                    "coap request"
-                ],
-                "enabled": true,
-                "local": true,
-                "user": false,
-                "module": "node-red-contrib-coap",
-                "file": "/data/node_modules/node-red-contrib-coap/coap/coap-request.js"
             }
         }
     }

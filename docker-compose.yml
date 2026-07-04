@@ -88,6 +88,29 @@ services:
     depends_on:
       - influxdb
 
+  # servicio de prediccion de series de tiempo (F9)
+  prediccion:
+    build: ./servicio_prediccion
+    container_name: iot_prediccion
+    environment:
+      INFLUX_URL: http://influxdb:8086
+      INFLUX_TOKEN: smarthome-token-super-secreto
+      INFLUX_ORG: smarthome
+      INFLUX_BUCKET: sensores
+      MQTT_HOST: mosquitto
+      MQTT_PORT: "8883"
+      MQTT_USER: prediccion
+      MQTT_PASS: zapato123
+      MQTT_CA: /certs/ca.crt
+    volumes:
+      - ./mosquitto/certs:/certs:ro          # CA para validar el TLS del broker
+    networks:
+      - iot_net
+    restart: unless-stopped
+    depends_on:
+      - influxdb
+      - mosquitto
+
   # orquestador del agente autonomo
   n8n:
     image: n8nio/n8n:2.29.2

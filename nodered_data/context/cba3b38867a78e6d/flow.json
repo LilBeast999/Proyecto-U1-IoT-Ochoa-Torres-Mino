@@ -1,0 +1,10 @@
+{
+    "estado": {
+        "equipo": "equipoXX",
+        "temperatura": 21.27,
+        "humedad": 44.82,
+        "gas": 1923,
+        "microfono": 486
+    },
+    "umbral_gas": 2500
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Agente IoT Autonomo",
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "pinData": {},
+  "nodes": [
+    {
+      "parameters": {
+        "rule": { "interval": [ { "field": "minutes", "minutesInterval": 5 } ] }
+      },
+      "id": "node-schedule",
+      "name": "Cada 5 min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [ -200, 300 ]
+    },
+    {
+      "parameters": {
+        "url": "https://nodered_app:1880/gemelo/estado",
+        "options": { "allowUnauthorizedCerts": true }
+      },
+      "id": "node-getgemelo",
+      "name": "GET gemelo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [ 20, 300 ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const g = $input.first().json;\nconst e = g.estado || {};\nconst p = g.prediccion || {};\nconst estado = `temperatura=${e.temperatura}C, humedad=${e.humedad}%, gas=${e.gas} (0-4095), persona=${g.persona||'ninguna'}, prediccion_temp_30min=${p.temperatura?p.temperatura.valor:'NA'}, prediccion_gas_30min=${p.gas?p.gas.valor:'NA'}`;\n\nconst prompt = `Eres un agente autonomo de una casa inteligente. Analiza el estado y decide una lista de ACCIONES.\n\nESTADO ACTUAL: ${estado}\n\nREGLAS DE DECISION:\n- Si gas>2500 O temperatura>40 => CRITICO: activa buzzer, activa led y envia una notificacion.\n- Si gas>1800 (y no critico) => ADVERTENCIA: activa led y registra un evento.\n- Si todo normal => solo registra un evento.\n\nFORMATO DE CADA ACCION (en activar_actuador el campo actuador debe ser UN solo valor: buzzer, led o luz; nunca varios juntos):\n- {\"tipo\":\"activar_actuador\",\"actuador\":\"buzzer\",\"estado\":true,\"razonamiento\":\"...\"}\n- {\"tipo\":\"activar_actuador\",\"actuador\":\"led\",\"estado\":true,\"razonamiento\":\"...\"}\n- {\"tipo\":\"enviar_notificacion\",\"texto\":\"...\",\"razonamiento\":\"...\"}\n- {\"tipo\":\"registrar_evento\",\"evento\":\"...\",\"razonamiento\":\"...\"}\n- {\"tipo\":\"ajustar_umbral\",\"variable\":\"gas\",\"valor\":2000,\"razonamiento\":\"...\"}\n\nGenera UNA accion por actuador (si activas buzzer y led, son dos acciones separadas).\n\nEJEMPLO para un estado critico:\n{\"acciones\":[{\"tipo\":\"activar_actuador\",\"actuador\":\"buzzer\",\"estado\":true,\"razonamiento\":\"gas 2700 mayor que 2500\"},{\"tipo\":\"activar_actuador\",\"actuador\":\"led\",\"estado\":true,\"razonamiento\":\"alerta visual\"},{\"tipo\":\"enviar_notificacion\",\"texto\":\"Gas critico en la casa\",\"razonamiento\":\"avisar al usuario\"}]}\n\nResponde SOLO JSON con la forma {\"acciones\":[...]}.`;\nreturn [{ json: { model:'llama3.2:3b', prompt: prompt, stream:false, format:'json', options:{ temperature:0, num_predict:400 } } }];"
+      },
+      "id": "node-prompt",
+      "name": "Construir prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [ 240, 300 ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "node-ollama",
+      "name": "Ollama",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [ 460, 300 ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const resp = $input.first().json.response;\nlet acciones = [];\ntry { const parsed = JSON.parse(resp); acciones = parsed.acciones || []; } catch (e) {}\nif (!Array.isArray(acciones) || acciones.length === 0) {\n  acciones = [{ tipo:'registrar_evento', evento:'sin acciones o respuesta invalida', razonamiento:'fallback' }];\n}\n// descarta actuadores mal formados (p.ej. el placeholder literal)\nconst VALIDOS = ['buzzer','led','luz'];\nacciones = acciones.filter(a => a.tipo !== 'activar_actuador' || VALIDOS.includes(a.actuador));\nreturn acciones.map(a => ({ json: a }));"
+      },
+      "id": "node-parse",
+      "name": "Parsear acciones",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [ 680, 300 ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://nodered_app:1880/agente/accion",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": { "allowUnauthorizedCerts": true }
+      },
+      "id": "node-exec",
+      "name": "Ejecutar accion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [ 900, 300 ]
+    }
+  ],
+  "connections": {
+    "Cada 5 min":        { "main": [ [ { "node": "GET gemelo",        "type": "main", "index": 0 } ] ] },
+    "GET gemelo":        { "main": [ [ { "node": "Construir prompt",  "type": "main", "index": 0 } ] ] },
+    "Construir prompt":  { "main": [ [ { "node": "Ollama",            "type": "main", "index": 0 } ] ] },
+    "Ollama":            { "main": [ [ { "node": "Parsear acciones",  "type": "main", "index": 0 } ] ] },
+    "Parsear acciones":  { "main": [ [ { "node": "Ejecutar accion",   "type": "main", "index": 0 } ] ] }
+  }
+}

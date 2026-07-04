@@ -15,6 +15,11 @@ topic write smarthome/equipoXX/camara
 user nodered
 topic readwrite smarthome/equipoXX/#
 
+# Servicio de prediccion (solo publica predicciones y alertas preventivas)
+user prediccion
+topic write smarthome/equipoXX/prediccion/#
+topic write smarthome/equipoXX/alerta
+
 # Admin: acceso total
 user admin
 topic readwrite #
