@@ -1,0 +1,25 @@
+# ESP32 de sensores y actuadores (REVISAR)
+user esp32
+topic write smarthome/equipoXX/sensores
+topic read  smarthome/equipoXX/luz_manual
+topic read  smarthome/equipoXX/camara
+topic read  smarthome/equipoXX/control/led
+topic read  smarthome/equipoXX/control/buzzer
+topic read  smarthome/equipoXX/comandos
+
+# ESP32-CAM 
+user esp32cam
+topic write smarthome/equipoXX/camara
+
+# Node-RED
+user nodered
+topic readwrite smarthome/equipoXX/#
+
+# Servicio de prediccion (solo publica predicciones y alertas preventivas)
+user prediccion
+topic write smarthome/equipoXX/prediccion/#
+topic write smarthome/equipoXX/alerta
+
+# Admin: acceso total
+user admin
+topic readwrite #

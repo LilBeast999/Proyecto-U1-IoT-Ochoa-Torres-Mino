@@ -1,0 +1,128 @@
+networks:
+  iot_net:
+    driver: bridge
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.22
+    container_name: mosquitto_broker
+    ports:
+      - "8883:8883"                                                    # TLS para el MQTT
+    volumes:
+      - ./mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./mosquitto/passwordfile:/mosquitto/config/passwordfile        # usuarios 
+      - ./mosquitto/aclfile:/mosquitto/config/aclfile                  # permisos por topico 
+      - ./mosquitto/certs:/mosquitto/config/certs                      # CA + cert servidor
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - iot_net
+    restart: unless-stopped
+
+  nodered:
+    image: nodered/node-red:4.1.8-20 
+    container_name: nodered_app
+    ports:
+      - "1880:1880"
+    volumes:
+      # guarda flujos, configuraciones y nodos descargados
+      - ./nodered_data:/data
+      # directorio mapeado para guardar temporalmente las capturas del esp32-cam
+      - ./imagenes_camara:/tmp/imagenes
+    extra_hosts:
+      - "host.docker.internal:host-gateway"   # para llegar a ollama (:11434) en el host
+    networks:
+      - iot_net
+    restart: unless-stopped
+    depends_on:
+      - mosquitto
+
+  reconocimiento_facial:
+    build: ./servicio_reconocimiento
+    container_name: iot_reconocimiento
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./imagenes_camara:/tmp/imagenes
+      - ./servicio_reconocimiento/caras_conocidas:/app/caras_conocidas
+    networks:
+      - iot_net
+    restart: unless-stopped
+
+  # base de datos de series de tiempo
+  influxdb:
+    image: influxdb:2.7.12
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: smarthome123         
+      DOCKER_INFLUXDB_INIT_ORG: smarthome
+      DOCKER_INFLUXDB_INIT_BUCKET: sensores
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: smarthome-token-super-secreto   
+    volumes:
+      - ./influxdb/data:/var/lib/influxdb2      
+      - ./influxdb/config:/etc/influxdb2      
+    networks:
+      - iot_net
+    restart: unless-stopped
+
+
+  # visualizacion (dashboard Grafana)
+  grafana:
+    image: grafana/grafana:12.4.5
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin         
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning  
+    networks:
+      - iot_net
+    restart: unless-stopped
+    depends_on:
+      - influxdb
+
+  # servicio de prediccion de series de tiempo (F9)
+  prediccion:
+    build: ./servicio_prediccion
+    container_name: iot_prediccion
+    environment:
+      INFLUX_URL: http://influxdb:8086
+      INFLUX_TOKEN: smarthome-token-super-secreto
+      INFLUX_ORG: smarthome
+      INFLUX_BUCKET: sensores
+      MQTT_HOST: mosquitto
+      MQTT_PORT: "8883"
+      MQTT_USER: prediccion
+      MQTT_PASS: zapato123
+      MQTT_CA: /certs/ca.crt
+    volumes:
+      - ./mosquitto/certs:/certs:ro          # CA para validar el TLS del broker
+    networks:
+      - iot_net
+    restart: unless-stopped
+    depends_on:
+      - influxdb
+      - mosquitto
+
+  # orquestador del agente autonomo
+  n8n:
+    image: n8nio/n8n:2.29.2
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    environment:
+      GENERIC_TIMEZONE: America/Santiago
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./n8n/data:/home/node/.n8n
+    networks:
+      - iot_net
+    restart: unless-stopped

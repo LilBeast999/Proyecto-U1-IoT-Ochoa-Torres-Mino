@@ -1,0 +1,2092 @@
+[
+    {
+        "id": "cba3b38867a78e6d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "03c03abb95d94b96",
+        "type": "ui_tab",
+        "name": "Controles",
+        "icon": "Controles",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5939b8b3ba12f0bb",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#3a07f2",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#3a07f2",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#3a07f2",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#714cfa",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#3a07f2",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "🏠Casa Inteligente 😶‍🌫️",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "icon",
+            "allowTempTheme": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d6d11e5f510da65c",
+        "type": "ui_group",
+        "name": "SmartHome-Pantalla",
+        "tab": "03c03abb95d94b96",
+        "order": 1,
+        "disp": false,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7d52552597192a71",
+        "type": "ui_spacer",
+        "z": "cba3b38867a78e6d",
+        "name": "spacer",
+        "group": "d6d11e5f510da65c",
+        "order": 1,
+        "width": 24,
+        "height": 1
+    },
+    {
+        "id": "35ce41db185c7de2",
+        "type": "ui_spacer",
+        "z": "cba3b38867a78e6d",
+        "name": "spacer",
+        "group": "d6d11e5f510da65c",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6c11c465778b17b6",
+        "type": "ui_spacer",
+        "z": "cba3b38867a78e6d",
+        "name": "spacer",
+        "group": "d6d11e5f510da65c",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a7429d22137d2f15",
+        "type": "ui_spacer",
+        "z": "cba3b38867a78e6d",
+        "name": "spacer",
+        "group": "d6d11e5f510da65c",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "582afb66f659d373",
+        "type": "ui_spacer",
+        "z": "cba3b38867a78e6d",
+        "name": "spacer",
+        "group": "d6d11e5f510da65c",
+        "order": 9,
+        "width": 24,
+        "height": 1
+    },
+    {
+        "id": "bc3f599b66574fb1",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "ca.crt",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "1aace3cbeb0d6dfd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "8883",
+        "tls": "bc3f599b66574fb1",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "47621f6372d73d76",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "casaclever",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "4f2d7218ecbbaae2",
+        "type": "http in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "url": "/upload-image",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "4fa3f8b73cf6a737",
+                "0a614ca3b6be5323",
+                "d13c5247dcc8ee1d",
+                "790b908da95f7788"
+            ]
+        ]
+    },
+    {
+        "id": "4fa3f8b73cf6a737",
+        "type": "http response",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 290,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "427886dfffa18e6c",
+        "type": "file",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "filename": "/tmp/imagenes/captura.jpg",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "790b908da95f7788"
+            ]
+        ]
+    },
+    {
+        "id": "b09bed846e736e47",
+        "type": "tensorflowCoco",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "modelUrl": "",
+        "scoreThreshold": 0.5,
+        "passthru": "bbox",
+        "lineColour": "magenta",
+        "x": 1010,
+        "y": 340,
+        "wires": [
+            [
+                "34da0bbe81be1790"
+            ]
+        ]
+    },
+    {
+        "id": "0a614ca3b6be5323",
+        "type": "delay",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "427886dfffa18e6c"
+            ]
+        ]
+    },
+    {
+        "id": "34da0bbe81be1790",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "filtrar persona",
+        "func": "// itera sobre el arreglo de detecciones buscando la clase person\nlet detecta_persona = false;\nif (Array.isArray(msg.payload)) {\n    for (let i = 0; i < msg.payload.length; i++) {\n        if (msg.payload[i].class === \"person\") {\n            detecta_persona = true;\n            break;\n        }\n    }\n}\n\n// continua el flujo si se encontro a alguien\nif (detecta_persona) {\n    return msg;\n}\n\n// detiene el proceso si detecto otra cosa\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 340,
+        "wires": [
+            [
+                "f3e899b15555bec5"
+            ]
+        ]
+    },
+    {
+        "id": "f3e899b15555bec5",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"nombre_archivo\": \"captura.jpg\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1420,
+        "y": 340,
+        "wires": [
+            [
+                "0b588c0bcafc5104"
+            ]
+        ]
+    },
+    {
+        "id": "0b588c0bcafc5104",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://iot_reconocimiento:5000/reconocer",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1610,
+        "y": 340,
+        "wires": [
+            [
+                "5c3d0c8bc9ca59d1",
+                "7c621e934e67035c",
+                "d011a35ed4758ef4",
+                "e09892d3ac40396b",
+                "b3f61a124f1a0cbb"
+            ]
+        ]
+    },
+    {
+        "id": "5c3d0c8bc9ca59d1",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "Salida Python",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1800,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "790b908da95f7788",
+        "type": "delay",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 260,
+        "wires": [
+            [
+                "f3e899b15555bec5",
+                "81fe041b85e05f34"
+            ]
+        ]
+    },
+    {
+        "id": "cb5aa7072b764dd3",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 860,
+        "wires": [
+            [
+                "d30be44562f05cc9",
+                "f370a4b8f43eeaf0",
+                "c91ec256d73d7327",
+                "3f78fc2969fde37a",
+                "d596676ac93f72a7",
+                "d5b835194dcfbe6f",
+                "7ede61f1787cfab7",
+                "d2e41f13fc10f35f",
+                "3e44dcb9af3ce6e7",
+                "a1b2gemeloupd001"
+            ]
+        ]
+    },
+    {
+        "id": "f370a4b8f43eeaf0",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d30be44562f05cc9",
+        "type": "ui_gauge",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 11,
+        "width": 8,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "units",
+        "format": "{{msg.payload.temperatura}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 410,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "7ede61f1787cfab7",
+        "type": "ui_gauge",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 14,
+        "width": 8,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Humedad",
+        "label": "units",
+        "format": "{{msg.payload.humedad}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "c91ec256d73d7327",
+        "type": "ui_gauge",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 16,
+        "width": 8,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Micrófono",
+        "label": "units",
+        "format": "{{msg.payload.microfono}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 400,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "d13c5247dcc8ee1d",
+        "type": "image",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 440,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3f78fc2969fde37a",
+        "type": "ui_gauge",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 12,
+        "width": 8,
+        "height": 7,
+        "gtype": "gage",
+        "title": "Nivel de Gas",
+        "label": "units",
+        "format": "{{msg.payload.gas}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 410,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "7c621e934e67035c",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.resultado",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1820,
+        "y": 420,
+        "wires": [
+            [
+                "433f0257e9f37497"
+            ]
+        ]
+    },
+    {
+        "id": "433f0257e9f37497",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/camara",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 2150,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d011a35ed4758ef4",
+        "type": "ui_text",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "order": 13,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Persona detectada: ",
+        "format": "{{msg.payload.resultado}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "19",
+        "color": "#000000",
+        "x": 1830,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e09892d3ac40396b",
+        "type": "switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "property": "payload.resultado",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "desconocido",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1810,
+        "y": 340,
+        "wires": [
+            [
+                "6f52856032ded4b4"
+            ]
+        ]
+    },
+    {
+        "id": "aef98006b3116a36",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "mensaje a telegram",
+        "func": "msg.payload = {\n    \"chat_id\": \"1455813427\",\n    \"text\": \"alerta de seguridad: se detecto una persona desconocida en el sistema de camaras.\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2150,
+        "y": 340,
+        "wires": [
+            [
+                "1b22efeed61f8c51"
+            ]
+        ]
+    },
+    {
+        "id": "1b22efeed61f8c51",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.telegram.org/bot8888114765:AAEg7mB50Fso7Q2uPsHKP7byBhoh1AVJtbw/sendMessage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2330,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d4f754df5d7cde2",
+        "type": "ui_chart",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 15,
+        "width": 8,
+        "height": 7,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "40",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d596676ac93f72a7",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 800,
+        "wires": [
+            [
+                "7d4f754df5d7cde2",
+                "37a47bf677bb38ea"
+            ]
+        ]
+    },
+    {
+        "id": "37a47bf677bb38ea",
+        "type": "switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "24",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "39d4df7c50117294",
+                "7dac7e67f4b3d6e4"
+            ]
+        ]
+    },
+    {
+        "id": "39d4df7c50117294",
+        "type": "delay",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 760,
+        "wires": [
+            [
+                "57b6e64bea5c4bcc"
+            ]
+        ]
+    },
+    {
+        "id": "57b6e64bea5c4bcc",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "mensaje a telegram",
+        "func": "msg.payload = {\n    \"chat_id\": \"1455813427\",\n    \"text\": \"Alerta: Temperatura superior a 24 grados.\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 720,
+        "wires": [
+            [
+                "f2bd0e0fb0631bcd"
+            ]
+        ]
+    },
+    {
+        "id": "f2bd0e0fb0631bcd",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.telegram.org/bot8888114765:AAEg7mB50Fso7Q2uPsHKP7byBhoh1AVJtbw/sendMessage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1470,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b3d8d50b9607abe5",
+        "type": "ui_template",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "name": "",
+        "order": 10,
+        "width": 8,
+        "height": 6,
+        "format": "<img src=\"data:image/jpeg;base64,{{msg.payload}}\" width=\"100%\"/>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1180,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81fe041b85e05f34",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 180,
+        "wires": [
+            [
+                "b3d8d50b9607abe5"
+            ]
+        ]
+    },
+    {
+        "id": "937ac1cd9ab80ad0",
+        "type": "ui_text",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "order": 5,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Estado del sistema",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1210,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "2abc3b19db51f6df",
+        "type": "inject",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Normal",
+        "payloadType": "str",
+        "x": 1000,
+        "y": 920,
+        "wires": [
+            [
+                "937ac1cd9ab80ad0"
+            ]
+        ]
+    },
+    {
+        "id": "512aedd7682ad3c2",
+        "type": "ui_button",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "group": "d6d11e5f510da65c",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "label": "Activar/Desactivar Cerradura",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "purple",
+        "className": "",
+        "icon": "",
+        "payload": "alternar",
+        "payloadType": "str",
+        "topic": "smarthome/equipoXX/comandos",
+        "topicType": "msg",
+        "x": 1860,
+        "y": 500,
+        "wires": [
+            [
+                "433f0257e9f37497"
+            ]
+        ]
+    },
+    {
+        "id": "7dac7e67f4b3d6e4",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "¡Alerta!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 880,
+        "wires": [
+            [
+                "52d82d8caef84634",
+                "937ac1cd9ab80ad0"
+            ]
+        ]
+    },
+    {
+        "id": "f0c6e143b4a68fa2",
+        "type": "ui_text",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2110,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "52d82d8caef84634",
+        "type": "trigger",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "op1": "",
+        "op2": "Normal",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "30",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 990,
+        "y": 800,
+        "wires": [
+            [
+                "937ac1cd9ab80ad0"
+            ]
+        ]
+    },
+    {
+        "id": "6f52856032ded4b4",
+        "type": "trigger",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "op1": "🔴 ¡Alerta de Intruso!",
+        "op2": "🟢 Sistema Normal",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "7",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1960,
+        "y": 340,
+        "wires": [
+            [
+                "f0c6e143b4a68fa2",
+                "aef98006b3116a36"
+            ]
+        ]
+    },
+    {
+        "id": "d5b835194dcfbe6f",
+        "type": "switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "property": "payload.humedad",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 900,
+        "wires": [
+            [
+                "7dac7e67f4b3d6e4",
+                "6b2b27c86bc4f999"
+            ]
+        ]
+    },
+    {
+        "id": "6b2b27c86bc4f999",
+        "type": "delay",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 980,
+        "wires": [
+            [
+                "d225c6544915c2cc"
+            ]
+        ]
+    },
+    {
+        "id": "d225c6544915c2cc",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "mensaje de telegram para humedad",
+        "func": "msg.payload = {\n    \"chat_id\": \"1455813427\",\n    \"text\": \"alerta de seguridad: la humedad ha superado el 70%.\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 980,
+        "wires": [
+            [
+                "f2bd0e0fb0631bcd"
+            ]
+        ]
+    },
+    {
+        "id": "744a18abb4ce8174",
+        "type": "ui_switch",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "label": "Luz patio",
+        "tooltip": "",
+        "group": "d6d11e5f510da65c",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1800,
+        "y": 1020,
+        "wires": [
+            [
+                "86be666d8d4cfa8a"
+            ]
+        ]
+    },
+    {
+        "id": "86be666d8d4cfa8a",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 2020,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "00ef81be64159fe7",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1870,
+        "y": 920,
+        "wires": [
+            [
+                "5b2b3faa0f951452"
+            ]
+        ]
+    },
+    {
+        "id": "5b2b3faa0f951452",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "d2e41f13fc10f35f",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Formato CSV",
+        "func": "let fecha = new Date().toLocaleString(\"es-CL\");\n\nlet estado = \"normal\";\nif (msg.payload.temperatura > 24 || msg.payload.humedad > 70) {\n    estado = \"alerta\";\n}\n\nmsg.payload = {\n    timestamp: fecha,\n    temperatura: msg.payload.temperatura,\n    humedad: msg.payload.humedad,\n    gas: msg.payload.gas,\n    estado_alerta: estado\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1260,
+        "wires": [
+            [
+                "3bf649e629ca8364"
+            ]
+        ]
+    },
+    {
+        "id": "3bf649e629ca8364",
+        "type": "csv",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "timestamp,temperatura,humedad,gas,estado_alerta",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 630,
+        "y": 1260,
+        "wires": [
+            [
+                "f2186967e6c01e5b"
+            ]
+        ]
+    },
+    {
+        "id": "f2186967e6c01e5b",
+        "type": "file",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "filename": "/data/registro_smarthome.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 870,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "659f7415a20c0df5",
+        "type": "inject",
+        "z": "cba3b38867a78e6d",
+        "name": "Coa gas",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "1ff9e5cf7c395576"
+            ]
+        ]
+    },
+    {
+        "id": "1ff9e5cf7c395576",
+        "type": "coap request",
+        "z": "cba3b38867a78e6d",
+        "method": "GET",
+        "confirmable": true,
+        "observe": false,
+        "multicast": false,
+        "multicastTimeout": 20000,
+        "url": "coap://192.168.137.50:5683/gas",
+        "content-format": "text/plain",
+        "raw-buffer": false,
+        "name": "",
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "60e3bb2d4ca7ae48"
+            ]
+        ]
+    },
+    {
+        "id": "60e3bb2d4ca7ae48",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$string(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 540,
+        "wires": [
+            [
+                "4f6082eb2d84ec14",
+                "0d3e1c0d8109aea8"
+            ]
+        ]
+    },
+    {
+        "id": "4f6082eb2d84ec14",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/gas_coap",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 830,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0d3e1c0d8109aea8",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3e44dcb9af3ce6e7",
+        "type": "change",
+        "z": "cba3b38867a78e6d",
+        "name": "guadar estado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "estado",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecd044fb87013bd0",
+        "type": "inject",
+        "z": "cba3b38867a78e6d",
+        "name": "LLM cada 30s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 1440,
+        "wires": [
+            [
+                "ce9c60e3f7b45672"
+            ]
+        ]
+    },
+    {
+        "id": "ce9c60e3f7b45672",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Construir prompt",
+        "func": "let e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', {hour:'2-digit', minute:'2-digit'});\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n             `gas=${e.gas ?? 'NA'} (rango 0-4095), microfono=${e.microfono ?? 'NA'}, ` +\n             `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el sistema de control de una casa inteligente. Clasifica el nivel de alerta comparando los numeros de gas, temperatura y humedad.\n\nREGLAS (basta que UNA condicion se cumpla para subir de nivel):\n- critico: gas mayor que 2500 O temperatura mayor que 40\n- advertencia: (gas mayor que 1800 O temperatura mayor que 24 O humedad mayor que 70) y no critico\n- normal: cualquier otro caso\n\nEJEMPLOS:\n- gas=3200 => critico (gas > 2500)\n- temperatura=45 => critico (temperatura > 40)\n- gas=2000 => advertencia (gas > 1800 y no critico)\n- temperatura=30 => advertencia (temperatura > 24)\n- humedad=75 => advertencia (humedad > 70)\n- gas=1500, temperatura=22, humedad=50 => normal\n\nACCIONES: critico => activar_led=true, activar_buzzer=true. advertencia => activar_led=true, activar_buzzer=false. normal => ambos false.\n\nEstado actual: ${estado}.\n\nResponde UNICAMENTE en JSON, sin texto adicional:\n{\"nivel_alerta\":\"...\",\"activar_led\":false,\"activar_buzzer\":false,\"mensaje_alerta\":\"texto breve\",\"razonamiento\":\"explica que regla aplicaste\"}`;\n\nmsg.payload = {\n    model: 'llama3.2:3b', prompt: prompt, stream: false, format: 'json',\n    keep_alive: -1, options: { temperature: 0, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1560,
+        "wires": [
+            [
+                "2c5efe22f51c212a"
+            ]
+        ]
+    },
+    {
+        "id": "2c5efe22f51c212a",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Ollama",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 660,
+        "y": 1640,
+        "wires": [
+            [
+                "01de07af338cfdf9",
+                "dc338203c680796d"
+            ]
+        ]
+    },
+    {
+        "id": "01de07af338cfdf9",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "dc338203c680796d",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "parsear decisión",
+        "func": "let raw = msg.payload && msg.payload.response;\nlet dec;\ntry {\n    dec = JSON.parse(raw);\n    // valida que el LLM devolvio algo usable\n    if (typeof dec.activar_led === 'undefined' || typeof dec.activar_buzzer === 'undefined'\n        || !['normal','advertencia','critico'].includes(dec.nivel_alerta)) {\n        throw new Error('respuesta incompleta');\n    }\n} catch (err) {\n    // FALLBACK: solo si el LLM no responde o el JSON es invalido\n    node.warn('LLM no disponible/JSON invalido, fallback por regla: ' + raw);\n    let e = flow.get('estado') || {};\n    let gas = Number(e.gas) || 0, temp = Number(e.temperatura) || 0, hum = Number(e.humedad) || 0;\n    let critico = (gas > 2500) || (temp > 40), adv = (gas > 1800) || (temp > 24) || (hum > 70);\n    dec = {\n        nivel_alerta: critico ? 'critico' : (adv ? 'advertencia' : 'normal'),\n        activar_led: critico || adv, activar_buzzer: critico,\n        mensaje_alerta: 'Decision por regla (LLM no disponible)', razonamiento: 'fallback'\n    };\n}\n\n// Gemelo: el agente actualiza resumen_llm cada ciclo\nlet gg = global.get('gemelo') || {};\ngg.resumen_llm = {nivel: dec.nivel_alerta, mensaje: dec.mensaje_alerta, razonamiento: dec.razonamiento, hora: new Date().toISOString()};\nglobal.set('gemelo', gg);\n\nlet luz      = { topic: 'smarthome/equipoXX/luz_manual',     payload: dec.activar_led    ? '1' : '0' };\nlet buz      = { topic: 'smarthome/equipoXX/control/buzzer', payload: dec.activar_buzzer ? '1' : '0' };\nlet decision = { topic: 'smarthome/equipoXX/llm/decision',   payload: JSON.stringify(dec) };\nlet dbg      = { payload: dec };\nreturn [luz, buz, decision, dbg];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 1640,
+        "wires": [
+            [
+                "556bb722f54cc596",
+                "c788355120e1e3ee"
+            ],
+            [
+                "703e9b44288eb716"
+            ],
+            [
+                "ba726e49a19a3474"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ba726e49a19a3474",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/llm/decision",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 1220,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "703e9b44288eb716",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/control/buzzer",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 1230,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "556bb722f54cc596",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/luz_manual",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 1220,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "c788355120e1e3ee",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "b3f61a124f1a0cbb",
+        "type": "debug",
+        "z": "cba3b38867a78e6d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1780,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "113d46af4798182a",
+        "type": "ui_text_input",
+        "z": "cba3b38867a78e6d",
+        "name": "entrada_nl",
+        "label": "preguntale a tu casita",
+        "tooltip": "",
+        "group": "d6d11e5f510da65c",
+        "order": 16,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 310,
+        "y": 2380,
+        "wires": [
+            [
+                "25d6ce4d2b28971c"
+            ]
+        ]
+    },
+    {
+        "id": "25d6ce4d2b28971c",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "Construir consulta NL",
+        "func": "// === F4.2 — Consulta en lenguaje natural al LLM ===\n// Entrada: msg.payload = texto que el usuario escribió en el text input\n\nlet pregunta = (msg.payload || '').toString().trim();\n\n// Si el campo está vacío, no dispares el LLM\nif (!pregunta) {\n    node.warn('Pregunta vacía, no se envía al LLM');\n    return null;\n}\n\n// Mismo contexto de sensores que usa F3 (flow.estado / flow.persona)\nlet e = flow.get('estado') || {};\nlet persona = flow.get('persona') || 'ninguna';\nlet hora = new Date().toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });\n\nlet estado = `temperatura=${e.temperatura ?? 'NA'}C, humedad=${e.humedad ?? 'NA'}%, ` +\n    `gas=${e.gas ?? 'NA'} (rango 0-4095, critico>2500), microfono=${e.microfono ?? 'NA'}, ` +\n    `persona=${persona}, hora=${hora}`;\n\nlet prompt = `Eres el asistente de una casa inteligente. Responde la pregunta del usuario de forma breve y clara, en español, basandote UNICAMENTE en el estado actual de los sensores. Si la pregunta no tiene relacion con la casa, dilo amablemente.\n\nEstado actual del hogar: ${estado}.\n\nPregunta del usuario: ${pregunta}\n\nRespuesta (2 o 3 frases, en texto plano, sin JSON):`;\n\n// Guardamos la pregunta para mostrarla junto a la respuesta más adelante (4.4)\nmsg.pregunta = pregunta;\n\nmsg.payload = {\n    model: 'llama3.2:3b',\n    prompt: prompt,\n    stream: false,\n    keep_alive: -1,\n    options: { temperature: 0.3, num_predict: 200 }\n};\nmsg.headers = { 'Content-Type': 'application/json' };\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 2380,
+        "wires": [
+            [
+                "f700cf38116077a7"
+            ]
+        ]
+    },
+    {
+        "id": "f700cf38116077a7",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Ollama NL",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 2380,
+        "wires": [
+            [
+                "8f08438258250934"
+            ]
+        ]
+    },
+    {
+        "id": "8f08438258250934",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "parsear respuesta",
+        "func": "// === F4.3/4.4 — Mostrar respuesta NL del LLM ===\nlet raw = msg.payload && msg.payload.response;\nlet texto = (raw || '').toString().trim();\n\nif (!texto) {\n    texto = 'El asistente no respondió. ¿Está activo Ollama?';\n}\n\nlet pregunta = msg.pregunta || '';\n\n// Salida 1 -> ui_text (mostrar en el dashboard)\nlet out_ui = { payload: texto };\n\n// Salida 2 -> mqtt out (smarthome/equipoXX/llm/respuesta)\nlet out_mqtt = {\n    topic: 'smarthome/equipoXX/llm/respuesta',\n    payload: JSON.stringify({ pregunta: pregunta, respuesta: texto, ts: Date.now() })\n};\n\nreturn [out_ui, out_mqtt];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 2380,
+        "wires": [
+            [
+                "48343dda7590749b"
+            ],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "48343dda7590749b",
+        "type": "ui_text",
+        "z": "cba3b38867a78e6d",
+        "group": "d6d11e5f510da65c",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "respuesta",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1340,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "ad8a2becafd6ecbb",
+        "type": "influxdb out",
+        "z": "cba3b38867a78e6d",
+        "influxdb": "47621f6372d73d76",
+        "name": "",
+        "measurement": "ambiente",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "sensores",
+        "x": 1540,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "dc563162f48c7a41",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "a influx",
+        "func": "msg.payload = {\n    temperatura: Number(msg.payload.temperatura),\n    humedad: Number(msg.payload.humedad),\n    gas: Number(msg.payload.gas)\n};\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 1320,
+        "wires": [
+            [
+                "ad8a2becafd6ecbb"
+            ]
+        ]
+    },
+    {
+        "id": "2028ed22b612589e",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1150,
+        "y": 1320,
+        "wires": [
+            [
+                "dc563162f48c7a41"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemeloupd001",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "actualizar gemelo",
+        "func": "// Gemelo digital: estado en vivo + historial (60 registros a 1/min)\nlet g = global.get('gemelo') || {estado:{},historial:{temperatura:[],humedad:[],gas:[]},prediccion:{},resumen_llm:'',actualizado:null,_lastHist:0};\nlet p = msg.payload || {};\nlet now = Date.now();\ng.estado = {temperatura:Number(p.temperatura), humedad:Number(p.humedad), gas:Number(p.gas)};\ng.persona = flow.get('persona') || 'ninguna';\ng.actualizado = new Date(now).toISOString();\nif (now - (g._lastHist||0) >= 60000) {\n    g._lastHist = now;\n    ['temperatura','humedad','gas'].forEach(function(k){\n        let v = g.estado[k];\n        if (!isNaN(v)) { g.historial[k].push({t:g.actualizado, v:v}); if (g.historial[k].length > 60) g.historial[k].shift(); }\n    });\n}\nglobal.set('gemelo', g);\nreturn null;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a1b2gemelohttpin",
+        "type": "http in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "url": "/gemelo/estado",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 990,
+        "y": 1960,
+        "wires": [
+            [
+                "a1b2gemeloresp01"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemeloresp01",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "responder gemelo",
+        "func": "msg.payload = global.get('gemelo') || {error:'gemelo aun sin datos'};\nmsg.headers = {'Content-Type':'application/json'};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 1960,
+        "wires": [
+            [
+                "a1b2gemelohttpout"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2gemelohttpout",
+        "type": "http response",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1440,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "a1b2predmqttin",
+        "type": "mqtt in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "smarthome/equipoXX/prediccion/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "1aace3cbeb0d6dfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 1920,
+        "wires": [
+            [
+                "a1b2predfunc001"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2predfunc001",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "gemelo <- prediccion",
+        "func": "// topic: smarthome/equipoXX/prediccion/<field>\nlet parts = msg.topic.split('/');\nlet field = parts[parts.length-1];\nlet data = msg.payload;\nif (typeof data === 'string') { try { data = JSON.parse(data); } catch(e){ return null; } }\nlet g = global.get('gemelo') || {};\ng.prediccion = g.prediccion || {};\ng.prediccion[field] = { valor: data.valor, horizon_min: data.horizon_min, actualizado: new Date().toISOString() };\nglobal.set('gemelo', g);\nreturn null;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "a1b2agentein01",
+        "type": "http in",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "url": "/agente/accion",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 290,
+        "y": 2060,
+        "wires": [
+            [
+                "a1b2agentedisp"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2agentedisp",
+        "type": "function",
+        "z": "cba3b38867a78e6d",
+        "name": "dispatch agente",
+        "func": "let a = msg.payload || {};\nlet tipo = a.tipo;\nlet out = [null, null, null, null];  // [mqtt, telegram, influx, respuesta]\nconst TOPICOS = { led:'smarthome/equipoXX/control/led', buzzer:'smarthome/equipoXX/control/buzzer', luz:'smarthome/equipoXX/luz_manual' };\nif (tipo === 'activar_actuador') {\n    let t = TOPICOS[a.actuador];\n    if (t) out[0] = { topic: t, payload: (a.estado ? '1' : '0') };\n} else if (tipo === 'ajustar_umbral') {\n    flow.set('umbral_' + a.variable, a.valor);\n    out[0] = { topic: 'smarthome/equipoXX/umbral/' + a.variable, payload: String(a.valor) };\n} else if (tipo === 'enviar_notificacion') {\n    out[1] = { payload: { chat_id: '1455813427', text: '[agente] ' + (a.texto || a.mensaje || 'evento') } };\n}\nout[2] = { measurement: 'decisiones', payload: { tipo: String(tipo||''), detalle: JSON.stringify(a), razonamiento: String(a.razonamiento||'') } };\nout[3] = Object.assign({}, msg, { payload: { ok: true, tipo: tipo } });\nreturn out;",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 2060,
+        "wires": [
+            [
+                "a1b2agentemqtt"
+            ],
+            [
+                "a1b2agentetg"
+            ],
+            [
+                "a1b2agenteinflux"
+            ],
+            [
+                "a1b2agenteresp"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2agentemqtt",
+        "type": "mqtt out",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "1aace3cbeb0d6dfd",
+        "x": 770,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "a1b2agentetg",
+        "type": "http request",
+        "z": "cba3b38867a78e6d",
+        "name": "Telegram",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.telegram.org/bot8888114765:AAEg7mB50Fso7Q2uPsHKP7byBhoh1AVJtbw/sendMessage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 780,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1b2agenteinflux",
+        "type": "influxdb out",
+        "z": "cba3b38867a78e6d",
+        "influxdb": "47621f6372d73d76",
+        "name": "",
+        "measurement": "decisiones",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "sensores",
+        "x": 780,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "a1b2agenteresp",
+        "type": "http response",
+        "z": "cba3b38867a78e6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 780,
+        "y": 2240,
+        "wires": []
+    }
+]
