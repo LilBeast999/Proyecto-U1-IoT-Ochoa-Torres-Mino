@@ -2,15 +2,11 @@
     "gemelo": {
         "estado": {
             "temperatura": 20.44,
-            "humedad": 60.08,
-            "gas": 2263
+            "humedad": 60.22,
+            "gas": 2261
         },
         "historial": {
             "temperatura": [
-                {
-                    "t": "2026-07-05T23:59:30.091Z",
-                    "v": 21.31
-                },
                 {
                     "t": "2026-07-06T00:00:33.069Z",
                     "v": 21.3
@@ -246,13 +242,13 @@
                 {
                     "t": "2026-07-06T00:58:58.438Z",
                     "v": 20.47
+                },
+                {
+                    "t": "2026-07-06T00:59:58.464Z",
+                    "v": 20.42
                 }
             ],
             "humedad": [
-                {
-                    "t": "2026-07-05T23:59:30.091Z",
-                    "v": 61.26
-                },
                 {
                     "t": "2026-07-06T00:00:33.069Z",
                     "v": 61.22
@@ -488,13 +484,13 @@
                 {
                     "t": "2026-07-06T00:58:58.438Z",
                     "v": 60.14
+                },
+                {
+                    "t": "2026-07-06T00:59:58.464Z",
+                    "v": 60.21
                 }
             ],
             "gas": [
-                {
-                    "t": "2026-07-05T23:59:30.091Z",
-                    "v": 1679
-                },
                 {
                     "t": "2026-07-06T00:00:33.069Z",
                     "v": 1635
@@ -730,6 +726,10 @@
                 {
                     "t": "2026-07-06T00:58:58.438Z",
                     "v": 2279
+                },
+                {
+                    "t": "2026-07-06T00:59:58.464Z",
+                    "v": 2272
                 }
             ]
         },
@@ -746,13 +746,13 @@
             }
         },
         "resumen_llm": {
-            "nivel": "advertencia",
-            "mensaje": "Humedad alta",
-            "razonamiento": "Aplicada la regla de advertencia porque el nivel de humedad (60.12%) es mayor que 70 y no se cumple la condición de temperatura (20.44C) ni gas (2205) para subir a critico",
-            "hora": "2026-07-06T00:59:20.979Z"
+            "nivel": "normal",
+            "mensaje": "",
+            "razonamiento": "Aplicada la regla de normalidad porque no se cumplieron las condiciones para advertencia ni critico.",
+            "hora": "2026-07-06T01:00:20.268Z"
         },
-        "actualizado": "2026-07-06T00:59:28.458Z",
-        "_lastHist": 1783299538438,
+        "actualizado": "2026-07-06T01:00:31.499Z",
+        "_lastHist": 1783299598464,
         "persona": "ninguna"
     }
 }
