@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>
-#include <coap-simple.h>        // "CoAP simple library" (Hirotaka Niisato)
+#include <coap-simple.h>        
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <Wire.h>
@@ -11,13 +11,13 @@
 const char* ssid = "iot";
 const char* password = "password123";
 const char* mqtt_server = "192.168.137.1";
-const int   mqtt_port   = 8883;            // puerto TLS del broker
+const int   mqtt_port   = 8883;            
 
 
 const char* mqtt_user = "esp32";
 const char* mqtt_pass = "zapato123";
 
-// Certificado de la CA (mosquitto/certs/ca.crt) para validar al broker por TLS.
+// Certificado de la CA (mosquitto/certs/ca.crt) para validar al broker por TLS
 const char* ca_cert = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIDlzCCAn+gAwIBAgIUaL9onXqEnSMOOCELR4eclRvmAa8wDQYJKoZIhvcNAQEL
@@ -46,8 +46,7 @@ HvInHqRe7EiCi6M=
 WiFiClientSecure espClient;
 PubSubClient client(espClient);
 
-// --- CoAP (F2): el ESP32 tambien es servidor CoAP del sensor de gas ---
-// IP fija para que Node-RED siempre sepa donde hacer el GET (rango del hotspot).
+// IP fija para que Node-RED siempre sepa donde hacer el GET 
 IPAddress ip_local(192, 168, 137, 50);
 IPAddress gateway (192, 168, 137, 1);
 IPAddress mascara (255, 255, 255, 0);
@@ -63,7 +62,7 @@ const int pinMic = 35;
 // definicion de pines para actuadores
 const int pinLedCerradura = 4;
 const int pinLuzPatio = 12;
-const int pinBuzzer = 13;        // buzzer activo controlado por el LLM (control/buzzer)
+const int pinBuzzer = 13;        
 
 // variables de temporizacion
 unsigned long ultimoEnvio = 0;
@@ -115,7 +114,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
       digitalWrite(pinLuzPatio, LOW);
     }
   } else if (String(topic) == "smarthome/equipoXX/control/buzzer") {
-    // decision del LLM: activar/desactivar buzzer de alerta
+    // activar/desactivar buzzer de alerta
     digitalWrite(pinBuzzer, (mensaje == "1") ? HIGH : LOW);
   }
 }
@@ -126,22 +125,21 @@ void reconectar() {
     if (client.connect("ESP32_SmartHome", mqtt_user, mqtt_pass)) {
       client.subscribe("smarthome/equipoXX/camara");
       client.subscribe("smarthome/equipoXX/luz_manual");
-      client.subscribe("smarthome/equipoXX/control/buzzer");   // decision del LLM
+      client.subscribe("smarthome/equipoXX/control/buzzer");  
     } else {
       delay(5000);
     }
   }
 }
 
-// Callback del recurso CoAP "gas": se ejecuta ante cada GET.
-// Lee el sensor de gas EN EL MOMENTO (true request/response) y responde.
+// Callback del recurso CoAP "gas"
+// Lee el sensor de gas y responde 
 void callbackGas(CoapPacket &packet, IPAddress ip, int port) {
   int g = analogRead(pinGas);
 
   char payload[16];
-  snprintf(payload, sizeof(payload), "%d", g);   // valor crudo del ADC
+  snprintf(payload, sizeof(payload), "%d", g);   
 
-  // Respuesta CoAP 2.05 Content, text/plain, devolviendo el token recibido
   coap.sendResponse(ip, port, packet.messageid,
                     payload, strlen(payload),
                     COAP_CONTENT, COAP_TEXT_PLAIN,
@@ -167,12 +165,12 @@ void setup() {
     delay(500);
   }
 
-  // Iniciar el servidor CoAP: recurso "gas" en UDP:5683
+  // iniciar el servidor CoAP paragas
   coap.server(callbackGas, "gas");
   coap.start();
 
-  // Sincronizar reloj por NTP: TLS necesita la hora real para validar
-  // la vigencia del certificado del broker. Sin esto la conexion falla.
+  // Sincronizar reloj por NTP: TLS necesita la hora real para validar la vigencia del certificado del broker
+
   configTime(0, 0, "pool.ntp.org", "time.nist.gov");
   time_t ahora = time(nullptr);
   unsigned long t0 = millis();

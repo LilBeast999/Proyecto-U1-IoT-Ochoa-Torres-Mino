@@ -10,7 +10,7 @@ const char* password = "password123";
 // ip y puerto (HTTPS / TLS hacia Node-RED)
 String serverName = "https://192.168.137.1:1880/upload-image";
 
-// Certificado de la CA (mosquitto/certs/ca.crt) para validar a Node-RED por TLS.
+// Certificado de la CA (mosquitto/certs/ca.crt) para validar a Node-RED por TLS
 const char* ca_cert = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIDlzCCAn+gAwIBAgIUaL9onXqEnSMOOCELR4eclRvmAa8wDQYJKoZIhvcNAQEL
